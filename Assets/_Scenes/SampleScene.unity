@@ -3452,6 +3452,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5dce1518ebad8b643905dbd0140522d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  image: {fileID: 0}
   min_opacity: 0
   max_opacity: 0.5
   time: 1
