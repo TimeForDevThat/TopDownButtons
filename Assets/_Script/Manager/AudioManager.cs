@@ -1,18 +1,24 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public AudioSource _audioSource;
+
+    [Header("Sounds")]
+    [Space(5)]
+    public AudioClip hoverFx;
+    public AudioClip clickFx;
+
+    [Header("Set volume")]
+    [Space(5)]
+    [Range(0f, 1f)]
+    public float volume;
+
     void Start()
     {
-        
+        _audioSource.GetComponent<AudioSource>().volume = volume;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public void HOVERBUTTON() => _audioSource.PlayOneShot(hoverFx);
+    public void CLICKBUTTON() => _audioSource.PlayOneShot(clickFx);
 }
