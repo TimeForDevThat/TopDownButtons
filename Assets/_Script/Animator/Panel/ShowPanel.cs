@@ -4,11 +4,16 @@ using DG.Tweening;
 
 public class ShowPanel : MonoBehaviour
 {
+    [field:SerializeField]
     Image image;
 
+    [Header("Изменить альфу гаму")]
+    [Space(5)]
     public float min_opacity = 0;
     public float max_opacity = 0.5f;
 
+    [Header("Время выполнение")]
+    [Space(5)]
     public float time = 1;
 
     void Start()
