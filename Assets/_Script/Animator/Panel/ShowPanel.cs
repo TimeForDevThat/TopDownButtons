@@ -7,9 +7,9 @@ public class ShowPanel : MonoBehaviour
     Image image;
 
     public float min_opacity = 0;
-    public float max_opacity = 255;
+    public float max_opacity = 0.5f;
 
-    public int time = 1;
+    public float time = 1;
 
     void Start()
     {
