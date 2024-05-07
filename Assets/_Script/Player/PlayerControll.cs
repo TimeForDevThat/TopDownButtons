@@ -2,14 +2,15 @@ using UnityEngine;
 
 public class PlayerControll : MonoBehaviour
 {
+    [SerializeField] private float walk;
     [SerializeField] private float speed;
+
     private Vector2 direction;
     private Rigidbody2D rb;
 
-    //public float dirX, dirY;
     private bool isf;
+    private Type type;
 
-    public Type type;
     public enum Type {PC, Joystick}
     public Joystick joystick;
 
@@ -21,9 +22,6 @@ public class PlayerControll : MonoBehaviour
         GetComponent<Rigidbody2D>();
         direction.x = Input.GetAxisRaw("Horizontal");
         direction.y = Input.GetAxisRaw("Vertical");
-
-        /*dirX = joystick.Horizontal * speed;
-        dirY = joystick.Vertical * speed;*/
 
         if (type == Type.PC)
         {
@@ -40,8 +38,10 @@ public class PlayerControll : MonoBehaviour
 
     void FixedUpdate()
     {
-        rb.MovePosition(rb.position + direction * speed * Time.fixedDeltaTime);
-        //rb.velocity = new Vector2(dirX, dirY);
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+            rb.MovePosition(rb.position + direction * speed * Time.fixedDeltaTime);
+        else
+            rb.MovePosition(rb.position + direction * walk * Time.fixedDeltaTime);
     }
 
     private void Flip()

@@ -9,7 +9,10 @@ public class load : MonoBehaviour
 
     public Image image;
     public Text Text;
-    public int SceneID;
+
+    [SerializeField]
+    [Space(5)]
+    private int SceneID;
     void Start()
         => StartCoroutine(LoadScene());
 
@@ -19,7 +22,7 @@ public class load : MonoBehaviour
         while (!asyncOperation.isDone)
         {
             float progress = asyncOperation.progress / 0.9f;
-            Text.text = "Загрузка" + string.Format("{0:0}%", progress * 100f);
+            Text.text = "Загрузка " + string.Format("{0:0}%", progress * 100f);
             yield return 0;
         }
     }
