@@ -66571,7 +66571,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &350431406
 Transform:
@@ -66620,7 +66620,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.30593872, y: 30.785076}
+  m_Offset: {x: 0.28741938, y: 30.785076}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -66631,7 +66631,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.38812256, y: 80.04806}
+  m_Size: {x: 0.42516124, y: 80.04806}
   m_EdgeRadius: 0
 --- !u!1 &370663523
 GameObject:
@@ -69525,7 +69525,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &609676771
 Transform:
@@ -69574,7 +69574,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.30593872, y: 30.785076}
+  m_Offset: {x: 0.36264765, y: 30.785076}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -69585,7 +69585,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.38812256, y: 80.04806}
+  m_Size: {x: 0.5015404, y: 80.04806}
   m_EdgeRadius: 0
 --- !u!1 &613240890
 GameObject:
@@ -69601,7 +69601,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &613240891
 Transform:
@@ -106628,7 +106628,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1520547468
 Transform:
@@ -106952,7 +106952,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1839762316
 Transform:
@@ -107154,7 +107154,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1937541768
 Transform:
@@ -112316,6 +112316,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2391822215058089069, guid: bb7fb35846c6c974397855eb17cd22fb, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3420684497666923334, guid: bb7fb35846c6c974397855eb17cd22fb, type: 3}
       propertyPath: m_LocalPosition.x
       value: 996.57
@@ -112356,10 +112360,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4345387684771283639, guid: bb7fb35846c6c974397855eb17cd22fb, type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5541441417254045509, guid: bb7fb35846c6c974397855eb17cd22fb, type: 3}
       propertyPath: m_Name
       value: Ammo_gun
@@ -112381,8 +112381,8 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4976234704172168601, guid: 10d2963bbd0f0894981651c36510d23a, type: 3}
-      propertyPath: m_IsTrigger
+    - target: {fileID: 3135592772681852011, guid: 10d2963bbd0f0894981651c36510d23a, type: 3}
+      propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5530101531807842023, guid: 10d2963bbd0f0894981651c36510d23a, type: 3}
@@ -112442,10 +112442,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4864762782562733861, guid: 97d7675ba14a2e24c9099e2573efd4a7, type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5197747517822743215, guid: 97d7675ba14a2e24c9099e2573efd4a7, type: 3}
       propertyPath: m_Name
       value: HightKit
@@ -112489,6 +112485,10 @@ PrefabInstance:
     - target: {fileID: 5774150984035028594, guid: 97d7675ba14a2e24c9099e2573efd4a7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8234000969659065324, guid: 97d7675ba14a2e24c9099e2573efd4a7, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
