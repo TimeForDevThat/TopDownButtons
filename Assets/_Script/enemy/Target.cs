@@ -4,15 +4,15 @@ using UnityEngine.Events;
 [AddComponentMenu("ScriptGun/Terget")]
 public class Target : MonoBehaviour
 {
-    public float _health = 50f;
+    public int _health = 50;
 
     public UnityEvent _hit;
 
-    public void TakeDamage(float amount) {
+    public void TakeDamage(int damage) {
         _hit.Invoke();
-        _health -= amount;
+        _health -= damage;
         if (_health <= 0) {
-            Invoke("Die", 2f);
+            Die();
         }
     }
 

@@ -4,15 +4,10 @@ using UnityEngine;
 [AddComponentMenu("ScriptGun/Weapon")]
 public class Weapon : MonoBehaviour
 {
-    public GameObject Gun;
-
-    public float fireRate = 1;
-    public int force = 155;
+    public GameObject bullet;
+    public float offset;
 
     public bool isActive = true;
-
-    [Header("Damage")]
-    public float damage = 10;
 
     [Header("ShotSpeed/ReloadSpeed")]
     public float ShootSpeed;
@@ -27,11 +22,7 @@ public class Weapon : MonoBehaviour
 
     [Header("Effect")]
     public ParticleSystem shotEffect;
-    public Transform bulletSpawn;
-
-    [Header("XRAY")]
-    public float range = 15;
-    public Camera _camera;
+    public Transform bulletSpawn; // point для патрона
 
     [Header("Timer")]
     public float ReloadTimer = 0.0f; // Время перезарядки(НЕ ТРОГАТЬ|НЕ МЕНЯТЬ)!!!!
@@ -48,10 +39,17 @@ public class Weapon : MonoBehaviour
 
     void Update()
     {
+        SpectorMouse();
         CheckAmmoUiUpdate();
         TouchButtonFireUpdate();
         TouchButtonReloadUpdate();
         TimeUpdate();
+    }
+
+    void SpectorMouse() {
+        Vector3 difference = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
+        float rotateZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.Euler(0f, 0f, rotateZ + offset);
     }
 
     void CheckAmmoUiUpdate()
@@ -89,7 +87,6 @@ public class Weapon : MonoBehaviour
     }
 
     void TimeUpdate() {
-
         if (ShootTimer > 0)
             ShootTimer -= Time.deltaTime;
 
@@ -99,26 +96,11 @@ public class Weapon : MonoBehaviour
 
     void Shoot()
     {
-        
         ShootTimer = ShootSpeed;
-        //Instantiate(shotEffect, bulletSpawn.position, bulletSpawn.rotation); тяжелый способ
+        Instantiate(bullet, bulletSpawn.position, bulletSpawn.rotation);
         shotEffect.Play();
 
         Cartridges = Cartridges - 1;
-
-        RaycastHit hit;
-
-        if (Physics.Raycast(_camera.transform.position, _camera.transform.forward, out hit, range))
-        {
-            Debug.Log(hit.transform.name);
-
-            Target target = hit.transform.GetComponent<Target>();
-            if (target != null)
-                target.TakeDamage(damage);
-
-            if (hit.rigidbody != null)
-                hit.rigidbody.AddForce(-hit.normal * force);
-        }
     }
 
     void YesShoot() 
