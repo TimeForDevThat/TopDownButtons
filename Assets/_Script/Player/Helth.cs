@@ -9,8 +9,6 @@ public class Helth : MonoBehaviour
     public Slider SliderHelth;
     public GameObject GameOver;
 
-    public Animator animator;
-
     private void Start()
         => InitComponentLinks();
 
@@ -32,10 +30,6 @@ public class Helth : MonoBehaviour
     {
         GameOver.SetActive(true);
         GetComponent<PlayerControll>().enabled = false;
-        Cursor.lockState = CursorLockMode.None;
-        Cursor.visible = true;
-
-        //animator.SetTrigger("die");
     }
 
     public void AddHealth(float amout)
