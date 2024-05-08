@@ -66297,6 +66297,7 @@ GameObject:
   - component: {fileID: 297823623}
   - component: {fileID: 297823629}
   - component: {fileID: 297823630}
+  - component: {fileID: 297823626}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -66392,7 +66393,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
-<<<<<<< HEAD
 --- !u!212 &297823626
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -66445,8 +66445,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
-=======
->>>>>>> 44c59d22dc04efb451d65097ce18e6cb027478cb
 --- !u!4 &297823627
 Transform:
   m_ObjectHideFlags: 0
@@ -66456,7 +66454,7 @@ Transform:
   m_GameObject: {fileID: 297823622}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 996.0467, y: 336.4023, z: 0}
+  m_LocalPosition: {x: 995.96, y: 336.4023, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -67106,7 +67104,7 @@ Transform:
   m_GameObject: {fileID: 475528172}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 996.0467, y: 336.4023, z: -10}
+  m_LocalPosition: {x: 995.96, y: 336.4023, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -107444,7 +107442,7 @@ Transform:
   m_GameObject: {fileID: 1481402415}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 996.0467, y: 336.4023, z: -10}
+  m_LocalPosition: {x: 995.96, y: 336.4023, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -107915,8 +107913,8 @@ Transform:
   m_GameObject: {fileID: 1710347867}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.32, y: -0.209, z: 0}
-  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
+  m_LocalPosition: {x: 0.038, y: -0.038, z: 0}
+  m_LocalScale: {x: 0.22840801, y: 0.22840801, z: 0.3}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 297823627}
@@ -107961,7 +107959,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 3f4787b90721355429b6adab708b534a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
