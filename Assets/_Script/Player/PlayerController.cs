@@ -1,7 +1,7 @@
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D), typeof(BoxCollider2D))]
-public class PlayerController : MonoBehaviour
+public class PlayerController : Sounds
 {
     [SerializeField] private float _movementSpeed = 5f;
     [SerializeField] private float _dashSpeed = 5000f;
@@ -14,7 +14,7 @@ public class PlayerController : MonoBehaviour
     private bool _isDashing = true;
     private Type type;
 
-    public enum Type {PC, Joystick}
+    public enum Type { PC, Joystick }
     public Joystick joystick;
 
     private void Start() => rb = GetComponent<Rigidbody2D>();
@@ -27,8 +27,11 @@ public class PlayerController : MonoBehaviour
         direction.y = Input.GetAxisRaw("Vertical");
     }
 
-    void FixedUpdate()
-        => rb.MovePosition(rb.position + direction * _movementSpeed * Time.fixedDeltaTime);
+    void FixedUpdate() {
+        rb.MovePosition(rb.position + direction* _movementSpeed * Time.fixedDeltaTime);
+        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
+            PlaySounds(0, random: true);
+    }
 
     private void Flip()
     {

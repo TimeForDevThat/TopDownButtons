@@ -5215,6 +5215,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 477543ae45ec0944e9673c63d6df38d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sounds:
+  - {fileID: 8300000, guid: e4bd373667efb004e8a7f6d857c8d308, type: 3}
+  SoundRandom: []
   HelthAmmo: 50
   AudioSource: {fileID: 7078765603739859891}
   canvas: {fileID: 8835505563347406698}
@@ -5229,7 +5232,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: e4bd373667efb004e8a7f6d857c8d308, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1

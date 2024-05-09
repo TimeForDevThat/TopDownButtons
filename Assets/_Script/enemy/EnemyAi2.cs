@@ -1,8 +1,7 @@
 using UnityEngine;
 using UnityEngine.AI;
-using static UnityEditor.Experimental.GraphView.GraphView;
 
-public class EnemyAi2 : MonoBehaviour
+public class EnemyAi2 : Sounds
 {
     private NavMeshAgent _navMeshAgent;
 
@@ -34,7 +33,9 @@ public class EnemyAi2 : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "Player") {
             _player.DealDamage(damage);
+            PlaySounds(0, destroy: true);
+        }
     }
 }

@@ -1,11 +1,10 @@
 ﻿using UnityEngine;
 
 [RequireComponent(typeof(BoxCollider2D))]
-public class AidKit : MonoBehaviour
+public class AidKit : Sounds
 {
     public int HelthAmmo = 50;
 
-    public AudioSource AudioSource;
     public Canvas canvas;
     public ParticleSystem _particleSystem;
 
@@ -25,16 +24,12 @@ public class AidKit : MonoBehaviour
                 if (playerHealth != null)
                 {
                     playerHealth.AddHealth(HelthAmmo);
-                    AudioSource.Play();
-                    _particleSystem.Play();
-                    Invoke("Destroy", AudioSource.clip.length);
+                    PlaySounds(0, destroy: true);
+                    Destroy(gameObject);
                 }
         }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
         => canvas.gameObject.SetActive(false);
-
-    private void Destroy()
-        => Destroy(gameObject);
 }

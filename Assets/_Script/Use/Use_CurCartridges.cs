@@ -7,8 +7,7 @@ public class Use_CurCartridges : MonoBehaviour
 
     private Weapon _weapon;
 
-    [Header("IntAmmoMagazin")]
-    public int ammoMagazin;
+    [SerializeField]private int MinAmmo, MaxAmmo;
 
     private void OnTriggerStay2D(Collider2D other)
     {
@@ -18,7 +17,7 @@ public class Use_CurCartridges : MonoBehaviour
             Canvas.SetActive(true);
             if (Input.GetKeyUp(KeyCode.E))
             {
-                ammo.CurCartridges += ammoMagazin;
+                ammo.CurCartridges += Random.Range(MinAmmo, MaxAmmo);
                 ParticleSystem.Play();
                 Destroy(gameObject);
             }
