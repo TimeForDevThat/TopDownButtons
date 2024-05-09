@@ -10,9 +10,6 @@ public class Use_CurCartridges : MonoBehaviour
     [Header("IntAmmoMagazin")]
     public int ammoMagazin;
 
-    private void Start()
-        => _weapon = GetComponent<Weapon>();
-
     private void OnTriggerStay2D(Collider2D other)
     {
         var ammo = other.GetComponent<Weapon>();

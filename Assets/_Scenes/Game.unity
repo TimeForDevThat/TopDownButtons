@@ -78829,9 +78829,10 @@ GameObject:
   - component: {fileID: 1447870137}
   - component: {fileID: 1447870136}
   - component: {fileID: 1447870138}
+  - component: {fileID: 1447870139}
   m_Layer: 0
   m_Name: Weapon
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -78922,14 +78923,59 @@ MonoBehaviour:
   isActive: 1
   ShootSpeed: 1
   ReloadSpeed: 1
-  Cartridges: 0
-  CurCartridges: 14
+  Cartridges: 5
+  CurCartridges: 15
   maxCartridgesText: {fileID: 370663525}
   shotEffect: {fileID: 1357228529}
   bulletSpawn: {fileID: 1096199744}
   ReloadTimer: 0
   ShootTimer: 0
   audioManager: {fileID: 212697065}
+--- !u!61 &1447870139
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1447870135}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 12, y: 12}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 12, y: 12}
+  m_EdgeRadius: 0
 --- !u!1 &1456496928
 GameObject:
   m_ObjectHideFlags: 0
@@ -79731,11 +79777,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.170431, y: 3.7612915}
   m_EdgeRadius: 0
---- !u!198 &1762703987 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 1881942572731379088, guid: bb7fb35846c6c974397855eb17cd22fb, type: 3}
-  m_PrefabInstance: {fileID: 876534868274410544}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1782556619
 GameObject:
   m_ObjectHideFlags: 0
@@ -81083,71 +81124,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2145088387}
   m_CullTransparentMesh: 1
---- !u!1001 &876534868274410544
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 3420684497666923334, guid: bb7fb35846c6c974397855eb17cd22fb, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 996.57
-      objectReference: {fileID: 0}
-    - target: {fileID: 3420684497666923334, guid: bb7fb35846c6c974397855eb17cd22fb, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 338.91
-      objectReference: {fileID: 0}
-    - target: {fileID: 3420684497666923334, guid: bb7fb35846c6c974397855eb17cd22fb, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3420684497666923334, guid: bb7fb35846c6c974397855eb17cd22fb, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3420684497666923334, guid: bb7fb35846c6c974397855eb17cd22fb, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3420684497666923334, guid: bb7fb35846c6c974397855eb17cd22fb, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3420684497666923334, guid: bb7fb35846c6c974397855eb17cd22fb, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3420684497666923334, guid: bb7fb35846c6c974397855eb17cd22fb, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3420684497666923334, guid: bb7fb35846c6c974397855eb17cd22fb, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3420684497666923334, guid: bb7fb35846c6c974397855eb17cd22fb, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5541441417254045509, guid: bb7fb35846c6c974397855eb17cd22fb, type: 3}
-      propertyPath: m_Name
-      value: Ammo_gun
-      objectReference: {fileID: 0}
-    - target: {fileID: 6120850804851774477, guid: bb7fb35846c6c974397855eb17cd22fb, type: 3}
-      propertyPath: m_Camera
-      value: 
-      objectReference: {fileID: 1481402417}
-    - target: {fileID: 7459553568438524274, guid: bb7fb35846c6c974397855eb17cd22fb, type: 3}
-      propertyPath: ParticleSystem
-      value: 
-      objectReference: {fileID: 1762703987}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: bb7fb35846c6c974397855eb17cd22fb, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -81155,7 +81131,6 @@ SceneRoots:
   - {fileID: 1481402418}
   - {fileID: 475528174}
   - {fileID: 1392050907}
-  - {fileID: 876534868274410544}
   - {fileID: 1710347868}
   - {fileID: 1817364721}
   - {fileID: 1887780812}

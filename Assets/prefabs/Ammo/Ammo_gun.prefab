@@ -5035,7 +5035,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Canvas: {fileID: 8076142254297715369}
   ParticleSystem: {fileID: 1881942572731379088}
-  ammoMagazin: 50
+  ammoMagazin: 15
 --- !u!1 &8076142254297715369
 GameObject:
   m_ObjectHideFlags: 0
