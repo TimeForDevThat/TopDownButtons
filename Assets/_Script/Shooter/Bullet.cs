@@ -12,7 +12,7 @@ public class Bullet : MonoBehaviour
         if (other.collider != null) {
             if (other.collider.CompareTag("Enemy"))
             {
-                other.collider.GetComponent<Target>().TakeDamage(damage);
+                other.collider.GetComponent<Health>().DealDamage(damage);
                 DestroyBull();
             }
         }

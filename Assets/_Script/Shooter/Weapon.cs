@@ -96,9 +96,9 @@ public class Weapon : MonoBehaviour
 
     void Shoot()
     {
+        shotEffect.Play();
         ShootTimer = ShootSpeed;
         Instantiate(bullet, bulletSpawn.position, bulletSpawn.rotation);
-        shotEffect.Play();
 
         Cartridges = Cartridges - 1;
     }

@@ -9,7 +9,7 @@ public class AidKit : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        var playerHealth = other.GetComponent<Helth>();
+        var playerHealth = other.GetComponent<PlayerHelth>();
         if (other.gameObject.tag == "Player")
         {
             if (playerHealth != null)

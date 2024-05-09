@@ -4,8 +4,15 @@ public class Use_CurCartridges : MonoBehaviour
 {
     public GameObject Canvas;
 
+    private Weapon _weapon;
+
     [Header("IntAmmoMagazin")]
     public int ammoMagazin;
+
+    private void Start()
+    {
+        _weapon = GetComponent<Weapon>();
+    }
 
     private void OnTriggerStay(Collider other)
     {
