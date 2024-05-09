@@ -32,6 +32,7 @@ public class PlayerHelth : MonoBehaviour
         GameOver.SetActive(true);
         GetComponent<PlayerController>().enabled = false;
         GetComponent<Weapon>().enabled = false;
+        GetComponent<SpawnerEnemy>().enabled = false;
     }
 
     public void AddHealth(int amout)

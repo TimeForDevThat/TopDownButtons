@@ -1,6 +1,4 @@
-using System.Collections;
 using UnityEngine;
-using UnityEngine.XR;
 
 [RequireComponent(typeof(Rigidbody2D), typeof(BoxCollider2D))]
 public class PlayerController : MonoBehaviour
@@ -53,7 +51,7 @@ public class PlayerController : MonoBehaviour
     }
 
     void Dash() {
-        if (Input.GetKeyDown(KeyCode.LeftShift) && _isDashing == true) {
+        if (Input.GetKeyDown(KeyCode.LeftShift) && _isDashing) {
             _isDashing = false;
             Invoke("DashLock", _dashTime);
             rb.velocity = new Vector2(0, 0);

@@ -22,6 +22,7 @@ public class load : MonoBehaviour
         while (!asyncOperation.isDone)
         {
             float progress = asyncOperation.progress / 0.9f;
+            image.fillAmount = progress;
             Text.text = "Загрузка " + string.Format("{0:0}%", progress * 100f);
             yield return 0;
         }
