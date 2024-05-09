@@ -3,6 +3,7 @@ using UnityEngine;
 public class Use_CurCartridges : MonoBehaviour
 {
     public GameObject Canvas;
+    public ParticleSystem ParticleSystem;
 
     private Weapon _weapon;
 
@@ -10,11 +11,9 @@ public class Use_CurCartridges : MonoBehaviour
     public int ammoMagazin;
 
     private void Start()
-    {
-        _weapon = GetComponent<Weapon>();
-    }
+        => _weapon = GetComponent<Weapon>();
 
-    private void OnTriggerStay(Collider other)
+    private void OnTriggerStay2D(Collider2D other)
     {
         var ammo = other.GetComponent<Weapon>();
         if (other.gameObject.tag == "Player")
@@ -23,10 +22,11 @@ public class Use_CurCartridges : MonoBehaviour
             if (Input.GetKeyUp(KeyCode.E))
             {
                 ammo.CurCartridges += ammoMagazin;
+                ParticleSystem.Play();
                 Destroy(gameObject);
             }
         }
     }
 
-    private void OnTriggerExit(Collider other) => Canvas.SetActive(false);
+    private void OnTriggerExit2D(Collider2D other) => Canvas.SetActive(false);
 }

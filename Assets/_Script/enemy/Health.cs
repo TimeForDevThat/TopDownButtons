@@ -21,8 +21,8 @@ public class Health : MonoBehaviour
 
     private void Die() {
         Destroy(gameObject);
-        GetComponent<EnemyAI>().enabled = false;
+        GetComponent<EnemyAi2>().enabled = false;
         GetComponent<NavMeshAgent>().enabled = false;
-        GetComponent<CapsuleCollider>().enabled = false;
+        GetComponent<BoxCollider2D>().enabled = false;
     }
 }

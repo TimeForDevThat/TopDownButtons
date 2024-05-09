@@ -14,7 +14,7 @@ public class EnemyAI : MonoBehaviour
 
     public float distant;
     public float viewAngle;
-    public float damage = 30;
+    public int damage = 30;
 
     public bool IsAlive() {
         return _health.isAlive();
@@ -64,7 +64,7 @@ public class EnemyAI : MonoBehaviour
     void AttackUpdate() {
         if (_isPlayerNoticed)
             if (_navMeshAgent.remainingDistance <= _navMeshAgent.stoppingDistance)
-                _player.DealDamage(damage * Time.deltaTime);
+                _player.DealDamage(damage);
     }
 
     void NewTargetPoint() => _navMeshAgent.destination = targetPoint[Random.Range(0, targetPoint.Count)].position;

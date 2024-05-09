@@ -33,9 +33,8 @@ public class Weapon : MonoBehaviour
     private void Start()
         => InitComponentLinks();
 
-    void InitComponentLinks() {
-        audioManager.GetComponent<AudioManager>();
-    }
+    void InitComponentLinks() 
+        => audioManager.GetComponent<AudioManager>();
 
     void Update()
     {

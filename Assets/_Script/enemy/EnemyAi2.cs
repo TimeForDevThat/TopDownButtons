@@ -10,6 +10,8 @@ public class EnemyAi2 : MonoBehaviour
     private PlayerHelth _player;
     private Health _health;
 
+    public int damage = 30;
+
     public bool IsAlive()
     {
         return _health.isAlive();
@@ -28,5 +30,11 @@ public class EnemyAi2 : MonoBehaviour
     private void Update()
     {
         _navMeshAgent.SetDestination(player.transform.position);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+            _player.DealDamage(damage);
     }
 }
