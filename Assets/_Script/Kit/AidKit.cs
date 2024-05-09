@@ -10,11 +10,14 @@ public class AidKit : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         var playerHealth = other.GetComponent<Helth>();
-        if (playerHealth != null)
+        if (other.gameObject.tag == "Player")
         {
-            playerHealth.AddHealth(healAmmo);
-            AudioSource.Play();
-            Invoke("Destroy", 1f);
+            if (playerHealth != null)
+            {
+                playerHealth.AddHealth(healAmmo);
+                AudioSource.Play();
+                Invoke("Destroy", 1f);
+            }
         }
     }
 

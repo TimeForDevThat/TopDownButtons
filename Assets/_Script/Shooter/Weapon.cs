@@ -14,19 +14,19 @@ public class Weapon : MonoBehaviour
     public float ReloadSpeed;
 
     [Header("Ammo")]
-    public int Cartridges; //кол патронов
-    public int CurCartridges; // магазе
+    public int Cartridges; //пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+    public int CurCartridges; // пїЅпїЅпїЅпїЅпїЅпїЅ
 
     [Header("Text")] 
     public Text maxCartridgesText;
 
     [Header("Effect")]
     public ParticleSystem shotEffect;
-    public Transform bulletSpawn; // point для патрона
+    public Transform bulletSpawn; // point пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 
     [Header("Timer")]
-    public float ReloadTimer = 0.0f; // Время перезарядки(НЕ ТРОГАТЬ|НЕ МЕНЯТЬ)!!!!
-    public float ShootTimer = 0.0f; // Время выстрела(НЕ ТРОГАТЬ|НЕ МЕНЯТЬ)
+    public float ReloadTimer = 0.0f; // пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ(пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ|пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ)!!!!
+    public float ShootTimer = 0.0f; // пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ(пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ|пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ)
 
     public AudioManager audioManager;
 
