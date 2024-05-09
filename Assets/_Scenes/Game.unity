@@ -78589,6 +78589,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1782556621}
   - component: {fileID: 1782556620}
+  - component: {fileID: 1782556623}
+  - component: {fileID: 1782556622}
   m_Layer: 0
   m_Name: PointSpawnEnemy
   m_TagString: Untagged
@@ -78608,7 +78610,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2098b3dc32b08d0489074acdca0249a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EnemyAIPrefabs: {fileID: 5766517063916861668, guid: 43a209ffed30c794f9cc684f10a120bd, type: 3}
+  EnemyAIPrefabs: {fileID: 170647691276672045, guid: 0a4860ff888cd104aa0476f81e89487b, type: 3}
   player: {fileID: 1710347872}
   targetPoint:
   - {fileID: 633026398}
@@ -78620,7 +78622,7 @@ MonoBehaviour:
   - {fileID: 888565969}
   - {fileID: 1143573508}
   - {fileID: 1811490650}
-  enemiesMaxCount: 10
+  enemiesMaxCount: 20
   ReloadSpawn: 5
   increaseEniumeaCountDelay: 30
 --- !u!4 &1782556621
@@ -78647,6 +78649,42 @@ Transform:
   - {fileID: 1811490650}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1782556622
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1782556619}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2098b3dc32b08d0489074acdca0249a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EnemyAIPrefabs: {fileID: 8599359039973781496, guid: 34d5ff2191eac5d4eb6556485254f051, type: 3}
+  player: {fileID: 1710347872}
+  targetPoint: []
+  enemiesMaxCount: 3
+  ReloadSpawn: 15
+  increaseEniumeaCountDelay: 30
+--- !u!114 &1782556623
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1782556619}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2098b3dc32b08d0489074acdca0249a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EnemyAIPrefabs: {fileID: 1297692030206175725, guid: 1b3dd63402c5ed448ba7ee6e944e2bcb, type: 3}
+  player: {fileID: 1710347872}
+  targetPoint: []
+  enemiesMaxCount: 10
+  ReloadSpawn: 6
+  increaseEniumeaCountDelay: 30
 --- !u!1 &1811490649
 GameObject:
   m_ObjectHideFlags: 0
