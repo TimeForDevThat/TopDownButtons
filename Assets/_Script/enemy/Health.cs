@@ -5,15 +5,8 @@ public class Health : MonoBehaviour
 {
     public float valueHealth = 100;
 
-    private PlayerProgress progress;
-
     public bool isAlive() { 
         return valueHealth > 0;
-    }
-
-    private void Start()
-    {
-        progress = FindObjectOfType<PlayerProgress>();
     }
 
     public void DealDamage(int damage) {
@@ -22,7 +15,6 @@ public class Health : MonoBehaviour
 
         if (valueHealth <= 0)
         {
-            progress.AddExperience(damage);
             Die();
         }
     }

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class AudioManager : MonoBehaviour
+public class BTN_FX : MonoBehaviour
 {
     public AudioSource _audioSource;
 
@@ -15,9 +15,7 @@ public class AudioManager : MonoBehaviour
     public float volume;
 
     void Start()
-    {
-        _audioSource.GetComponent<AudioSource>().volume = volume;
-    }
+        => _audioSource.GetComponent<AudioSource>().volume = volume;
 
     public void HOVERBUTTON() => _audioSource.PlayOneShot(hoverFx);
     public void CLICKBUTTON() => _audioSource.PlayOneShot(clickFx);

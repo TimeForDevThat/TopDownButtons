@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Bullet : MonoBehaviour
+public class Bullet : Sounds
 {
     public float force = 155;
     public float distant = 5;
@@ -13,6 +13,7 @@ public class Bullet : MonoBehaviour
             if (other.collider.CompareTag("Enemy"))
             {
                 other.collider.GetComponent<Health>().DealDamage(damage);
+                PlaySounds(0, destroy: true);
                 DestroyBull();
             }
         }

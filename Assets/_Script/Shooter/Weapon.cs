@@ -2,7 +2,7 @@ using UnityEngine.UI;
 using UnityEngine;
 
 [AddComponentMenu("ScriptGun/Weapon")]
-public class Weapon : MonoBehaviour
+public class Weapon : Sounds
 {
     public GameObject bullet;
     public float offset;
@@ -27,14 +27,6 @@ public class Weapon : MonoBehaviour
     [Header("Timer")]
     public float ReloadTimer = 0.0f; // ����� �����������(�� �������|�� ������)!!!!
     public float ShootTimer = 0.0f; // ����� ��������(�� �������|�� ������)
-
-    public AudioManager audioManager;
-
-    private void Start()
-        => InitComponentLinks();
-
-    void InitComponentLinks() 
-        => audioManager.GetComponent<AudioManager>();
 
     void Update()
     {
@@ -100,6 +92,8 @@ public class Weapon : MonoBehaviour
         Instantiate(bullet, bulletSpawn.position, bulletSpawn.rotation);
 
         Cartridges = Cartridges - 1;
+
+        PlaySounds(0);
     }
 
     void YesShoot() 
