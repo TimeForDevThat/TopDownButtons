@@ -40957,7 +40957,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13e9c8d64f4b94743a33c1755f71322b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _cursorDef: {fileID: 2800000, guid: 8f2d128e17dfe7a4ca04ba0fb1d0ac76, type: 3}
+  _cursorDef: {fileID: 2800000, guid: 827029d95337d5840978e2f81d02a648, type: 3}
   cursorDef: {x: 0, y: 0}
   _cursorButtonSelect: {fileID: 2800000, guid: 4024131aa93e8114592fa2f5737f4b7e, type: 3}
   cursorOffset: {x: 0, y: 0}
@@ -67530,6 +67530,22 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 212697067}
+          m_TargetAssemblyTypeName: SelectButtonCursor, Assembly-CSharp
+          m_MethodName: OnButtonCursorExit
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!114 &445448543
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -80306,6 +80322,7 @@ MonoBehaviour:
   _value: 100
   SliderHelth: {fileID: 414631150}
   GameOver: {fileID: 1456496928}
+  Weapon: {fileID: 1447870138}
 --- !u!114 &1710347872
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -80896,6 +80913,22 @@ MonoBehaviour:
         - m_Target: {fileID: 212697067}
           m_TargetAssemblyTypeName: SelectButtonCursor, Assembly-CSharp
           m_MethodName: OnButtonCursorEnter
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 212697067}
+          m_TargetAssemblyTypeName: SelectButtonCursor, Assembly-CSharp
+          m_MethodName: OnButtonCursorExit
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}

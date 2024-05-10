@@ -5,8 +5,16 @@ public class Health : MonoBehaviour
 {
     public float valueHealth = 100;
 
+    public ParticleSystem ParticleSystem;
+
     public bool isAlive() { 
         return valueHealth > 0;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.tag == "Bull")
+            ParticleSystem.Play();
     }
 
     public void DealDamage(int damage) {

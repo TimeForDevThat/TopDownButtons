@@ -9,6 +9,8 @@ public class PlayerHelth : MonoBehaviour
     public Slider SliderHelth;
     public GameObject GameOver;
 
+    public Weapon Weapon;
+
     private void Start()
         => InitComponentLinks();
 
@@ -31,7 +33,7 @@ public class PlayerHelth : MonoBehaviour
     {
         GameOver.SetActive(true);
         GetComponent<PlayerController>().enabled = false;
-        GetComponent<Weapon>().enabled = false;
+        Weapon.GetComponent<Weapon>().enabled = false;
         GetComponent<SpawnerEnemy>().enabled = false;
     }
 
