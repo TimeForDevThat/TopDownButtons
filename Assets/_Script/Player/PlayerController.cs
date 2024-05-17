@@ -10,7 +10,7 @@ public class PlayerController : Sounds
     private Vector2 direction;
     private Rigidbody2D rb;
 
-    private bool isf;
+    private bool isf = false;
     private bool _isDashing = true;
     private Type type;
 
@@ -25,6 +25,7 @@ public class PlayerController : Sounds
         InputDevice();
         direction.x = Input.GetAxisRaw("Horizontal");
         direction.y = Input.GetAxisRaw("Vertical");
+        Flip();
     }
 
     void FixedUpdate() {
@@ -35,8 +36,17 @@ public class PlayerController : Sounds
 
     private void Flip()
     {
-        isf = !isf;
-        transform.Rotate(0f, 180, 0f);
+        if (Input.GetKeyDown(KeyCode.A) && !isf)
+        {
+            transform.Rotate(0f, 180, 0f);
+            isf = true;
+        }
+        if (Input.GetKeyDown(KeyCode.D) && isf)
+        {
+            transform.Rotate(0f, -180, 0f);
+            isf = false;
+        }
+
     }
 
     void InputDevice() {
