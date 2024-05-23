@@ -3,7 +3,8 @@ using UnityEngine;
 public class Use_CurCartridges : MonoBehaviour
 {
     public GameObject Canvas;
-    public ParticleSystem ParticleSystem;
+    public Transform point;
+    public ParticleSystem _particleSystem;
 
     private Weapon _weapon;
 
@@ -18,7 +19,7 @@ public class Use_CurCartridges : MonoBehaviour
             if (Input.GetKeyUp(KeyCode.E))
             {
                 ammo.CurCartridges += Random.Range(MinAmmo, MaxAmmo);
-                ParticleSystem.Play();
+                Instantiate(_particleSystem, point.position, point.rotation);
                 Destroy(gameObject);
             }
         }

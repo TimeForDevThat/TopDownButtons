@@ -6,6 +6,7 @@ public class AidKit : Sounds
     public int HelthAmmo = 50;
 
     public Canvas canvas;
+    public Transform point;
     public ParticleSystem _particleSystem;
 
     private void Start()
@@ -25,6 +26,7 @@ public class AidKit : Sounds
                 {
                     playerHealth.AddHealth(HelthAmmo);
                     PlaySounds(0, destroy: true);
+                    Instantiate(_particleSystem, point.position, point.rotation);
                     Destroy(gameObject);
                 }
         }
