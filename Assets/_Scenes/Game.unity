@@ -79486,6 +79486,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 67583042547758823, guid: 42205bed59e7bb541a4ffdcf67fe7241, type: 3}
+      propertyPath: m_Pitch
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 67583042547758823, guid: 42205bed59e7bb541a4ffdcf67fe7241, type: 3}
+      propertyPath: m_Volume
+      value: 0.6
+      objectReference: {fileID: 0}
     - target: {fileID: 158404045523452735, guid: 42205bed59e7bb541a4ffdcf67fe7241, type: 3}
       propertyPath: m_Name
       value: Player
@@ -79502,6 +79510,10 @@ PrefabInstance:
       propertyPath: SliderHelth
       value: 
       objectReference: {fileID: 414631150}
+    - target: {fileID: 1008124907505845686, guid: 42205bed59e7bb541a4ffdcf67fe7241, type: 3}
+      propertyPath: m_Volume
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 2025662408811772275, guid: 42205bed59e7bb541a4ffdcf67fe7241, type: 3}
       propertyPath: Player
       value: 
@@ -79530,6 +79542,14 @@ PrefabInstance:
       propertyPath: joystick
       value: 
       objectReference: {fileID: 1348204145}
+    - target: {fileID: 3249157751488224526, guid: 42205bed59e7bb541a4ffdcf67fe7241, type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3249157751488224526, guid: 42205bed59e7bb541a4ffdcf67fe7241, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: ca79802457c9be84687041cb290a901d, type: 3}
     - target: {fileID: 7218205079913488702, guid: 42205bed59e7bb541a4ffdcf67fe7241, type: 3}
       propertyPath: m_LocalPosition.x
       value: 996.036
