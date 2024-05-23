@@ -9,10 +9,6 @@ public class ButtonsCountdownandCall : MonoBehaviour
     public GameObject ButtonsMenu;
     public GameObject weapon;
     public GameObject VictoryMenu;
-    void Start()
-    {
-        
-    }
 
     void Update()
     {

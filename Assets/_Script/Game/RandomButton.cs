@@ -7,6 +7,9 @@ public class RandomButton : MonoBehaviour
     public GameObject Player;
     [SerializeField] private int _randomEffect;
     public GameObject Weapon;
+    public GameObject Buff1Info;
+    public GameObject Buff2Info;
+    public float InfoTimer = 2f;
     void Start()
     {
         RandomizeButtons();
@@ -27,6 +30,9 @@ public class RandomButton : MonoBehaviour
         if(_randomEffect == 2)
         {
             Weapon.GetComponent<Weapon>().ShootSpeed = 0;
+            Buff2Info.SetActive(true);
+
+
         }
 
         if (_randomEffect == 3)
@@ -53,4 +59,6 @@ public class RandomButton : MonoBehaviour
         Buffs();
         Debuffs();
     }
+
+
 }
