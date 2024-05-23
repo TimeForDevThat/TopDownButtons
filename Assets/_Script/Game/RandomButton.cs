@@ -9,6 +9,8 @@ public class RandomButton : MonoBehaviour
     public GameObject Weapon;
     public GameObject Buff1Info;
     public GameObject Buff2Info;
+    public GameObject Buff3Info;
+    public GameObject Buff4Info;
     public float InfoTimer = 2f;
     void Start()
     {
@@ -25,6 +27,7 @@ public class RandomButton : MonoBehaviour
         if (_randomEffect == 1)
         {
             Player.GetComponent<PlayerController>()._movementSpeed *= 2;
+            Buff1Info.SetActive(true);
         }
 
         if(_randomEffect == 2)
@@ -38,6 +41,12 @@ public class RandomButton : MonoBehaviour
         if (_randomEffect == 3)
         {
             //Player.GetComponent<PlayerHelth>()._value 
+        }
+
+        if (_randomEffect == 4)
+        {
+            Weapon.GetComponent<Weapon>().CurCartridges += 25;
+            Buff4Info.SetActive(true);
         }
 
     }
