@@ -3,17 +3,43 @@ using UnityEngine;
 
 public class RandomButton : MonoBehaviour
 {
-    public GameObject[] button;
+    public Component[] buttonEffects;
+    public GameObject Player;
+    [SerializeField] private int _randomEffect;
     void Start()
-        => RandomizeButtons();
+    {
+        RandomizeButtons();
+    }
 
     void RandomizeButtons()
     {
-        List<GameObject> values = new List<GameObject>();
-        for (int i = 0; i < button.Length; i++)
+        _randomEffect = Random.Range(0, 10);
+    }
+
+    void Buffs()
+    {
+        if (_randomEffect == 1)
         {
-            int random = Random.Range(0, values.Count);
-            button[random].SetActive(true);
+            Player.GetComponent<PlayerController>()._movementSpeed *= 10;
         }
+
+        if(_randomEffect == 2)
+        {
+
+        }
+
+    }
+
+    void Debuffs()
+    {
+        if(_randomEffect == 11)
+        {
+            Player.GetComponent<PlayerController>()._movementSpeed /= 10;
+        }
+    }
+     public void EffectSelect()
+    {
+        Buffs();
+        Debuffs();
     }
 }

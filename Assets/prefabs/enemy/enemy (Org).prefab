@@ -204,7 +204,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 193cb91f190ead44b831699e36b3bdf0, type: 3}
   SoundRandom: []
   player: {fileID: 0}
-  damage: 10
+  damage: 5
 --- !u!114 &41698084048597369
 MonoBehaviour:
   m_ObjectHideFlags: 0

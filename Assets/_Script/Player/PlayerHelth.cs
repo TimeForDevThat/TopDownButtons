@@ -8,6 +8,7 @@ public class PlayerHelth : MonoBehaviour
     [Header("UI")]
     public Slider SliderHelth;
     public GameObject GameOver;
+    public GameObject EnemySpawn;
 
     public Weapon Weapon;
 
@@ -34,7 +35,7 @@ public class PlayerHelth : MonoBehaviour
         GameOver.SetActive(true);
         GetComponent<PlayerController>().enabled = false;
         Weapon.GetComponent<Weapon>().enabled = false;
-        GetComponent<SpawnerEnemy>().enabled = false;
+        EnemySpawn.GetComponent<SpawnerEnemy>().enabled = false;
     }
 
     public void AddHealth(int amout)

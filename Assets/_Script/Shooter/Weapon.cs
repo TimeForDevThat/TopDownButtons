@@ -9,6 +9,8 @@ public class Weapon : Sounds
 
     public bool isActive = true;
 
+    public GameObject Player;
+
     [Header("ShotSpeed/ReloadSpeed")]
     public float ShootSpeed;
     public float ReloadSpeed;
@@ -25,7 +27,7 @@ public class Weapon : Sounds
     public Transform bulletSpawn; // point ��� �������
 
     [Header("Timer")]
-    public float ReloadTimer = 0.0f; // ����� �����������(�� �������|�� ������)!!!!
+    public float ReloadTimer = 1f; // ����� �����������(�� �������|�� ������)!!!!
     public float ShootTimer = 0.0f; // ����� ��������(�� �������|�� ������)
 
     void Update()
@@ -34,10 +36,12 @@ public class Weapon : Sounds
         CheckAmmoUiUpdate();
         TouchButtonFireUpdate();
         TouchButtonReloadUpdate();
+        AutoReload();
         TimeUpdate();
     }
 
-    void SpectorMouse() {
+    void SpectorMouse() 
+    {
         Vector3 difference = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
         float rotateZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(0f, 0f, rotateZ + offset);
@@ -73,8 +77,18 @@ public class Weapon : Sounds
 
     void TouchButtonReloadUpdate()
     {
-        if (Input.GetKeyUp(KeyCode.R) & Cartridges == 0 & CurCartridges > 0 & ReloadTimer <= 0 & isActive == true )
+        if (Input.GetKey(KeyCode.R) && Cartridges == 0 & CurCartridges > 0 & ReloadTimer <= 0 & isActive == true)
+        {
             ReloadCartridges();
+        }
+    }
+
+    void AutoReload()
+    {
+        if (Cartridges == 0 & CurCartridges > 0 & ReloadTimer <= 0 & isActive == true)
+        {
+            ReloadCartridges();
+        }
     }
 
     void TimeUpdate() {

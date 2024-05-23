@@ -3,14 +3,14 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D), typeof(BoxCollider2D))]
 public class PlayerController : Sounds
 {
-    [SerializeField] private float _movementSpeed = 5f;
+    [SerializeField] public float _movementSpeed = 5f;
     [SerializeField] private float _dashSpeed = 5000f;
     [SerializeField] private float _dashTime = 2f;
 
     private Vector2 direction;
     private Rigidbody2D rb;
 
-    private bool isf = false;
+    public bool isf = false;
     private bool _isDashing = true;
     private Type type;
 
