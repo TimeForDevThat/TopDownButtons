@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 7609809309980496834}
   - component: {fileID: 4178147053681819720}
   - component: {fileID: -3250814994706573490}
+  - component: {fileID: 6195293341445473664}
   m_Layer: 0
   m_Name: enemy (Vampire)
   m_TagString: Enemy
@@ -247,7 +248,7 @@ AudioSource:
   m_GameObject: {fileID: 365966901203957566}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 6876244109020698546, guid: decdca0ac605b3e40ba22b42561ea763, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -334,6 +335,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &6195293341445473664
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 365966901203957566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c382e35a4e4463f44ad79a2435b339e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  valumeParametr: affactVol
+  mixer: {fileID: 24100000, guid: decdca0ac605b3e40ba22b42561ea763, type: 2}
 --- !u!1 &2820622803329409415
 GameObject:
   m_ObjectHideFlags: 0
