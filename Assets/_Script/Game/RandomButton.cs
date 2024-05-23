@@ -6,6 +6,7 @@ public class RandomButton : MonoBehaviour
     public Component[] buttonEffects;
     public GameObject Player;
     [SerializeField] private int _randomEffect;
+    public GameObject Weapon;
     void Start()
     {
         RandomizeButtons();
@@ -25,7 +26,7 @@ public class RandomButton : MonoBehaviour
 
         if(_randomEffect == 2)
         {
-
+            Weapon.GetComponent<Weapon>().ShootSpeed = 0;
         }
 
     }
