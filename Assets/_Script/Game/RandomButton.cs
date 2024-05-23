@@ -14,19 +14,24 @@ public class RandomButton : MonoBehaviour
 
     void RandomizeButtons()
     {
-        _randomEffect = Random.Range(0, 10);
+        _randomEffect = Random.Range(0, 20);
     }
 
     void Buffs()
     {
         if (_randomEffect == 1)
         {
-            Player.GetComponent<PlayerController>()._movementSpeed *= 10;
+            Player.GetComponent<PlayerController>()._movementSpeed *= 2;
         }
 
         if(_randomEffect == 2)
         {
             Weapon.GetComponent<Weapon>().ShootSpeed = 0;
+        }
+
+        if (_randomEffect == 3)
+        {
+            //Player.GetComponent<PlayerHelth>()._value 
         }
 
     }
@@ -35,7 +40,12 @@ public class RandomButton : MonoBehaviour
     {
         if(_randomEffect == 11)
         {
-            Player.GetComponent<PlayerController>()._movementSpeed /= 10;
+            Player.GetComponent<PlayerController>()._movementSpeed /= 2;
+        }
+
+        if (_randomEffect == 12)
+        {
+            Weapon.GetComponent<Weapon>().CurCartridges = 0;
         }
     }
      public void EffectSelect()

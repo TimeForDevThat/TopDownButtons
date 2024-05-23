@@ -105,7 +105,7 @@ public class Weapon : Sounds
         ShootTimer = ShootSpeed;
         Instantiate(bullet, bulletSpawn.position, bulletSpawn.rotation);
 
-        Cartridges = Cartridges - 1;
+        Cartridges -= 1;
 
         PlaySounds(0);
     }
