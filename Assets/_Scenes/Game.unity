@@ -41000,7 +41000,6 @@ GameObject:
   - component: {fileID: 212697067}
   - component: {fileID: 212697068}
   - component: {fileID: 212697069}
-  - component: {fileID: 212697070}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -41087,21 +41086,6 @@ MonoBehaviour:
   ButtonsMenu: {fileID: 932991572}
   weapon: {fileID: 1983647228}
   VictoryMenu: {fileID: 1584293235}
---- !u!114 &212697070
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 212697064}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5dce1518ebad8b643905dbd0140522d5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  min_opacity: 0
-  max_opacity: 0.5
-  time: 1
 --- !u!1 &213424184
 GameObject:
   m_ObjectHideFlags: 0
