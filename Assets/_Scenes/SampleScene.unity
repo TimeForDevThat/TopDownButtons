@@ -970,6 +970,8 @@ PlayableDirector:
     value: {fileID: 519420033}
   - key: {fileID: 1028218441851102711, guid: 45b4409dc4ff9e9439ef0284519a0e07, type: 2}
     value: {fileID: 1208573459}
+  - key: {fileID: -2121270633689575847, guid: 45b4409dc4ff9e9439ef0284519a0e07, type: 2}
+    value: {fileID: 1482427046}
   m_ExposedReferences:
     m_References: []
 --- !u!4 &518362499
@@ -1957,7 +1959,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 788591829}
+      - m_Target: {fileID: 518362497}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -1967,12 +1969,12 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
+          m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 518362497}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 1482427046}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: Stop
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
