@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class RandomButton : MonoBehaviour
 {
@@ -11,7 +12,10 @@ public class RandomButton : MonoBehaviour
     public GameObject Buff2Info;
     public GameObject Buff3Info;
     public GameObject Buff4Info;
+    public GameObject Debuff1Info;
+    public GameObject Debuff2Info;
     public float InfoTimer = 2f;
+    public Button Self;
     void Start()
     {
         RandomizeButtons();
@@ -40,7 +44,8 @@ public class RandomButton : MonoBehaviour
 
         if (_randomEffect == 3)
         {
-            //Player.GetComponent<PlayerHelth>()._value 
+            //Player.GetComponent<PlayerHelth>()._value
+            Buff3Info.SetActive(true);
         }
 
         if (_randomEffect == 4)
@@ -56,17 +61,24 @@ public class RandomButton : MonoBehaviour
         if(_randomEffect == 11)
         {
             Player.GetComponent<PlayerController>()._movementSpeed /= 2;
+            Debuff1Info.SetActive(true);
         }
 
         if (_randomEffect == 12)
         {
             Weapon.GetComponent<Weapon>().CurCartridges = 0;
+            Debuff2Info.SetActive(true);
         }
     }
      public void EffectSelect()
     {
         Buffs();
         Debuffs();
+    }
+
+    public void SetInactive()
+    {
+        Self.interactable = false;
     }
 
 
