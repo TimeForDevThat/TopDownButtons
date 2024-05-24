@@ -176,7 +176,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c91c23d7aa1f8f4ea378cc1de98f9ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  "\u0441anvas": {fileID: 8076142254297715369}
+  canvas: {fileID: 8076142254297715369}
   point: {fileID: 1472517115834291076}
   _particleSystem: {fileID: 6796291305883008259, guid: 4f686180ea0b91648914facd598258fa, type: 3}
   MinAmmo: 5

@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Use_CurCartridges : MonoBehaviour
 {
-    public GameObject ñanvas;
+    public GameObject canvas;
     public Transform point;
     public ParticleSystem _particleSystem;
 
@@ -16,14 +16,14 @@ public class Use_CurCartridges : MonoBehaviour
     void InitComponentLinks()
     {
         _weapon = FindObjectOfType<Weapon>();
-        ñanvas.gameObject.SetActive(false);
+        canvas.gameObject.SetActive(false);
     }
 
     private void OnTriggerStay2D(Collider2D other)
     {
         if (other.gameObject.tag == "Player")
         {
-            ñanvas.SetActive(true);
+            canvas.SetActive(true);
             if (Input.GetKeyUp(KeyCode.E))
             {
                 _weapon.CurCartridges += Random.Range(MinAmmo, MaxAmmo);
@@ -33,5 +33,5 @@ public class Use_CurCartridges : MonoBehaviour
         }
     }
 
-    private void OnTriggerExit2D(Collider2D other) => ñanvas.SetActive(false);
+    private void OnTriggerExit2D(Collider2D other) => canvas.SetActive(false);
 }
