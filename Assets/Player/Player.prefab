@@ -187,6 +187,10 @@ MonoBehaviour:
   _movementSpeed: 5
   _dashSpeed: 35000
   _dashTime: 2
+  isf: 0
+  type: 0
+  GunRight: {fileID: 0}
+  GunLeft: {fileID: 0}
   joystick: {fileID: 0}
 --- !u!114 &609571472642936255
 MonoBehaviour:
@@ -203,6 +207,7 @@ MonoBehaviour:
   _value: 100
   SliderHelth: {fileID: 0}
   GameOver: {fileID: 0}
+  EnemySpawn: {fileID: 0}
   Weapon: {fileID: 2025662408811772275}
 --- !u!81 &4627584626527659728
 AudioListener:
@@ -5303,6 +5308,9 @@ MonoBehaviour:
   bullet: {fileID: 9190216098967584131, guid: 43716be634bd0b34dbc3d121f4227194, type: 3}
   offset: 0
   isActive: 1
+  Player: {fileID: 0}
+  Self: {fileID: 0}
+  rotateZ: 0
   ShootSpeed: 1
   ReloadSpeed: 1
   Cartridges: 5

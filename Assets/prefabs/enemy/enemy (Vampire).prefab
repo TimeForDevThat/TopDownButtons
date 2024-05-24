@@ -347,7 +347,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c382e35a4e4463f44ad79a2435b339e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  valumeParametr: affactVol
+  valumeParametr: effectVol
   mixer: {fileID: 24100000, guid: decdca0ac605b3e40ba22b42561ea763, type: 2}
 --- !u!1 &2820622803329409415
 GameObject:

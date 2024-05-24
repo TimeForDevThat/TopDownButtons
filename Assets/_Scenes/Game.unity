@@ -41331,7 +41331,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c382e35a4e4463f44ad79a2435b339e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  valumeParametr: affactVol
+  valumeParametr: effectVol
   mixer: {fileID: 24100000, guid: decdca0ac605b3e40ba22b42561ea763, type: 2}
 --- !u!114 &200431490
 MonoBehaviour:
@@ -41578,6 +41578,7 @@ GameObject:
   - component: {fileID: 212697069}
   - component: {fileID: 212697070}
   - component: {fileID: 212697071}
+  - component: {fileID: 212697072}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -41692,8 +41693,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6cffddfa702a674a8e0ff20e7e07c3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GunRight: {fileID: 1983647228}
-  GunLeft: {fileID: 1467799754}
+--- !u!114 &212697072
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 212697064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03bdc124350fba3468587db7807fd01d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  WinScore: 0
+  Victory: {fileID: 0}
+  WinScoreText: {fileID: 0}
 --- !u!1 &213424184
 GameObject:
   m_ObjectHideFlags: 0
@@ -71008,7 +71022,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c382e35a4e4463f44ad79a2435b339e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  valumeParametr: affactVol
+  valumeParametr: effectVol
   mixer: {fileID: 24100000, guid: decdca0ac605b3e40ba22b42561ea763, type: 2}
 --- !u!1 &469109936
 GameObject:
@@ -75300,7 +75314,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c382e35a4e4463f44ad79a2435b339e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  valumeParametr: affactVol
+  valumeParametr: effectVol
   mixer: {fileID: 24100000, guid: decdca0ac605b3e40ba22b42561ea763, type: 2}
 --- !u!114 &612968498
 MonoBehaviour:
@@ -75879,7 +75893,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c382e35a4e4463f44ad79a2435b339e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  valumeParametr: affactVol
+  valumeParametr: effectVol
   mixer: {fileID: 24100000, guid: decdca0ac605b3e40ba22b42561ea763, type: 2}
 --- !u!1 &642146691
 GameObject:
@@ -76161,7 +76175,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c382e35a4e4463f44ad79a2435b339e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  valumeParametr: affactVol
+  valumeParametr: effectVol
   mixer: {fileID: 24100000, guid: decdca0ac605b3e40ba22b42561ea763, type: 2}
 --- !u!1 &647095638
 GameObject:
@@ -76974,7 +76988,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c382e35a4e4463f44ad79a2435b339e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  valumeParametr: affactVol
+  valumeParametr: effectVol
   mixer: {fileID: 24100000, guid: decdca0ac605b3e40ba22b42561ea763, type: 2}
 --- !u!1 &814979044
 GameObject:
@@ -81659,6 +81673,7 @@ GameObject:
   - component: {fileID: 1584293238}
   - component: {fileID: 1584293237}
   - component: {fileID: 1584293236}
+  - component: {fileID: 1584293239}
   m_Layer: 5
   m_Name: Victory
   m_TagString: Untagged
@@ -81726,6 +81741,19 @@ RectTransform:
   m_AnchoredPosition: {x: -0.000061035156, y: 0.000030517578}
   m_SizeDelta: {x: 928.095, y: 424.6288}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1584293239
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1584293235}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72ab1855f1b31c74d89d3fe96782fdcb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  score: 0
 --- !u!1 &1629413281
 GameObject:
   m_ObjectHideFlags: 0
@@ -81776,7 +81804,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c382e35a4e4463f44ad79a2435b339e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  valumeParametr: affactVol
+  valumeParametr: effectVol
   mixer: {fileID: 24100000, guid: decdca0ac605b3e40ba22b42561ea763, type: 2}
 --- !u!114 &1629413284
 MonoBehaviour:
@@ -89747,7 +89775,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c382e35a4e4463f44ad79a2435b339e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  valumeParametr: affactVol
+  valumeParametr: effectVol
   mixer: {fileID: 24100000, guid: decdca0ac605b3e40ba22b42561ea763, type: 2}
 --- !u!114 &1916612357
 MonoBehaviour:
