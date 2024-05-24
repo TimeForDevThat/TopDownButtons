@@ -78686,9 +78686,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1441920221}
   m_CullTransparentMesh: 1
-=======
   MedKit: {fileID: 0}
-=======
 --- !u!1 &1443232712
 GameObject:
   m_ObjectHideFlags: 0
