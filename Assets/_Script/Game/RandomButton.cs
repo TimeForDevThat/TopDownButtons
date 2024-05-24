@@ -8,10 +8,12 @@ public class RandomButton : MonoBehaviour
     public GameObject Player;
     [SerializeField] private int _randomEffect;
     public GameObject Weapon;
+    public GameObject SecondWeapon;
     public GameObject Buff1Info;
     public GameObject Buff2Info;
     public GameObject Buff3Info;
     public GameObject Buff4Info;
+    public GameObject Buff5Info;
     public GameObject Debuff1Info;
     public GameObject Debuff2Info;
     public float InfoTimer = 2f;
@@ -53,6 +55,13 @@ public class RandomButton : MonoBehaviour
             Weapon.GetComponent<Weapon>().CurCartridges += 25;
             Buff4Info.SetActive(true);
         }
+
+        if(_randomEffect == 5)
+        {
+            SecondWeapon.SetActive(true);
+            Buff5Info.SetActive(true);
+        }
+
 
     }
 

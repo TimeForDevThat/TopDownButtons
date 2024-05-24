@@ -11,6 +11,9 @@ public class Weapon : Sounds
 
     public GameObject Player;
 
+    public GameObject Self;
+
+    public float rotateZ;
     [Header("ShotSpeed/ReloadSpeed")]
     public float ShootSpeed;
     public float ReloadSpeed;
@@ -43,7 +46,7 @@ public class Weapon : Sounds
     void SpectorMouse() 
     {
         Vector3 difference = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
-        float rotateZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
+        rotateZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(0f, 0f, rotateZ + offset);
     }
 
@@ -112,4 +115,8 @@ public class Weapon : Sounds
 
     void YesShoot() 
         => isActive = true;
+
+
+
+    
 }

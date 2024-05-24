@@ -3,7 +3,7 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D), typeof(BoxCollider2D))]
 public class PlayerController : Sounds
 {
-    [SerializeField] public float _movementSpeed = 5f;
+    public float _movementSpeed = 5f;
     [SerializeField] private float _dashSpeed = 5000f;
     [SerializeField] private float _dashTime = 2f;
 
@@ -13,7 +13,8 @@ public class PlayerController : Sounds
     public bool isf = false;
     private bool _isDashing = true;
     public Type type;
-    public GameObject Weapon;
+    public GameObject GunRight;
+    public GameObject GunLeft;
 
     public enum Type { PC, Joystick }
     public Joystick joystick;
@@ -26,31 +27,30 @@ public class PlayerController : Sounds
         InputDevice();
         direction.x = Input.GetAxisRaw("Horizontal");
         direction.y = Input.GetAxisRaw("Vertical");
-        Flip();
+
     }
 
     void FixedUpdate() {
         rb.MovePosition(rb.position + direction* _movementSpeed * Time.fixedDeltaTime);
         if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
             PlaySounds(0, random: true);
+        //Flip();
     }
 
-    private void Flip()
-    {
-        if (Input.GetKeyDown(KeyCode.A) && !isf)
-        {
-            transform.Rotate(0f, 180, 0f);
-            Weapon.GetComponent<SpriteRenderer>().flipY = true;
-            isf = true;
-        }
-        if (Input.GetKeyDown(KeyCode.D) && isf)
-        {
-            transform.Rotate(0f, -180, 0f);
-            Weapon.GetComponent<SpriteRenderer>().flipY = false;
-            isf = false;
-        }
+    //private void Flip()
+    //{
+       // if (GunRight.GetComponent<Weapon>().rotateZ >= 100 || GunRight.GetComponent<Weapon>().rotateZ <= -100 || GunLeft.GetComponent<Weapon>().rotateZ >= 100 || GunLeft.GetComponent<Weapon>().rotateZ <= -100)
+       // {
+         //   GetComponent<SpriteRenderer>().flipX = true;
 
-    }
+        //}
+       // else
+       // {
+        //    GetComponent<SpriteRenderer>().flipX = false;
+        //    //Gun.GetComponent<SpriteRenderer>().flipY = false;
+       // }
+
+    //}
 
     void InputDevice() {
         if (type == Type.PC)

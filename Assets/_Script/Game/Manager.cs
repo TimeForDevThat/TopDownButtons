@@ -4,6 +4,7 @@ public class Manager : MonoBehaviour
 {
     public GameObject Pausa;
     public GameObject weapon;
+    public GameObject weapontwo;
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape)) {
@@ -16,11 +17,13 @@ public class Manager : MonoBehaviour
     {
         Time.timeScale = 1f;
         weapon.GetComponent<Weapon>().enabled = true;
+        weapontwo.GetComponent<Weapon>().enabled = true;
     }
 
     public void StopGame()
     {
         Time.timeScale = 0;
         weapon.GetComponent<Weapon>().enabled = false;
+        weapontwo.GetComponent<Weapon>().enabled = false;
     }
 }

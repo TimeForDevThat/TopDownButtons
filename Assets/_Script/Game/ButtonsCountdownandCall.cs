@@ -8,6 +8,7 @@ public class ButtonsCountdownandCall : MonoBehaviour
     [SerializeField] private float _timetotrigger = 30f;
     public GameObject ButtonsMenu;
     public GameObject weapon;
+    public GameObject weapontwo;
     public GameObject VictoryMenu;
 
     void Update()
@@ -30,6 +31,7 @@ public class ButtonsCountdownandCall : MonoBehaviour
         ButtonsMenu.SetActive(false);
         Time.timeScale = 1;
         weapon.GetComponent<Weapon>().enabled = true;
+        weapontwo.GetComponent<Weapon>().enabled = true;
         _timetotrigger = 30f;
     }
     void IsTimeUp()
@@ -49,6 +51,7 @@ public class ButtonsCountdownandCall : MonoBehaviour
     {
         Time.timeScale = 0;
         weapon.GetComponent<Weapon>().enabled = false;
+        weapontwo.GetComponent<Weapon>().enabled = false;
     }
 
     void VictoryScreenCall()
