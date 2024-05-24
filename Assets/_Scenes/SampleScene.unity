@@ -3501,7 +3501,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0d98cd7536fab247aee0c99b797e0a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  volumeParametr: affectVol
+  volumeParametr: effectVol
   mixer: {fileID: 24100000, guid: decdca0ac605b3e40ba22b42561ea763, type: 2}
   slider: {fileID: 1180869302}
 --- !u!1 &1208573454
@@ -8816,7 +8816,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c382e35a4e4463f44ad79a2435b339e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  valumeParametr: affactVol
+  valumeParametr: effectVol
   mixer: {fileID: 24100000, guid: decdca0ac605b3e40ba22b42561ea763, type: 2}
 --- !u!4 &1986544399
 Transform:
