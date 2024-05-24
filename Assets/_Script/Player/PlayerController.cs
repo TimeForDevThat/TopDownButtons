@@ -12,6 +12,9 @@ public class PlayerController : Sounds
 
     public bool isf = false;
     private bool _isDashing = true;
+    public bool theRoom = false;
+
+
     public Type type;
     public GameObject GunRight;
     public GameObject GunLeft;
@@ -19,7 +22,8 @@ public class PlayerController : Sounds
     public enum Type { PC, Joystick }
     public Joystick joystick;
 
-    private void Start() => rb = GetComponent<Rigidbody2D>();
+    private void Start() 
+        => rb = GetComponent<Rigidbody2D>(); 
 
     private void Update()
     {
@@ -78,7 +82,16 @@ public class PlayerController : Sounds
         }
     }
 
-    void DashLock() { 
-        _isDashing = true;
+    void DashLock()=> _isDashing = true;
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Room")
+            theRoom = true;
+    }
+
+    private void OnTriggerExit2D(Collider2D other) {
+        if (other.gameObject.tag == "Room")
+            theRoom = false;
     }
 }
