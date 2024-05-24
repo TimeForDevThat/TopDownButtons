@@ -13,6 +13,7 @@ public class PlayerController : Sounds
     public bool isf = false;
     private bool _isDashing = true;
     public Type type;
+    public GameObject Weapon;
 
     public enum Type { PC, Joystick }
     public Joystick joystick;
@@ -39,11 +40,13 @@ public class PlayerController : Sounds
         if (Input.GetKeyDown(KeyCode.A) && !isf)
         {
             transform.Rotate(0f, 180, 0f);
+            Weapon.GetComponent<SpriteRenderer>().flipY = true;
             isf = true;
         }
         if (Input.GetKeyDown(KeyCode.D) && isf)
         {
             transform.Rotate(0f, -180, 0f);
+            Weapon.GetComponent<SpriteRenderer>().flipY = false;
             isf = false;
         }
 
