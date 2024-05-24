@@ -52,7 +52,7 @@ public class Weapon : Sounds
 
     void CheckAmmoUiUpdate()
     {
-        maxCartridgesText.text = Cartridges + "/" + CurCartridges;
+        maxCartridgesText.text = string.Format("{0:0}", Cartridges + "/" + CurCartridges);
 
         if (Cartridges >= 1)
             maxCartridgesText.color = new Color(255, 255, 255);

@@ -78586,7 +78586,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   image: {fileID: 450575309}
   Text: {fileID: 249854120}
-  SceneID: 0
+  SceneID: 1
 --- !u!114 &259478526
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -90473,7 +90473,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   image: {fileID: 881913563}
   Text: {fileID: 1732639607}
-  SceneID: 1
+  SceneID: 2
 --- !u!114 &1360857533
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -91603,7 +91603,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1467799755
 Transform:
   m_ObjectHideFlags: 0
@@ -99488,7 +99488,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1782556620
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -102171,6 +102171,10 @@ PrefabInstance:
       propertyPath: Weapon
       value: 
       objectReference: {fileID: 1983647228}
+    - target: {fileID: 2537479630565771404, guid: 42205bed59e7bb541a4ffdcf67fe7241, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 190605027}
     - target: {fileID: 2537479630565771404, guid: 42205bed59e7bb541a4ffdcf67fe7241, type: 3}
       propertyPath: GunLeft
       value: 
