@@ -16,7 +16,6 @@ public class RandomButton : MonoBehaviour
     public GameObject Debuff2Info;
     public float InfoTimer = 2f;
     public Button Self;
-    public GameObject MedKit;
     void Start()
     {
         RandomizeButtons();
@@ -45,7 +44,7 @@ public class RandomButton : MonoBehaviour
 
         if (_randomEffect == 3)
         {
-            MedKit.GetComponent<AidKit>().HelthAmmo = 100;
+            //Player.GetComponent<PlayerHelth>()._value
             Buff3Info.SetActive(true);
         }
 
