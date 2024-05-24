@@ -264,6 +264,7 @@ MonoBehaviour:
   canvas: {fileID: 5320043390855590840}
   point: {fileID: 8527981245621474786}
   _particleSystem: {fileID: 4360557437673477465, guid: e432c61971d3bcb429d5e0313fdb6fd2, type: 3}
+  player: {fileID: 0}
 --- !u!82 &2800190976232413472
 AudioSource:
   m_ObjectHideFlags: 0

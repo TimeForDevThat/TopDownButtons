@@ -9,26 +9,30 @@ public class AidKit : Sounds
     public Transform point;
     public ParticleSystem _particleSystem;
 
+    public PlayerController player;
+    private PlayerHelth _player;
+
     private void Start()
         => InitComponentLinks();
 
     void InitComponentLinks()
-       => canvas.gameObject.SetActive(false);
+    {
+        _player = FindObjectOfType<PlayerHelth>();
+        canvas.gameObject.SetActive(false);
+    }
 
     private void OnTriggerStay2D(Collider2D other)
     {
-        var playerHealth = other.GetComponent<PlayerHelth>();
         if (other.gameObject.tag == "Player")
         {
             canvas.gameObject.SetActive(true);
-            if (Input.GetKeyDown(KeyCode.E))
-                if (playerHealth != null)
-                {
-                    playerHealth.AddHealth(HelthAmmo);
-                    PlaySounds(0, destroy: true);
-                    Instantiate(_particleSystem, point.position, point.rotation);
-                    Destroy(gameObject);
-                }
+            if (Input.GetKeyDown(KeyCode.E)) {
+                _player.AddHealth(HelthAmmo);
+                PlaySounds(0, destroy: true);
+                Instantiate(_particleSystem, point.position, point.rotation);
+                Destroy(gameObject);
+            }
+
         }
     }
 
