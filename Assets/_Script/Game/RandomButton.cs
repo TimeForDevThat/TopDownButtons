@@ -16,6 +16,7 @@ public class RandomButton : MonoBehaviour
     public GameObject Buff5Info;
     public GameObject Debuff1Info;
     public GameObject Debuff2Info;
+    public GameObject EmptyEffectInfo;
     public float InfoTimer = 2f;
     public Button Self;
     void Start()
@@ -25,7 +26,7 @@ public class RandomButton : MonoBehaviour
 
     void RandomizeButtons()
     {
-        _randomEffect = Random.Range(0, 20);
+        _randomEffect = Random.Range(0, 7);
     }
 
     void Buffs()
@@ -39,41 +40,46 @@ public class RandomButton : MonoBehaviour
         if(_randomEffect == 2)
         {
             Weapon.GetComponent<Weapon>().ShootSpeed = 0;
+            SecondWeapon.GetComponent<Weapon>().ShootSpeed = 0;
             Buff2Info.SetActive(true);
-
-
         }
 
-        if (_randomEffect == 3)
-        {
-            //Player.GetComponent<PlayerHelth>()._value
-            Buff3Info.SetActive(true);
-        }
 
         if (_randomEffect == 4)
         {
             Weapon.GetComponent<Weapon>().CurCartridges += 25;
+            SecondWeapon.GetComponent<Weapon>().CurCartridges += 25;
             Buff4Info.SetActive(true);
         }
 
-        if(_randomEffect == 5)
+        if(_randomEffect == 6)
         {
             SecondWeapon.SetActive(true);
             Buff5Info.SetActive(true);
         }
 
+        if(_randomEffect == 0)
+        {
+            EmptyEffectInfo.SetActive(true);
+        }
 
+        if(_randomEffect == 7)
+        {
+            Weapon.GetComponent<Weapon>().ReloadSpeed = 0;
+            SecondWeapon.GetComponent<Weapon>().ReloadSpeed = 0;
+            Buff3Info.SetActive(true);
+        }
     }
 
     void Debuffs()
     {
-        if(_randomEffect == 11)
+        if(_randomEffect == 5)
         {
             Player.GetComponent<PlayerController>()._movementSpeed /= 2;
             Debuff1Info.SetActive(true);
         }
 
-        if (_randomEffect == 12)
+        if (_randomEffect == 3)
         {
             Weapon.GetComponent<Weapon>().CurCartridges = 0;
             Debuff2Info.SetActive(true);
