@@ -41577,7 +41577,6 @@ GameObject:
   - component: {fileID: 212697068}
   - component: {fileID: 212697069}
   - component: {fileID: 212697070}
-  - component: {fileID: 212697071}
   - component: {fileID: 212697072}
   m_Layer: 0
   m_Name: Manager
@@ -41681,18 +41680,6 @@ MonoBehaviour:
   Pausa: {fileID: 481665103}
   weapon: {fileID: 1983647228}
   weapontwo: {fileID: 1467799754}
---- !u!114 &212697071
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 212697064}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a6cffddfa702a674a8e0ff20e7e07c3b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &212697072
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -77184,7 +77171,7 @@ Transform:
   m_GameObject: {fileID: 821171509}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1050, y: 387.475, z: 0}
+  m_LocalPosition: {x: 1050.004, y: 387.464, z: 0}
   m_LocalScale: {x: 437.83554, y: 52.91, z: 52.91}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -88151,7 +88138,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -881, y: 483.95}
+  m_AnchoredPosition: {x: -907.34, y: 442.1}
   m_SizeDelta: {x: 31.9247, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1731452039

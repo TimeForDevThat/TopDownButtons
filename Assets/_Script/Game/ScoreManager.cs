@@ -5,7 +5,6 @@ using UnityEngine;
 public class ScoreManager : MonoBehaviour
 {
     public int WinScore;
-    public GameObject Victory;
     public GameObject WinScoreText;
     void Start()
     {
