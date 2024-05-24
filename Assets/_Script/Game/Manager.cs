@@ -14,6 +14,6 @@ public class Manager : MonoBehaviour
     public void Resume()
         => Time.timeScale = 1.0f;
 
-    void StopGame()
+    public void StopGame()
         => Time.timeScale = 0;
 }

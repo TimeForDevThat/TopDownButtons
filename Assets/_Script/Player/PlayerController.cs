@@ -12,7 +12,7 @@ public class PlayerController : Sounds
 
     public bool isf = false;
     private bool _isDashing = true;
-    private Type type;
+    public Type type;
 
     public enum Type { PC, Joystick }
     public Joystick joystick;
