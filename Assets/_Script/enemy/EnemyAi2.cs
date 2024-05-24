@@ -9,7 +9,10 @@ public class EnemyAi2 : Sounds
     private PlayerHelth _player;
     private Health _health;
 
+    public int damage_restart_time = 1;
     public int damage = 30;
+
+    private bool damage_time = true;
 
     public bool IsAlive()
     {
@@ -31,11 +34,17 @@ public class EnemyAi2 : Sounds
         _navMeshAgent.SetDestination(player.transform.position);
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Player") {
+        if (collision.gameObject.tag == "Player" && damage_time == true) {
             _player.DealDamage(damage);
             PlaySounds(0, destroy: true);
+            damage_time = false;
+            Invoke("Restart", damage_restart_time);
         }
+    }
+
+    void Restart() {
+        damage_time = true;
     }
 }
