@@ -205,6 +205,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 193cb91f190ead44b831699e36b3bdf0, type: 3}
   SoundRandom: []
   player: {fileID: 0}
+  damage_restart_time: 1
   damage: 5
 --- !u!114 &41698084048597369
 MonoBehaviour:
@@ -219,7 +220,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   valueHealth: 50
-  ParticleSystem: {fileID: 525974507621921780}
+  UnityEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 525974507621921780}
+        m_TargetAssemblyTypeName: UnityEngine.ParticleSystem, UnityEngine
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!95 &5706266034984333126
 Animator:
   serializedVersion: 5
@@ -350,7 +365,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   valumeParametr: effectVol
-  valumeParametr: effect
   mixer: {fileID: 24100000, guid: decdca0ac605b3e40ba22b42561ea763, type: 2}
 --- !u!1 &5963162846099289122
 GameObject:
