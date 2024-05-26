@@ -97764,7 +97764,7 @@ GameObject:
   - component: {fileID: 1537057521}
   - component: {fileID: 1537057522}
   m_Layer: 3
-  m_Name: Test
+  m_Name: Room
   m_TagString: Room
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -97778,12 +97778,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1537057518}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 966.5, y: 319.7503, z: -9.944538}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -34.7818, y: -17.868958, z: -9.870109}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1887780812}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1537057522
 BoxCollider2D:
@@ -105950,6 +105950,7 @@ Transform:
   - {fileID: 612968496}
   - {fileID: 1629413282}
   - {fileID: 635519165}
+  - {fileID: 1537057521}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1899191392
@@ -107825,4 +107826,3 @@ SceneRoots:
   - {fileID: 212697066}
   - {fileID: 413781652}
   - {fileID: 2013113226}
-  - {fileID: 1537057521}
