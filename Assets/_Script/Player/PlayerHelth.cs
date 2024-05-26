@@ -17,7 +17,6 @@ public class PlayerHelth : MonoBehaviour
 
     void InitComponentLinks()
     {
-        SliderHelth.maxValue = _value;
         SliderHelth.value = _value;
         GameOver.SetActive(false);
     }

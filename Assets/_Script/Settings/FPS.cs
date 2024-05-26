@@ -1,6 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
-public class FPS : MonoBehaviour
+public class Fps : MonoBehaviour
 {
     [SerializeField] int FPS_int = 60;
     [SerializeField] private Text fpsText;
@@ -21,15 +21,18 @@ public class FPS : MonoBehaviour
         timeLeft -= Time.deltaTime;
         accum += Time.timeScale / Time.deltaTime;
         frames++;
+        float fps = accum / frames;
 
         if (timeLeft <= 0.0f)
         {
-            float fps = accum / frames;
             fpsText.text = $"FPS: {fps:0.}";
 
             timeLeft = updateInterval;
             accum = 0.0f;
             frames = 0;
         }
+
+        if (fps <= 20)
+            fpsText.color = new Color(255, 0, 0);
     }
 }

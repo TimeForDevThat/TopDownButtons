@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class BTN_FX : MonoBehaviour
+public class Btn_Fx : MonoBehaviour
 {
     public AudioSource _audioSource;
 

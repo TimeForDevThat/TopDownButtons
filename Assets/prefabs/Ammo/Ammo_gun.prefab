@@ -42,7 +42,9 @@ GameObject:
   - component: {fileID: 3420684497666923334}
   - component: {fileID: 2391822215058089069}
   - component: {fileID: 4345387684771283639}
-  - component: {fileID: 7459553568438524274}
+  - component: {fileID: 7263194151460412491}
+  - component: {fileID: 567631222855591674}
+  - component: {fileID: 7953702782249205305}
   m_Layer: 0
   m_Name: Ammo_gun
   m_TagString: Untagged
@@ -60,7 +62,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1003.49695, y: 336.64014, z: 0}
-  m_LocalScale: {x: 0.8, y: 0.8, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 359414120529850841}
@@ -164,7 +166,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.5, y: 1.5}
   m_EdgeRadius: 0
---- !u!114 &7459553568438524274
+--- !u!114 &7263194151460412491
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -173,14 +175,129 @@ MonoBehaviour:
   m_GameObject: {fileID: 5541441417254045509}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5c91c23d7aa1f8f4ea378cc1de98f9ba, type: 3}
+  m_Script: {fileID: 11500000, guid: 477543ae45ec0944e9673c63d6df38d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvas: {fileID: 8076142254297715369}
+  sounds:
+  - {fileID: 8300000, guid: 06177142387436340a7cbef80cf0dfab, type: 3}
+  SoundRandom: []
+  Helth: 0
+  MinAmmo: 5
+  MaxAmmo: 10
+  canvas: {fileID: 6120850804851774477}
   point: {fileID: 1472517115834291076}
   _particleSystem: {fileID: 6796291305883008259, guid: 4f686180ea0b91648914facd598258fa, type: 3}
-  MinAmmo: 5
-  MaxAmmo: 15
+  type: 1
+--- !u!82 &567631222855591674
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5541441417254045509}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 6876244109020698546, guid: decdca0ac605b3e40ba22b42561ea763, type: 2}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &7953702782249205305
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5541441417254045509}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c382e35a4e4463f44ad79a2435b339e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  valumeParametr: effectVol
+  mixer: {fileID: 24100000, guid: decdca0ac605b3e40ba22b42561ea763, type: 2}
 --- !u!1 &8076142254297715369
 GameObject:
   m_ObjectHideFlags: 0

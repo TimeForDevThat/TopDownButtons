@@ -7,6 +7,8 @@ public class PlayerController : Sounds
     [SerializeField] private float _dashSpeed = 5000f;
     [SerializeField] private float _dashTime = 2f;
 
+    private Animator _animator;
+
     private Vector2 direction;
     private Rigidbody2D rb;
 
@@ -22,8 +24,13 @@ public class PlayerController : Sounds
     public enum Type { PC, Joystick }
     public Joystick joystick;
 
-    private void Start() 
-        => rb = GetComponent<Rigidbody2D>(); 
+    private void Start()
+        => InitComponentLinks();
+
+    void InitComponentLinks() {
+        rb = GetComponent<Rigidbody2D>();
+        _animator = GetComponent<Animator>();
+    }
 
     private void Update()
     {
@@ -73,6 +80,7 @@ public class PlayerController : Sounds
     void Dash() {
         if (Input.GetKeyDown(KeyCode.LeftShift) && _isDashing) {
             _isDashing = false;
+            _animator.SetTrigger("dash");
             Invoke("DashLock", _dashTime);
             rb.velocity = new Vector2(0, 0);
 

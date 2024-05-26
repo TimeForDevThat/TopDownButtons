@@ -243,7 +243,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 993.57, y: 339.32, z: 0}
-  m_LocalScale: {x: 0.8, y: 0.8, z: 0}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1259434705584267652}
@@ -338,7 +338,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2, y: 2}
+    oldSize: {x: 0.64, y: 0.64}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -362,10 +362,13 @@ MonoBehaviour:
   sounds:
   - {fileID: 8300000, guid: e4bd373667efb004e8a7f6d857c8d308, type: 3}
   SoundRandom: []
-  HelthAmmo: 50
+  Helth: 15
+  MinAmmo: 0
+  MaxAmmo: 0
   canvas: {fileID: 8835505563347406698}
   point: {fileID: 8951097394571509752}
   _particleSystem: {fileID: 4360557437673477465, guid: e432c61971d3bcb429d5e0313fdb6fd2, type: 3}
+  type: 0
 --- !u!82 &7078765603739859891
 AudioSource:
   m_ObjectHideFlags: 0
