@@ -29,8 +29,8 @@ public class BaseCommands : MonoBehaviour
     [Commmand]
     public void version()
     {
-        string temp = "</color=white>версия игры:</color>";
-        temp += $"<color=blue>{UnityEditor.PlayerSettings.bundleVersion}</color>";
+        string temp = "<color=white>версия игры:</color>";
+        temp += $"<color=blue>{UnityEditor.PlayerSettings.bundleVersion}, {UnityEditor.PlayerSettings.productName}</color>";
         console.Console.WriteConsole(temp, Color.black);
     }
 
@@ -38,10 +38,6 @@ public class BaseCommands : MonoBehaviour
     public void level(int sceneInt)
     {
         SceneManager.LoadScene(sceneInt);
-    }
-
-    [Commmand(typeof(int), typeof(int), typeof(int))]
-    public void testParams(int x, int y, int z) {
-    
+        Time.timeScale = 1;
     }
 }
