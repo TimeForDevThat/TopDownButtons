@@ -7,7 +7,6 @@ using UnityEngine.UI;
 public class Settings : MonoBehaviour
 {
     public Dropdown resolutionDropdown;
-    public Dropdown qualityDropdown;
     public Toggle toggleEffect;
     public PostProcessVolume PostProcessVolume;
     private static bool isFullScreen;
@@ -55,7 +54,6 @@ public class Settings : MonoBehaviour
     }
 
     public void SaveSettings() {
-        PlayerPrefs.SetInt("QualitySettingsPrefence", qualityDropdown.value);
         PlayerPrefs.SetInt("ResolutionPrefence", resolutionDropdown.value);
         PlayerPrefs.SetInt("FullscreenPrefence", System.Convert.ToInt32(Screen.fullScreen));
         if (toggleEffect.isOn)
@@ -65,16 +63,9 @@ public class Settings : MonoBehaviour
     }
 
     public void LoadSettings(int currentResolutionIndex) {
-        if (PlayerPrefs.HasKey("QualitySettingsPrefence"))
-            qualityDropdown.value = PlayerPrefs.GetInt("QualitySettingsPrefence");
-        else
-            qualityDropdown.value = 6;
-
         if (PlayerPrefs.HasKey("ResolutionPrefence"))
-            qualityDropdown.value = PlayerPrefs.GetInt("ResolutionPrefence");
-        else
             resolutionDropdown.value = currentResolutionIndex;
-
+           
         if (PlayerPrefs.HasKey("FullscreenPrefence"))
             Screen.fullScreen = System.Convert.ToBoolean(PlayerPrefs.GetInt("FullscreenPrefence"));
         else
