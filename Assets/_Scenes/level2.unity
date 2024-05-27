@@ -57850,7 +57850,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   resolutionDropdown: {fileID: 456410061}
-  qualityDropdown: {fileID: 0}
   toggleEffect: {fileID: 2097215705}
   PostProcessVolume: {fileID: 1481402420}
 --- !u!1 &213424184

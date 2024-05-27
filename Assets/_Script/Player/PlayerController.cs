@@ -3,6 +3,8 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D), typeof(BoxCollider2D))]
 public class PlayerController : Sounds
 {
+    [Space(5)]
+    [Header("Speed, MoveSpeed, DashForce, DashForceTime")]
     public float _movementSpeed = 5f;
     [SerializeField] private float _dashSpeed = 5000f;
     [SerializeField] private float _dashTime = 2f;
@@ -12,17 +14,32 @@ public class PlayerController : Sounds
     private Vector2 direction;
     private Rigidbody2D rb;
 
-    public bool isf = false;
-    private bool _isDashing = true;
+    bool isf = false;
+    bool _isDashing = true;
     public bool theRoom = false;
 
-
-    public Type type;
+    [Space(5)]
+    [Header("GameObject Gun")]
     public GameObject GunRight;
     public GameObject GunLeft;
 
+    [Space(5)]
+    [Header("Type Device")]
+    public Type type;
     public enum Type { PC, Joystick }
     public Joystick joystick;
+
+    [Space(5)]
+    [Header("KeyBoard")]
+    public KeyCode LeftShift = KeyCode.LeftShift;
+    public KeyCode Up = KeyCode.W;
+    public KeyCode Down = KeyCode.S;
+    public KeyCode Right = KeyCode.A;
+    public KeyCode Left = KeyCode.D;
+    bool dashKeyBoardUp;
+    bool dashKeyBoardDown;
+    bool dashKeyBoardRight;
+    bool dashKeyBoardLeft;
 
     private void Start()
         => InitComponentLinks();
@@ -36,9 +53,17 @@ public class PlayerController : Sounds
     {
         Dash();
         InputDevice();
+        CombiningKeyUpdate();
         direction.x = Input.GetAxisRaw("Horizontal");
         direction.y = Input.GetAxisRaw("Vertical");
 
+    }
+
+    void CombiningKeyUpdate() {
+        dashKeyBoardUp = (Input.GetKey(LeftShift) && Input.GetKey(Up));
+        dashKeyBoardDown = (Input.GetKey(LeftShift) && Input.GetKey(Down));
+        dashKeyBoardRight = (Input.GetKey(LeftShift) && Input.GetKey(Right));
+        dashKeyBoardLeft = (Input.GetKey(LeftShift) && Input.GetKey(Left));
     }
 
     void FixedUpdate() {
@@ -78,16 +103,41 @@ public class PlayerController : Sounds
     }
 
     void Dash() {
-        if (Input.GetKeyDown(KeyCode.LeftShift) && _isDashing) {
-            _isDashing = false;
-            _animator.SetTrigger("dash");
-            Invoke("DashLock", _dashTime);
-            rb.velocity = new Vector2(0, 0);
+        if (dashKeyBoardLeft == true && _isDashing) {
+            BaseDash();
 
             if (rb.transform.localScale.x < 0)
                 rb.AddForce(Vector2.left * _dashSpeed);
             else rb.AddForce(Vector2.right * _dashSpeed);
         }
+        if (dashKeyBoardRight == true && _isDashing){
+            BaseDash();
+
+            if (rb.transform.localScale.x < 0)
+                rb.AddForce(Vector2.right * _dashSpeed);
+            else rb.AddForce(Vector2.left * _dashSpeed);
+        }
+        if (dashKeyBoardUp == true && _isDashing) {
+            BaseDash();
+
+            if (rb.transform.localScale.y < 0)
+                rb.AddForce(Vector2.down * _dashSpeed);
+            else rb.AddForce(Vector2.up * _dashSpeed);
+        }
+        if (dashKeyBoardDown == true && _isDashing){
+            BaseDash();
+
+            if (rb.transform.localScale.y < 0)
+                rb.AddForce(Vector2.up * _dashSpeed);
+            else rb.AddForce(Vector2.down * _dashSpeed);
+        }
+    }
+
+    void BaseDash() {
+        _isDashing = false;
+        _animator.SetTrigger("dash");
+        Invoke("DashLock", _dashTime);
+        rb.velocity = new Vector2(0, 0);
     }
 
     void DashLock()=> _isDashing = true;

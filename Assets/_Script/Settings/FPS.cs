@@ -34,5 +34,7 @@ public class Fps : MonoBehaviour
 
         if (fps <= 20)
             fpsText.color = new Color(255, 0, 0);
+        else
+            fpsText.color = new Color(255, 255, 255);
     }
 }
