@@ -260,9 +260,8 @@ MonoBehaviour:
   sounds:
   - {fileID: 8300000, guid: e4bd373667efb004e8a7f6d857c8d308, type: 3}
   SoundRandom: []
-  Helth: 50
-  MinAmmo: 0
-  MaxAmmo: 0
+  Helth: 280000002d00000032000000
+  ammo: 
   canvas: {fileID: 5320043390855590840}
   point: {fileID: 8527981245621474786}
   _particleSystem: {fileID: 4360557437673477465, guid: e432c61971d3bcb429d5e0313fdb6fd2, type: 3}

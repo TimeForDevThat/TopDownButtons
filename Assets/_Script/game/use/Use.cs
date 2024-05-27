@@ -5,9 +5,9 @@ using UnityEngine;
 public class Use : Sounds
 {
     [Header("Количество здоровье если стоит type aidkit")]
-    public int Helth;
+    public int[] Helth;
     [Header("Количество патрон если стоит type ammo")]
-    public int MinAmmo, MaxAmmo;
+    public int[] ammo;
 
     [Space(5)]
     [Header("UI")]
@@ -41,9 +41,9 @@ public class Use : Sounds
             if (Input.GetKeyDown(KeyCode.E)) {
                 PlaySounds(0, destroy: true);
                 if (type == Type.AidKit)
-                    _player.AddHealth(Helth);
+                    _player.AddHealth(Helth[Random.Range(0, Helth.Length)]);
                 if (type == Type.Ammo)
-                    _weapon.CurCartridges += Random.Range(MinAmmo, MaxAmmo);
+                    _weapon.CurCartridges += ammo[Random.Range(0, ammo.Length)];
                 Instantiate(_particleSystem, point.position, point.rotation);
                 Destroy(gameObject);
             }
