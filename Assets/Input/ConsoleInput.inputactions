@@ -1,0 +1,54 @@
+{
+    "name": "Console",
+    "maps": [
+        {
+            "name": "Console",
+            "id": "bbcd61f1-a0bd-4be4-946c-7c2a7542a8f2",
+            "actions": [
+                {
+                    "name": "AppendText",
+                    "type": "Button",
+                    "id": "5873da06-f746-41c0-86ea-34351b2d4755",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "EnterText",
+                    "type": "Button",
+                    "id": "1818356d-2610-4e66-a4f1-c5e5024d17ea",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "03f6cc89-f1e0-443b-9e8d-cc766d70524f",
+                    "path": "<Keyboard>/tab",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "AppendText",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ae862a8b-461c-4b49-a046-f1cc56c23272",
+                    "path": "<Keyboard>/enter",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "EnterText",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
