@@ -3,13 +3,25 @@ using UnityEngine;
 public class Manager : MonoBehaviour
 {
     public GameObject Pausa;
+    public GameObject Console;
+
     public GameObject weapon;
     public GameObject weapontwo;
+
+    private void Start()
+    {
+        Pausa.SetActive(false);
+        Console.SetActive(false);
+    }
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape)) {
             Pausa.SetActive(true);
             StopGame();
+        }
+        if (Input.GetKeyDown(KeyCode.BackQuote))
+        {
+            Console.SetActive(!Console.activeSelf);
         }
     }
 

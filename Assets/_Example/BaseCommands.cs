@@ -1,16 +1,47 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BaseCommands : MonoBehaviour
 {
     [Commmand]
-    public void Help() { 
-    
+    public void help() {
+        console.Console.WriteConsole("<size=60>Все команды:</size>", Color.cyan);
+        console.Console.WriteConsole("Command Example: \"Console\"\n", Color.cyan);
+        List<ChatCodes> commands = console.Console.GatCommands();
+        foreach (ChatCodes command in commands) {
+            string temp = "<color=white>" + command.Method.Name + "(</color>";
+
+            for (int i = 0; i < command.ParamTypes.Count; i++) {
+                temp += $"</color=yellow>{command.ParamTypes[i].Name}</color>";
+                if (i != command.ParamTypes.Count - 1) temp += "<color=white>, </color>";
+            }
+            temp += "<color=white>)</color>";
+            console.Console.WriteConsole(temp, Color.black);
+        }
+    }
+
+    [Commmand]
+    public void clearChat() { 
+        console.Console.ClearConsole();
+    }
+
+    [Commmand]
+    public void version()
+    {
+        string temp = "</color=white>версия игры:</color>";
+        temp += $"<color=blue>{UnityEditor.PlayerSettings.bundleVersion}</color>";
+        console.Console.WriteConsole(temp, Color.black);
+    }
+
+    [Commmand(typeof(int))]
+    public void level(int sceneInt)
+    {
+        SceneManager.LoadScene(sceneInt);
     }
 
     [Commmand(typeof(int), typeof(int), typeof(int))]
-    public void TestParams(int x, int y, int z) {
+    public void testParams(int x, int y, int z) {
     
     }
 }

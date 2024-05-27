@@ -20,6 +20,10 @@ public class console : MonoBehaviour
     private List<ChatCodes> commands = new List<ChatCodes>();
     private List<GameObject> HelpPanelChatCommands = new List<GameObject>();
 
+    private ConsoleInput consoleInput;
+
+    public static console Console;
+
     private void OnDisable()
     {
         InputField.text = String.Empty;
@@ -29,14 +33,29 @@ public class console : MonoBehaviour
 
     private void Awake()
     {
+        Console = this;
+        consoleInput = new ConsoleInput();
+        consoleInput.Console.Enable();
+
         FindCommands();
         AddListerners();
 
         Debug.Log(commands.Count);
     }
 
+    private void HelpAppend() {
+        InputField.text = ContentText.text;
+        InputField.MoveTextEnd(false);
+    }
+
     private void AddListerners()
     {
+        consoleInput.Console.AppendText.performed += e => HelpAppend();
+        consoleInput.Console.EnterText.performed += e => {
+            SendButton?.onClick.Invoke();
+            UnityEngine.EventSystems.EventSystem.current.SetSelectedGameObject(null);
+        };
+
         SendButton.onClick.AddListener(Send);
         InputField.onValueChanged.AddListener(InputValueChanged);
         InputField.onSelect.AddListener(e =>
@@ -77,6 +96,7 @@ public class console : MonoBehaviour
 
         if (Types.Count != Strings.Count)
         {
+            WriteConsole($"неверная команда: {Types.Count}", Color.red);
             return null;
         }
         else
@@ -95,6 +115,7 @@ public class console : MonoBehaviour
                 }
                 catch
                 {
+                    WriteConsole($"неверная команда", Color.red);
                     return null;
                 }
             }
@@ -111,6 +132,7 @@ public class console : MonoBehaviour
 
         IEnumerable<ChatCodes> SendCommands = commands.OfType<ChatCodes>().Where(i => i.Method.Name == Strings[0]);
         if (SendCommands.Count() == 0) {
+            WriteConsole($"Команда не найдена", Color.red);
             return;
         }
         List<string> tempList = new();
