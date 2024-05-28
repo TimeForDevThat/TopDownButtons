@@ -9,6 +9,11 @@ public class Health : MonoBehaviour
     [SerializeField]
     UnityEvent UnityEvent;
 
+    private PlayerProgress PlayerProgress;
+
+    private void Start()
+        => PlayerProgress = FindObjectOfType<PlayerProgress>();
+
     public bool isAlive() { 
         return valueHealth > 0;
     }
@@ -24,6 +29,7 @@ public class Health : MonoBehaviour
         valueHealth -= damage;
         if (valueHealth <= 0)
         {
+            PlayerProgress.AddExperience(damage);
             Die();
         }
     }

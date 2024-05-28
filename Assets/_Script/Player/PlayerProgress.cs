@@ -11,8 +11,6 @@ public class PlayerProgress : Sounds
     public Slider Slider;
     public TextMeshProUGUI levelValueTMP;
 
-    public GameObject NewLevelPanel;
-
     private int _levelValue = 1;
 
     private float _experienceCurrentValue = 0;
@@ -45,9 +43,8 @@ public class PlayerProgress : Sounds
 
     private void DrawUI()
     {
-        NewLevelPanel.SetActive(true);
         Slider.value = _experienceCurrentValue/ _experienceTargetValue;
-        levelValueTMP.text = "Level " + _levelValue.ToString();
+        levelValueTMP.text = "Убить " + _levelValue.ToString();
         PlaySounds(0);
     }
 }

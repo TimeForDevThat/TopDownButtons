@@ -2,7 +2,6 @@
 
 [Serializable]public class PlayerProgressLevel
 {
-    public float fireballDamage;
-    public float grenadeDamage;
+    public float kills;
     public float experienceForceTheNextLevel;
 }
