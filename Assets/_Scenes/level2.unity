@@ -58181,6 +58181,8 @@ MonoBehaviour:
   Slider: {fileID: 761509255}
   progressbar: {fileID: 2042731312}
   levelValueTMP: {fileID: 1029126771}
+  point: {fileID: 2020594939}
+  Boss: {fileID: 3844628375131842688, guid: 9db6940cdfb736b4fabcda20ba198c26, type: 3}
 --- !u!114 &212697075
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -131019,6 +131021,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 2020594940}
   - {fileID: 642146695}
   - {fileID: 468518697}
   - {fileID: 795499180}
@@ -132536,6 +132539,37 @@ MonoBehaviour:
   SendButton: {fileID: 2083651242}
   PanelHelp: {fileID: 544447510}
   HelpText: {fileID: 2228037059069970124, guid: a17375d8d4a466c4f9b9bfaf13d2c3a5, type: 3}
+--- !u!1 &2020594939
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2020594940}
+  m_Layer: 0
+  m_Name: SpawnBoss
+  m_TagString: Untagged
+  m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2020594940
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2020594939}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -4.25, y: -1.66, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1887780812}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2021558948
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,5 +1,4 @@
-﻿using System.Linq;
-using UnityEngine;
+﻿using UnityEngine;
 
 [RequireComponent(typeof(BoxCollider2D))]
 public class Use : Sounds

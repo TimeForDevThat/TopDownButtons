@@ -1,6 +1,7 @@
 ﻿using UnityEngine.UI;
 using TMPro;
 using System.Collections.Generic;
+using UnityEngine;
 
 public class PlayerProgress : Sounds
 {
@@ -9,6 +10,9 @@ public class PlayerProgress : Sounds
     public Slider Slider;
     public TextMeshProUGUI progressbar;
     public TextMeshProUGUI levelValueTMP;
+
+    public Transform point;
+    public GameObject gameObj;
 
     private int _levelValue = 1;
 
@@ -33,13 +37,13 @@ public class PlayerProgress : Sounds
 
     private void SetLevel(int value) {
         _levelValue = value;
+        PlaySounds(0);
     }
 
     private void DrawUI()
     {
         Slider.value = _experienceCurrentValue / _experienceTargetValue;
-        progressbar.text = "Убиств: " + _experienceCurrentValue + "/" + _experienceTargetValue;
+        progressbar.text = "Очки: " + _experienceCurrentValue + "/" + _experienceTargetValue;
         levelValueTMP.text = "Level: " + _levelValue.ToString();
-        PlaySounds(0);
     }
 }
