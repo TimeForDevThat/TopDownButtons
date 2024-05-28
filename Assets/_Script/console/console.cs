@@ -40,8 +40,6 @@ public class console : MonoBehaviour
 
         FindCommands();
         AddListerners();
-
-        Debug.Log(commands.Count);
     }
 
     private void HelpAppend() {
