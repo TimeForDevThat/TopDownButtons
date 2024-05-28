@@ -2,6 +2,6 @@
 
 [Serializable]public class PlayerProgressLevel
 {
-    public float kills;
+    public float speedPlayer;
     public float experienceForceTheNextLevel;
 }

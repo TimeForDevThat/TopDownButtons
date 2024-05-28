@@ -1,14 +1,13 @@
-﻿using UnityEngine;
-using UnityEngine.UI;
+﻿using UnityEngine.UI;
 using TMPro;
 using System.Collections.Generic;
-using UnityEngine.SceneManagement;
 
 public class PlayerProgress : Sounds
 {
     public List<PlayerProgressLevel> levels;
 
     public Slider Slider;
+    public TextMeshProUGUI progressbar;
     public TextMeshProUGUI levelValueTMP;
 
     private int _levelValue = 1;
@@ -22,16 +21,11 @@ public class PlayerProgress : Sounds
         DrawUI();
     }
 
-    private void Update()
-    {
-        if(_levelValue == 10)
-            SceneManager.LoadScene("EndGame");
-    }
-
     public void AddExperience(int value) { 
         _experienceCurrentValue += value;
         if (_experienceCurrentValue >= _experienceTargetValue) {
-           SetLevel(_levelValue + 1);
+            SetLevel(_levelValue + 1);
+            _experienceTargetValue *= 2;
             _experienceCurrentValue = 0;
         }
         DrawUI();
@@ -43,8 +37,9 @@ public class PlayerProgress : Sounds
 
     private void DrawUI()
     {
-        Slider.value = _experienceCurrentValue/ _experienceTargetValue;
-        levelValueTMP.text = "Убить " + _levelValue.ToString();
+        Slider.value = _experienceCurrentValue / _experienceTargetValue;
+        progressbar.text = "Убиств: " + _experienceCurrentValue + "/" + _experienceTargetValue;
+        levelValueTMP.text = "Level: " + _levelValue.ToString();
         PlaySounds(0);
     }
 }
