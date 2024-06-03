@@ -190,12 +190,16 @@ MonoBehaviour:
   _movementSpeed: 5
   _dashSpeed: 35000
   _dashTime: 2
-  isf: 0
   theRoom: 0
-  type: 0
   GunRight: {fileID: 1943867038916341420}
   GunLeft: {fileID: 6401636498144166823}
+  type: 0
   joystick: {fileID: 0}
+  LeftShift: 304
+  Up: 119
+  Down: 115
+  Right: 97
+  Left: 100
 --- !u!114 &609571472642936255
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -210,9 +214,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _value: 100
   SliderHelth: {fileID: 0}
-  GameOver: {fileID: 0}
   EnemySpawn: {fileID: 0}
   Weapon: {fileID: 2025662408811772275}
+  textMeshPro: {fileID: 0}
+  textMenu: 
+  GameOver: {fileID: 0}
 --- !u!81 &4627584626527659728
 AudioListener:
   m_ObjectHideFlags: 0
@@ -5274,8 +5280,8 @@ Transform:
   m_LocalScale: {x: 0.10344827, y: 0.10344827, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 4475893425848633713}
   - {fileID: 747651006072819164}
+  - {fileID: 4475893425848633713}
   m_Father: {fileID: 7218205079913488702}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &860866557888934350
