@@ -30,7 +30,7 @@ public class BaseCommands : MonoBehaviour
     public void version()
     {
         string temp = "<color=white>версия игры:</color>";
-        temp += $"<color=blue>{UnityEditor.PlayerSettings.bundleVersion}, {UnityEditor.PlayerSettings.productName}</color>";
+        temp += $"<color=blue>{Application.version}, {Application.productName}</color>";
         console.Console.WriteConsole(temp, Color.black);
     }
 
