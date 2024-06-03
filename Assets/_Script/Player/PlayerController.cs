@@ -54,9 +54,9 @@ public class PlayerController : Sounds
         Dash();
         InputDevice();
         CombiningKeyUpdate();
+        Flip();
         direction.x = Input.GetAxisRaw("Horizontal");
         direction.y = Input.GetAxisRaw("Vertical");
-
     }
 
     void CombiningKeyUpdate() {
@@ -70,23 +70,19 @@ public class PlayerController : Sounds
         rb.MovePosition(rb.position + direction* _movementSpeed * Time.fixedDeltaTime);
         if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
             PlaySounds(0, random: true);
-        //Flip();
     }
 
-    //private void Flip()
-    //{
-       // if (GunRight.GetComponent<Weapon>().rotateZ >= 100 || GunRight.GetComponent<Weapon>().rotateZ <= -100 || GunLeft.GetComponent<Weapon>().rotateZ >= 100 || GunLeft.GetComponent<Weapon>().rotateZ <= -100)
-       // {
-         //   GetComponent<SpriteRenderer>().flipX = true;
-
-        //}
-       // else
-       // {
-        //    GetComponent<SpriteRenderer>().flipX = false;
-        //    //Gun.GetComponent<SpriteRenderer>().flipY = false;
-       // }
-
-    //}
+    private void Flip()
+    {
+        if (GunRight.GetComponent<Weapon>().rotateZ >= 100 || GunRight.GetComponent<Weapon>().rotateZ <= -100 || GunLeft.GetComponent<Weapon>().rotateZ >= 100 || GunLeft.GetComponent<Weapon>().rotateZ <= -100)
+          GetComponent<SpriteRenderer>().flipX = true;
+       else
+       {
+           GetComponent<SpriteRenderer>().flipX = false;
+           GunLeft.GetComponent<SpriteRenderer>().flipY = false;
+           GunRight.GetComponent<SpriteRenderer>().flipY = false;
+       }
+    }
 
     void InputDevice() {
         if (type == Type.PC)
@@ -102,7 +98,7 @@ public class PlayerController : Sounds
         }
     }
 
-    void Dash() {
+    public void Dash() {
         if (dashKeyBoardLeft == true && _isDashing) {
             BaseDash();
 

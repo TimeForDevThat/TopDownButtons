@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class ButtonsCountdownandCall : MonoBehaviour
@@ -9,6 +8,10 @@ public class ButtonsCountdownandCall : MonoBehaviour
     public GameObject ButtonsMenu;
     public GameObject weapon;
     public GameObject weapontwo;
+
+    [Space(5)]
+    public TextMeshProUGUI textMeshPro;
+    public string textMenu;
     public GameObject VictoryMenu;
 
     void Update()
@@ -56,6 +59,7 @@ public class ButtonsCountdownandCall : MonoBehaviour
 
     void VictoryScreenCall()
     {
+        textMeshPro.text = textMenu;
         VictoryMenu.SetActive(true);
     }
     public void TimeReturn()

@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -5,12 +6,17 @@ public class PlayerHelth : MonoBehaviour
 {
     public int _value = 100;
 
+    [Space(5)]
     [Header("UI")]
     public Slider SliderHelth;
-    public GameObject GameOver;
     public GameObject EnemySpawn;
 
     public Weapon Weapon;
+
+    [Space(5)]
+    public TextMeshProUGUI textMeshPro;
+    public string textMenu;
+    public GameObject GameOver;
 
     private void Start()
         => InitComponentLinks();
@@ -31,6 +37,7 @@ public class PlayerHelth : MonoBehaviour
 
     void Die()
     {
+        textMeshPro.text = textMenu;
         GameOver.SetActive(true);
         GetComponent<PlayerController>().enabled = false;
         Weapon.GetComponent<Weapon>().enabled = false;

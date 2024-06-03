@@ -1,4 +1,6 @@
 using UnityEngine;
+using TMPro;
+using Unity.VisualScripting;
 
 public class Manager : MonoBehaviour
 {
@@ -13,6 +15,7 @@ public class Manager : MonoBehaviour
         Pausa.SetActive(false);
         Console.SetActive(false);
     }
+
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape)) {
