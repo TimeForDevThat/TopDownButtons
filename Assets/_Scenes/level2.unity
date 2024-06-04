@@ -56827,14 +56827,14 @@ MonoBehaviour:
   _randomEffect: 0
   Weapon: {fileID: 1983647228}
   SecondWeapon: {fileID: 1467799754}
-  Buff1Info: {fileID: 0}
-  Buff2Info: {fileID: 0}
-  Buff3Info: {fileID: 0}
-  Buff4Info: {fileID: 0}
-  Buff5Info: {fileID: 0}
-  Debuff1Info: {fileID: 0}
-  Debuff2Info: {fileID: 0}
-  EmptyEffectInfo: {fileID: 0}
+  Buff1Info: {fileID: 746323559}
+  Buff2Info: {fileID: 746323559}
+  Buff3Info: {fileID: 714548577}
+  Buff4Info: {fileID: 429404303}
+  Buff5Info: {fileID: 2079929208}
+  Debuff1Info: {fileID: 572989015}
+  Debuff2Info: {fileID: 497097133}
+  EmptyEffectInfo: {fileID: 1915513474}
   InfoTimer: 2
   Self: {fileID: 70456962}
 --- !u!114 &70456962
@@ -84784,14 +84784,14 @@ MonoBehaviour:
   _randomEffect: 0
   Weapon: {fileID: 1983647228}
   SecondWeapon: {fileID: 1467799754}
-  Buff1Info: {fileID: 0}
-  Buff2Info: {fileID: 0}
-  Buff3Info: {fileID: 0}
-  Buff4Info: {fileID: 0}
-  Buff5Info: {fileID: 0}
-  Debuff1Info: {fileID: 0}
-  Debuff2Info: {fileID: 0}
-  EmptyEffectInfo: {fileID: 0}
+  Buff1Info: {fileID: 746323559}
+  Buff2Info: {fileID: 746323559}
+  Buff3Info: {fileID: 714548577}
+  Buff4Info: {fileID: 429404303}
+  Buff5Info: {fileID: 2079929208}
+  Debuff1Info: {fileID: 572989015}
+  Debuff2Info: {fileID: 497097133}
+  EmptyEffectInfo: {fileID: 1915513474}
   InfoTimer: 2
   Self: {fileID: 223847889}
 --- !u!114 &223847889
@@ -84918,7 +84918,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 276101655}
+    m_TransformParent: {fileID: 1392050907}
     m_Modifications:
     - target: {fileID: 2929252283123773937, guid: aaa2c939c0359ac4dbce3f49e8b90252, type: 3}
       propertyPath: m_Color.b
@@ -84974,7 +84974,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2929252283123773938, guid: aaa2c939c0359ac4dbce3f49e8b90252, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.00013766189
       objectReference: {fileID: 0}
     - target: {fileID: 2929252283123773938, guid: aaa2c939c0359ac4dbce3f49e8b90252, type: 3}
       propertyPath: m_LocalRotation.w
@@ -84982,15 +84982,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2929252283123773938, guid: aaa2c939c0359ac4dbce3f49e8b90252, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 2929252283123773938, guid: aaa2c939c0359ac4dbce3f49e8b90252, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 2929252283123773938, guid: aaa2c939c0359ac4dbce3f49e8b90252, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 2929252283123773938, guid: aaa2c939c0359ac4dbce3f49e8b90252, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -85216,14 +85216,14 @@ MonoBehaviour:
   _randomEffect: 0
   Weapon: {fileID: 1983647228}
   SecondWeapon: {fileID: 1467799754}
-  Buff1Info: {fileID: 0}
-  Buff2Info: {fileID: 0}
-  Buff3Info: {fileID: 0}
-  Buff4Info: {fileID: 0}
-  Buff5Info: {fileID: 0}
-  Debuff1Info: {fileID: 0}
-  Debuff2Info: {fileID: 0}
-  EmptyEffectInfo: {fileID: 0}
+  Buff1Info: {fileID: 746323559}
+  Buff2Info: {fileID: 746323559}
+  Buff3Info: {fileID: 714548577}
+  Buff4Info: {fileID: 429404303}
+  Buff5Info: {fileID: 2079929208}
+  Debuff1Info: {fileID: 572989015}
+  Debuff2Info: {fileID: 497097133}
+  EmptyEffectInfo: {fileID: 1915513474}
   InfoTimer: 2
   Self: {fileID: 257303693}
 --- !u!114 &257303693
@@ -85518,7 +85518,6 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 232356764}
   - {fileID: 1517225418}
   - {fileID: 20177250}
   - {fileID: 1837842311}
@@ -86776,14 +86775,14 @@ MonoBehaviour:
   _randomEffect: 0
   Weapon: {fileID: 1983647228}
   SecondWeapon: {fileID: 1467799754}
-  Buff1Info: {fileID: 0}
-  Buff2Info: {fileID: 0}
-  Buff3Info: {fileID: 0}
-  Buff4Info: {fileID: 0}
-  Buff5Info: {fileID: 0}
-  Debuff1Info: {fileID: 0}
-  Debuff2Info: {fileID: 0}
-  EmptyEffectInfo: {fileID: 0}
+  Buff1Info: {fileID: 746323559}
+  Buff2Info: {fileID: 746323559}
+  Buff3Info: {fileID: 714548577}
+  Buff4Info: {fileID: 429404303}
+  Buff5Info: {fileID: 2079929208}
+  Debuff1Info: {fileID: 572989015}
+  Debuff2Info: {fileID: 497097133}
+  EmptyEffectInfo: {fileID: 1915513474}
   InfoTimer: 2
   Self: {fileID: 411060462}
 --- !u!114 &411060462
@@ -91722,14 +91721,14 @@ MonoBehaviour:
   _randomEffect: 0
   Weapon: {fileID: 1983647228}
   SecondWeapon: {fileID: 1467799754}
-  Buff1Info: {fileID: 0}
-  Buff2Info: {fileID: 0}
-  Buff3Info: {fileID: 0}
-  Buff4Info: {fileID: 0}
-  Buff5Info: {fileID: 0}
-  Debuff1Info: {fileID: 0}
-  Debuff2Info: {fileID: 0}
-  EmptyEffectInfo: {fileID: 0}
+  Buff1Info: {fileID: 746323559}
+  Buff2Info: {fileID: 746323559}
+  Buff3Info: {fileID: 714548577}
+  Buff4Info: {fileID: 429404303}
+  Buff5Info: {fileID: 2079929208}
+  Debuff1Info: {fileID: 572989015}
+  Debuff2Info: {fileID: 497097133}
+  EmptyEffectInfo: {fileID: 1915513474}
   InfoTimer: 2
   Self: {fileID: 571526868}
 --- !u!114 &571526868
@@ -95812,14 +95811,14 @@ MonoBehaviour:
   _randomEffect: 0
   Weapon: {fileID: 1983647228}
   SecondWeapon: {fileID: 1467799754}
-  Buff1Info: {fileID: 0}
-  Buff2Info: {fileID: 0}
-  Buff3Info: {fileID: 0}
-  Buff4Info: {fileID: 0}
-  Buff5Info: {fileID: 0}
-  Debuff1Info: {fileID: 0}
-  Debuff2Info: {fileID: 0}
-  EmptyEffectInfo: {fileID: 0}
+  Buff1Info: {fileID: 746323559}
+  Buff2Info: {fileID: 746323559}
+  Buff3Info: {fileID: 714548577}
+  Buff4Info: {fileID: 429404303}
+  Buff5Info: {fileID: 2079929208}
+  Debuff1Info: {fileID: 572989015}
+  Debuff2Info: {fileID: 497097133}
+  EmptyEffectInfo: {fileID: 1915513474}
   InfoTimer: 2
   Self: {fileID: 981098534}
 --- !u!114 &981098534
@@ -98875,6 +98874,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 232356764}
   - {fileID: 370663524}
   - {fileID: 1042054607}
   - {fileID: 810839297}
@@ -99801,14 +99801,14 @@ MonoBehaviour:
   _randomEffect: 0
   Weapon: {fileID: 1983647228}
   SecondWeapon: {fileID: 1467799754}
-  Buff1Info: {fileID: 0}
-  Buff2Info: {fileID: 0}
-  Buff3Info: {fileID: 0}
-  Buff4Info: {fileID: 0}
-  Buff5Info: {fileID: 0}
-  Debuff1Info: {fileID: 0}
-  Debuff2Info: {fileID: 0}
-  EmptyEffectInfo: {fileID: 0}
+  Buff1Info: {fileID: 746323559}
+  Buff2Info: {fileID: 746323559}
+  Buff3Info: {fileID: 714548577}
+  Buff4Info: {fileID: 429404303}
+  Buff5Info: {fileID: 2079929208}
+  Debuff1Info: {fileID: 572989015}
+  Debuff2Info: {fileID: 497097133}
+  EmptyEffectInfo: {fileID: 1915513474}
   InfoTimer: 2
   Self: {fileID: 1512418260}
 --- !u!114 &1512418260
@@ -100494,14 +100494,14 @@ MonoBehaviour:
   _randomEffect: 0
   Weapon: {fileID: 1983647228}
   SecondWeapon: {fileID: 1467799754}
-  Buff1Info: {fileID: 0}
-  Buff2Info: {fileID: 0}
-  Buff3Info: {fileID: 0}
-  Buff4Info: {fileID: 0}
-  Buff5Info: {fileID: 0}
-  Debuff1Info: {fileID: 0}
-  Debuff2Info: {fileID: 0}
-  EmptyEffectInfo: {fileID: 0}
+  Buff1Info: {fileID: 746323559}
+  Buff2Info: {fileID: 746323559}
+  Buff3Info: {fileID: 714548577}
+  Buff4Info: {fileID: 429404303}
+  Buff5Info: {fileID: 2079929208}
+  Debuff1Info: {fileID: 572989015}
+  Debuff2Info: {fileID: 497097133}
+  EmptyEffectInfo: {fileID: 1915513474}
   InfoTimer: 2
   Self: {fileID: 1569943418}
 --- !u!114 &1569943418
@@ -131274,7 +131274,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 483.08, y: -307.51}
+  m_AnchoredPosition: {x: 483.07996, y: -307.51}
   m_SizeDelta: {x: 950, y: 600}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2020213495
@@ -131812,14 +131812,14 @@ MonoBehaviour:
   _randomEffect: 0
   Weapon: {fileID: 1983647228}
   SecondWeapon: {fileID: 1467799754}
-  Buff1Info: {fileID: 0}
-  Buff2Info: {fileID: 0}
-  Buff3Info: {fileID: 0}
-  Buff4Info: {fileID: 0}
-  Buff5Info: {fileID: 0}
-  Debuff1Info: {fileID: 0}
-  Debuff2Info: {fileID: 0}
-  EmptyEffectInfo: {fileID: 0}
+  Buff1Info: {fileID: 746323559}
+  Buff2Info: {fileID: 746323559}
+  Buff3Info: {fileID: 714548577}
+  Buff4Info: {fileID: 429404303}
+  Buff5Info: {fileID: 2079929208}
+  Debuff1Info: {fileID: 572989015}
+  Debuff2Info: {fileID: 497097133}
+  EmptyEffectInfo: {fileID: 1915513474}
   InfoTimer: 2
   Self: {fileID: 2072463499}
 --- !u!114 &2072463499
@@ -132689,14 +132689,14 @@ MonoBehaviour:
   _randomEffect: 0
   Weapon: {fileID: 1983647228}
   SecondWeapon: {fileID: 1467799754}
-  Buff1Info: {fileID: 0}
-  Buff2Info: {fileID: 0}
-  Buff3Info: {fileID: 0}
-  Buff4Info: {fileID: 0}
-  Buff5Info: {fileID: 0}
-  Debuff1Info: {fileID: 0}
-  Debuff2Info: {fileID: 0}
-  EmptyEffectInfo: {fileID: 0}
+  Buff1Info: {fileID: 2076605131}
+  Buff2Info: {fileID: 746323559}
+  Buff3Info: {fileID: 714548577}
+  Buff4Info: {fileID: 572989015}
+  Buff5Info: {fileID: 497097133}
+  Debuff1Info: {fileID: 429404303}
+  Debuff2Info: {fileID: 2079929208}
+  EmptyEffectInfo: {fileID: 1915513474}
   InfoTimer: 2
   Self: {fileID: 2112999801}
 --- !u!114 &2112999801
@@ -133281,7 +133281,7 @@ PrefabInstance:
       objectReference: {fileID: 370663525}
     - target: {fileID: 2537479630565771404, guid: 42205bed59e7bb541a4ffdcf67fe7241, type: 3}
       propertyPath: type
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2537479630565771404, guid: 42205bed59e7bb541a4ffdcf67fe7241, type: 3}
       propertyPath: GunLeft
@@ -133307,9 +133307,21 @@ PrefabInstance:
       propertyPath: OutputAudioMixerGroup
       value: 
       objectReference: {fileID: -3913741312324701576, guid: decdca0ac605b3e40ba22b42561ea763, type: 2}
+    - target: {fileID: 4198135854306746152, guid: 42205bed59e7bb541a4ffdcf67fe7241, type: 3}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4198135854306746152, guid: 42205bed59e7bb541a4ffdcf67fe7241, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6401636498144166823, guid: 42205bed59e7bb541a4ffdcf67fe7241, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7175660868667214636, guid: 42205bed59e7bb541a4ffdcf67fe7241, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7175660868667214636, guid: 42205bed59e7bb541a4ffdcf67fe7241, type: 3}
       propertyPath: m_ApplyRootMotion
@@ -133399,6 +133411,22 @@ PrefabInstance:
       propertyPath: maxCartridgesText
       value: 
       objectReference: {fileID: 370663525}
+    - target: {fileID: 8203592445942705353, guid: 42205bed59e7bb541a4ffdcf67fe7241, type: 3}
+      propertyPath: m_Size.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8203592445942705353, guid: 42205bed59e7bb541a4ffdcf67fe7241, type: 3}
+      propertyPath: m_Size.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8203592445942705353, guid: 42205bed59e7bb541a4ffdcf67fe7241, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 8203592445942705353, guid: 42205bed59e7bb541a4ffdcf67fe7241, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 8363368260225275262, guid: 42205bed59e7bb541a4ffdcf67fe7241, type: 3}
       propertyPath: m_LocalScale.x
       value: 15

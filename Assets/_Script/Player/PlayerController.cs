@@ -14,8 +14,8 @@ public class PlayerController : Sounds
     private Vector2 direction;
     private Rigidbody2D rb;
 
-    bool isf = false;
-    bool _isDashing = true;
+    private bool isf = false;
+    private bool _isDashing = true;
     public bool theRoom = false;
 
     [Space(5)]
@@ -52,11 +52,26 @@ public class PlayerController : Sounds
     private void Update()
     {
         Dash();
-        InputDevice();
-        CombiningKeyUpdate();
         Flip();
+        CombiningKeyUpdate();
+        GetComponent<Rigidbody2D>();
         direction.x = Input.GetAxisRaw("Horizontal");
         direction.y = Input.GetAxisRaw("Vertical");
+        InputDevice();
+    }
+    void InputDevice()
+    {
+        if (type == Type.PC)
+        {
+            joystick.gameObject.SetActive(false);
+            direction = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+        }
+        else if (type == Type.Joystick)
+        {
+            joystick.gameObject.SetActive(true);
+            direction = new Vector2(joystick.Horizontal, joystick.Vertical);
+            isf = true;
+        }
     }
 
     void CombiningKeyUpdate() {
@@ -82,20 +97,6 @@ public class PlayerController : Sounds
            GunLeft.GetComponent<SpriteRenderer>().flipY = false;
            GunRight.GetComponent<SpriteRenderer>().flipY = false;
        }
-    }
-
-    void InputDevice() {
-        if (type == Type.PC)
-        {
-            joystick.gameObject.SetActive(false);
-            direction = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
-        }
-        else if (type == Type.Joystick)
-        {
-            joystick.gameObject.SetActive(true);
-            direction = new Vector2(joystick.Horizontal, joystick.Vertical);
-            isf = true;
-        }
     }
 
     public void Dash() {
