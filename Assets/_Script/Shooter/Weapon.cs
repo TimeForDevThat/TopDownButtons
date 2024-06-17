@@ -60,7 +60,7 @@ public class Weapon : Sounds
             maxCartridgesText.color = new Color(255, 0, 0);
     }
 
-    void TouchButtonFireUpdate()
+    public void TouchButtonFireUpdate()
     {
         if (Input.GetButtonDown("Fire1") & Cartridges > 0 & ReloadTimer <= 0 & ShootTimer <= 0 & isActive == true) {
             Shoot();
