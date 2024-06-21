@@ -58815,7 +58815,6 @@ MonoBehaviour:
   _audioSource: {fileID: 1483111103}
   hoverFx: {fileID: 8300000, guid: 404f9776f572bb94c90c7e37a6bee9aa, type: 3}
   clickFx: {fileID: 8300000, guid: b231fd968eddef24e8aaae2610afc0cc, type: 3}
-  volume: 1
 --- !u!4 &212697066
 Transform:
   m_ObjectHideFlags: 0
@@ -96617,7 +96616,6 @@ GameObject:
   - component: {fileID: 1030839016}
   - component: {fileID: 1030839019}
   - component: {fileID: 1030839018}
-  - component: {fileID: 1030839020}
   m_Layer: 5
   m_Name: Content
   m_TagString: Untagged
@@ -96683,19 +96681,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1030839015}
   m_CullTransparentMesh: 1
---- !u!114 &1030839020
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1030839015}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 31a19414c41e5ae4aae2af33fee712f6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_ShowMaskGraphic: 1
 --- !u!1 &1030965632
 GameObject:
   m_ObjectHideFlags: 0
@@ -128882,6 +128867,7 @@ GameObject:
   - component: {fileID: 1762582729}
   - component: {fileID: 1762582728}
   - component: {fileID: 1762582727}
+  - component: {fileID: 1762582730}
   m_Layer: 5
   m_Name: Header
   m_TagString: Untagged
@@ -128952,14 +128938,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.039215688}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 10917, guid: 0000000000000000f000000000000000, type: 0}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -128977,6 +128963,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1762582725}
   m_CullTransparentMesh: 1
+--- !u!114 &1762582730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1762582725}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31a19414c41e5ae4aae2af33fee712f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShowMaskGraphic: 1
 --- !u!1 &1765859515
 GameObject:
   m_ObjectHideFlags: 0
