@@ -5419,7 +5419,6 @@ MonoBehaviour:
   _audioSource: {fileID: 1986544397}
   hoverFx: {fileID: 8300000, guid: 2de9db3cada9e5641b2a0cfbc113cf8d, type: 3}
   clickFx: {fileID: 8300000, guid: f75816b1986aa414d81d654cecc06b65, type: 3}
-  volume: 0
 --- !u!1 &1149426408
 GameObject:
   m_ObjectHideFlags: 0
@@ -5705,7 +5704,7 @@ MonoBehaviour:
     m_Events:
     - m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1879450122}
+        - m_Target: {fileID: 1306130456}
           m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_MethodName: SetActive
           m_Mode: 6
@@ -12110,7 +12109,6 @@ MonoBehaviour:
   _audioSource: {fileID: 1986544397}
   hoverFx: {fileID: 8300000, guid: 2de9db3cada9e5641b2a0cfbc113cf8d, type: 3}
   clickFx: {fileID: 8300000, guid: f75816b1986aa414d81d654cecc06b65, type: 3}
-  volume: 0
 --- !u!1 &1980613084
 GameObject:
   m_ObjectHideFlags: 0
@@ -13416,7 +13414,6 @@ MonoBehaviour:
   _audioSource: {fileID: 1986544397}
   hoverFx: {fileID: 8300000, guid: 404f9776f572bb94c90c7e37a6bee9aa, type: 3}
   clickFx: {fileID: 8300000, guid: b231fd968eddef24e8aaae2610afc0cc, type: 3}
-  volume: 1
 --- !u!114 &2053329514
 MonoBehaviour:
   m_ObjectHideFlags: 0

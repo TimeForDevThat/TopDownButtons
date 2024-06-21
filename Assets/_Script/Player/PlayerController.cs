@@ -15,7 +15,6 @@ public class PlayerController : Sounds
     private Vector2 direction;
     private Rigidbody2D rb;
 
-    private bool isf = false;
     private bool _isDashing = true;
     public bool theRoom = false;
 
@@ -74,7 +73,6 @@ public class PlayerController : Sounds
             weapon.gameObject.SetActive(true);
             dash.gameObject.SetActive(true);
             direction = new Vector2(joystick.Horizontal, joystick.Vertical);
-            isf = true;
         }
     }
 
