@@ -148,7 +148,7 @@ MonoBehaviour:
   sounds:
   - {fileID: 8300000, guid: 0233ea8cba4d56a4597743487783c1a3, type: 3}
   SoundRandom: []
-  force: 50
+  force: 35
   distant: 0.4
   damage: 10
 --- !u!82 &-5145772485414931433
