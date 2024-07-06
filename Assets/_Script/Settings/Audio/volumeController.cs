@@ -26,6 +26,9 @@ namespace volumeController{
             textVolume.text = Mathf.Round(f: value * 100) + "%";
         }
 
+        private void Update()
+            => slider.onValueChanged.AddListener(HandSliderValueChanget);
+
         void Start()
         {
             _volumeValue = PlayerPrefs.GetFloat(volumeParametr, Mathf.Log10(slider.value) * _multiplier);

@@ -5580,7 +5580,7 @@ TilemapRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
-  m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
+  m_ChunkCullingBounds: {x: 0.03333336, y: 0.03333336, z: 0}
   m_MaxChunkCount: 16
   m_MaxFrameAge: 16
   m_SortOrder: 0
@@ -58086,7 +58086,7 @@ MonoBehaviour:
   progressbar: {fileID: 2042731312}
   levelValueTMP: {fileID: 1029126771}
   point: {fileID: 2020594940}
-  gameObj: {fileID: 0}
+  gameObj: {fileID: 3844628375131842688, guid: 9db6940cdfb736b4fabcda20ba198c26, type: 3}
 --- !u!114 &212697075
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -87381,7 +87381,7 @@ TilemapRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_ChunkSize: {x: 32, y: 32, z: 32}
-  m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
+  m_ChunkCullingBounds: {x: 0.03333336, y: 0.03333336, z: 0}
   m_MaxChunkCount: 16
   m_MaxFrameAge: 16
   m_SortOrder: 0
@@ -99110,7 +99110,7 @@ TilemapRenderer:
   m_SortingLayer: 1
   m_SortingOrder: 4
   m_ChunkSize: {x: 32, y: 32, z: 32}
-  m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
+  m_ChunkCullingBounds: {x: 0.03333336, y: 0.03333336, z: 0}
   m_MaxChunkCount: 16
   m_MaxFrameAge: 16
   m_SortOrder: 0
@@ -125134,6 +125134,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   valueHealth: 150
+  canvas: {fileID: 0}
+  healthSlider: {fileID: 0}
   UnityEvent:
     m_PersistentCalls:
       m_Calls: []
