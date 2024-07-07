@@ -57948,7 +57948,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c1253307574c374888847a38dd12d9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _audioSource: {fileID: 1483111103}
+  _audioSource: {fileID: 212697076}
   hoverFx: {fileID: 8300000, guid: 404f9776f572bb94c90c7e37a6bee9aa, type: 3}
   clickFx: {fileID: 8300000, guid: b231fd968eddef24e8aaae2610afc0cc, type: 3}
 --- !u!4 &212697066
@@ -58031,8 +58031,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b4aade3679caec45b67e0681783b4e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Pausa: {fileID: 20177246}
-  Console: {fileID: 1338474208}
+  pausa: {fileID: 20177246}
+  console: {fileID: 1338474208}
   weapon: {fileID: 1983647228}
   weapontwo: {fileID: 1467799754}
 --- !u!114 &212697072
@@ -97322,11 +97322,6 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
---- !u!82 &1483111103 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 3249157751488224526, guid: 42205bed59e7bb541a4ffdcf67fe7241, type: 3}
-  m_PrefabInstance: {fileID: 7839924300222366606}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1485720913
 GameObject:
   m_ObjectHideFlags: 0

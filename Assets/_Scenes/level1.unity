@@ -6381,8 +6381,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b4aade3679caec45b67e0681783b4e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Pausa: {fileID: 0}
-  Console: {fileID: 1119203615}
+  pausa: {fileID: 0}
+  console: {fileID: 1119203615}
   weapon: {fileID: 0}
   weapontwo: {fileID: 0}
 --- !u!114 &2053329522

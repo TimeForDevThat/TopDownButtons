@@ -2,29 +2,52 @@ using UnityEngine;
 
 public class Manager : MonoBehaviour
 {
-    public GameObject Pausa;
-    public GameObject Console;
+    public GameObject pausa;
+    public GameObject console;
 
+    [Space(5)]
     public GameObject weapon;
     public GameObject weapontwo;
 
     private void Start()
     {
-        Pausa.SetActive(false);
-        Console.SetActive(false);
+        if(pausa != null)
+            pausa.SetActive(false);
+        else return;
+
+        if (console != null)
+            console.SetActive(false);
+        else return;
+
     }
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
-            Pausa.SetActive(true);
-        if (Input.GetKeyDown(KeyCode.BackQuote))
-            Console.SetActive(!Console.activeSelf);
+        Pausa();
+        Console();
+    }
 
-        if (Pausa.activeSelf == true)
-            StopGame();
-        else
-            Resume();
+    private void Pausa()
+    {
+        if (pausa != null)
+            if (Input.GetKeyDown(KeyCode.Escape))
+                pausa.SetActive(true);
+        else return;
+
+        if (pausa != null)
+            if (pausa.activeSelf == true)
+                StopGame();
+            else
+                Resume();
+        else return;
+    }
+
+    private void Console()
+    {
+        if (console != null)
+            if (Input.GetKeyDown(KeyCode.BackQuote))
+                console.SetActive(!console.activeSelf);
+        else return;
     }
 
     public void Resume()
