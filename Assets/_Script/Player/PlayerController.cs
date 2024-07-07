@@ -18,6 +18,8 @@ public class PlayerController : Sounds
     private bool _isDashing = true;
     public bool theRoom = false;
 
+    public ParticleSystem effect;
+
     [Space(5)]
     [Header("GameObject Gun")]
     public GameObject GunRight;
@@ -86,7 +88,10 @@ public class PlayerController : Sounds
     void FixedUpdate() {
         rb.MovePosition(rb.position + direction* _movementSpeed * Time.fixedDeltaTime);
         if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
+        {
+            effect.Play();
             PlaySounds(0, random: true);
+        }
     }
 
     private void Flip()
