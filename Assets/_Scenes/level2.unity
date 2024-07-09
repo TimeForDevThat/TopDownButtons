@@ -93998,6 +93998,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 859287276}
   m_CullTransparentMesh: 1
+--- !u!1 &874628740 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6895939860628480236, guid: 1b3dd63402c5ed448ba7ee6e944e2bcb, type: 3}
+  m_PrefabInstance: {fileID: 1593362162}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &888565968
 GameObject:
   m_ObjectHideFlags: 0
@@ -95775,6 +95780,9 @@ MonoBehaviour:
   - 4
   - 15
   minDistance: 15
+  obj:
+  - {fileID: 1632629783}
+  - {fileID: 874628740}
 --- !u!1 &1196339301
 GameObject:
   m_ObjectHideFlags: 0
@@ -99117,6 +99125,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1632629783 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2412616430103469538, guid: 1b3dd63402c5ed448ba7ee6e944e2bcb, type: 3}
+  m_PrefabInstance: {fileID: 1593362162}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1692275731
 GameObject:
   m_ObjectHideFlags: 0

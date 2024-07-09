@@ -1,16 +1,15 @@
 using UnityEngine;
-using UnityEngine.Events;
 
-namespace Vampire {
-    public class Vampire : MonoBehaviour
+namespace capabilities{
+    public class capabilities : MonoBehaviour
     {
         [SerializeField]
         private float[] speed;
         [SerializeField]
         private float minDistance = 15;
 
-        [SerializeField]
-        UnityEvent active;
+        //public Animation animation;
+        public GameObject[] obj;
 
         private EnemyAi2 scr;
 
@@ -30,9 +29,16 @@ namespace Vampire {
             if (heading.sqrMagnitude < minDistance)
             {
                 Debug.Log("Я догнал");
+                for (int i = 0; i < 10; i++)
+                {
+                    obj[i].SetActive(false);
+                }
             }
             else { 
-                active.Invoke();
+                //animation.Play();
+                for (int i = 0; i < 10; i++) {
+                    obj[i].SetActive(true);
+                }
             }
         }
     }
