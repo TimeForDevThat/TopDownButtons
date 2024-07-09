@@ -1,4 +1,6 @@
+using System.Net.NetworkInformation;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace capabilities{
     public class capabilities : MonoBehaviour
@@ -8,8 +10,8 @@ namespace capabilities{
         [SerializeField]
         private float minDistance = 15;
 
-        //public Animation animation;
-        public GameObject[] obj;
+        public UnityEvent deasactive;
+        public UnityEvent acticve;
 
         private EnemyAi2 scr;
 
@@ -29,16 +31,10 @@ namespace capabilities{
             if (heading.sqrMagnitude < minDistance)
             {
                 Debug.Log("Я догнал");
-                for (int i = 0; i < 10; i++)
-                {
-                    obj[i].SetActive(false);
-                }
+                deasactive.Invoke();
             }
-            else { 
-                //animation.Play();
-                for (int i = 0; i < 10; i++) {
-                    obj[i].SetActive(true);
-                }
+            else {
+                acticve.Invoke();
             }
         }
     }
