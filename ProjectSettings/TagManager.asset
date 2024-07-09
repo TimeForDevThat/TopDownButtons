@@ -7,6 +7,7 @@ TagManager:
   - Bull
   - Enemy
   - Room
+  - Shield
   layers:
   - Default
   - TransparentFX

@@ -1,5 +1,6 @@
 using System.Net.NetworkInformation;
 using UnityEngine;
+using UnityEngine.AI;
 using UnityEngine.Events;
 
 namespace capabilities{
@@ -28,12 +29,15 @@ namespace capabilities{
             var distance = heading.magnitude;
             var direction = heading / distance;
 
+            var speedMove = scr._navMeshAgent.speed;
+
             if (heading.sqrMagnitude < minDistance)
             {
-                Debug.Log("Я догнал");
+                speedMove = speed[0];
                 deasactive.Invoke();
             }
             else {
+                scr._navMeshAgent.speed = speed[1];
                 acticve.Invoke();
             }
         }

@@ -16,6 +16,12 @@ public class Bullet : Sounds
                 PlaySounds(0, destroy: true);
                 DestroyBull();
             }
+            if (other.collider.CompareTag("Shield"))
+            {
+                other.collider.GetComponent<shield>().DealDamage(damage);
+                PlaySounds(1, destroy: true);
+                DestroyBull();
+            }
         }
 
         transform.Translate(Vector2.up * force * Time.deltaTime);

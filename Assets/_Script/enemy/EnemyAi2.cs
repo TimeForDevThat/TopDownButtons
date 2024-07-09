@@ -3,7 +3,7 @@ using UnityEngine.AI;
 
 public class EnemyAi2 : Sounds
 {
-    private NavMeshAgent _navMeshAgent;
+    public NavMeshAgent _navMeshAgent;
 
     public PlayerController player;
     private PlayerHelth _player;
