@@ -140,8 +140,8 @@ public class PlayerController : Sounds
     void BaseDash() {
         _isDashing = false;
         _animator.SetTrigger("dash");
-        Invoke("DashLock", _dashTime);
         rb.velocity = new Vector2(0, 0);
+        Invoke("DashLock", _dashTime);
     }
 
     void DashLock()=> _isDashing = true;
