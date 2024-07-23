@@ -62,12 +62,13 @@ public class ButtonsCountdownandCall : MonoBehaviour
         textMeshPro.text = textMenu;
         VictoryMenu.SetActive(true);
     }
-    public void TimeReturn()
+
+/*    public void TimeReturn()
     {
         if (Time.timeScale == 0)
         {
             _gametime = 2f;
             Time.timeScale = 1;
         }
-    }
+    }*/
 }

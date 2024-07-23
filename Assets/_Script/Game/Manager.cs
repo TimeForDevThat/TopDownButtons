@@ -13,12 +13,9 @@ public class Manager : MonoBehaviour
     {
         if(pausa != null)
             pausa.SetActive(false);
-        else return;
 
         if (console != null)
             console.SetActive(false);
-        else return;
-
     }
 
     private void Update()
@@ -32,7 +29,6 @@ public class Manager : MonoBehaviour
         if (pausa != null)
             if (Input.GetKeyDown(KeyCode.Escape))
                 pausa.SetActive(true);
-        else return;
 
         if (pausa != null)
             if (pausa.activeSelf == true)
@@ -47,7 +43,6 @@ public class Manager : MonoBehaviour
         if (console != null)
             if (Input.GetKeyDown(KeyCode.BackQuote))
                 console.SetActive(!console.activeSelf);
-        else return;
     }
 
     public void Resume()
