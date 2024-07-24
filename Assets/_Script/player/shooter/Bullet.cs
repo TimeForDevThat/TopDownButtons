@@ -13,20 +13,20 @@ public class Bullet : Sounds
             if (other.collider.CompareTag("Enemy"))
             {
                 other.collider.GetComponent<Health>().DealDamage(damage);
-                PlaySounds(0, destroy: true);
                 DestroyBull();
+                PlaySounds(0, destroy: true);
             }
             if (other.collider.CompareTag("Shield"))
             {
                 other.collider.GetComponent<shield>().DealDamage(damage);
-                PlaySounds(1, destroy: true);
                 DestroyBull();
+                PlaySounds(1, destroy: true);
             }
         }
 
         transform.Translate(Vector2.up * force * Time.deltaTime);
 
-        Invoke("DestroyBull", 4f);
+        Invoke("DestroyBull", 3f);
     }
 
     void DestroyBull() {

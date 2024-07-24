@@ -24,18 +24,16 @@ public class Health : MonoBehaviour
         return valueHealth > 0;
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.tag == "Bull") {
-            UnityEvent.Invoke();
-            canvas.gameObject.SetActive(true);
-        }
-    }
-
     public void DealDamage(int damage) {
 
         valueHealth -= damage;
         healthSlider.value = valueHealth;
+
+        UnityEvent.Invoke();
+
+        if (canvas.isActiveAndEnabled == false)
+            canvas.gameObject.SetActive(true);
+
         if (valueHealth <= 0)
         {
             PlayerProgress.AddExperience(damage);
