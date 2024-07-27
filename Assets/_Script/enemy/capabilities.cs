@@ -1,6 +1,4 @@
-using System.Net.NetworkInformation;
 using UnityEngine;
-using UnityEngine.AI;
 using UnityEngine.Events;
 
 namespace capabilities{
@@ -17,9 +15,7 @@ namespace capabilities{
         private EnemyAi2 scr;
 
         private void Start()
-        {
-            scr = GetComponent<EnemyAi2>();
-        }
+            => scr = GetComponent<EnemyAi2>();
 
         private void Update()
         {
