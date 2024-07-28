@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class ScoreManager : MonoBehaviour
@@ -10,10 +8,5 @@ public class ScoreManager : MonoBehaviour
     {
         WinScore = PlayerPrefs.GetInt("WinScore");
         WinScoreText.GetComponent<TMPro.TextMeshProUGUI>().SetText("Прохождений:" + WinScore);
-    }
-
-    void Update()
-    {
-
     }
 }
