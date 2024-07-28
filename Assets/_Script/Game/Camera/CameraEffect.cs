@@ -6,8 +6,7 @@ public class CameraEffect : MonoBehaviour
     public PlayerController PlayerController;
 
     public float speed_postProccesing = 2f;
-    private float t;
-    private float t2;
+    private float t, t2;
     private PostProcessVolume _PostProcessVolume;
     private Vignette _vignette;
 
@@ -38,7 +37,7 @@ public class CameraEffect : MonoBehaviour
     }
 
     void Restart() {
-        t2 = 0;
-        t = 0;
+        t2 = 0f;
+        t = 0f;
     }
 }
