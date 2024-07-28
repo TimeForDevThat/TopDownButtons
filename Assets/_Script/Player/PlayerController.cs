@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.UI;
 
 [RequireComponent(typeof(Rigidbody2D), typeof(BoxCollider2D))]
 public class PlayerController : Sounds
@@ -24,14 +23,6 @@ public class PlayerController : Sounds
     [Header("GameObject Gun")]
     public GameObject GunRight;
     public GameObject GunLeft;
-
-    [Space(5)]
-    [Header("Type Device")]
-    public Type type;
-    public enum Type { PC, Joystick }
-    public Joystick joystick;
-    public Button weapon;
-    public Button dash;
 
     [Space(5)]
     [Header("KeyBoard")]
@@ -61,21 +52,6 @@ public class PlayerController : Sounds
         GetComponent<Rigidbody2D>();
         direction.x = Input.GetAxisRaw("Horizontal");
         direction.y = Input.GetAxisRaw("Vertical");
-
-        if (type == Type.PC)
-        {
-            joystick.gameObject.SetActive(false);
-            weapon.gameObject.SetActive(false);
-            dash.gameObject.SetActive(false);
-            direction = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
-        }
-        else if (type == Type.Joystick)
-        {
-            joystick.gameObject.SetActive(true);
-            weapon.gameObject.SetActive(true);
-            dash.gameObject.SetActive(true);
-            direction = new Vector2(joystick.Horizontal, joystick.Vertical);
-        }
     }
 
     void CombiningKeyUpdate() {
