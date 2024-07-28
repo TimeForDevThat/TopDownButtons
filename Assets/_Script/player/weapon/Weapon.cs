@@ -35,9 +35,6 @@ public class Weapon : Sounds
         TouchButtonReloadUpdate();
         AutoReload();
         TimeUpdate();
-
-        if (this != null)
-            maxCartridgesText.gameObject.SetActive(true);
     }
 
     void SpectorMouse() 
@@ -49,6 +46,9 @@ public class Weapon : Sounds
 
     void CheckAmmoUiUpdate()
     {
+        if (this != null)
+            maxCartridgesText.gameObject.SetActive(true);
+
         maxCartridgesText.text = string.Format("{0:0}", Cartridges + "/" + CurCartridges);
 
         if (Cartridges >= 1)
