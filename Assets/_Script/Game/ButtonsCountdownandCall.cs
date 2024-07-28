@@ -21,6 +21,7 @@ public class ButtonsCountdownandCall : MonoBehaviour
         CheckNTrigger();
         IsTimeUp();
     }
+
     void CheckNTrigger()
     {
         if (_timetotrigger <= 0)
@@ -29,6 +30,7 @@ public class ButtonsCountdownandCall : MonoBehaviour
             ZaWarudo();
         }
     }
+
     public void ButtonClicked()
     {
         ButtonsMenu.SetActive(false);
@@ -37,6 +39,7 @@ public class ButtonsCountdownandCall : MonoBehaviour
         weapontwo.GetComponent<Weapon>().enabled = true;
         _timetotrigger = 30f;
     }
+
     void IsTimeUp()
     {
         if (_gametime < 30)
@@ -62,13 +65,4 @@ public class ButtonsCountdownandCall : MonoBehaviour
         textMeshPro.text = textMenu;
         VictoryMenu.SetActive(true);
     }
-
-/*    public void TimeReturn()
-    {
-        if (Time.timeScale == 0)
-        {
-            _gametime = 2f;
-            Time.timeScale = 1;
-        }
-    }*/
 }

@@ -4,34 +4,28 @@ using UnityEngine;
 [AddComponentMenu("ScriptGun/Weapon")]
 public class Weapon : Sounds
 {
-    public GameObject bullet;
-    public float offset;
+    public float offset, rotateZ;
 
     public bool isActive = true;
 
-    public GameObject Player;
+    [Space(5)]
+    public GameObject bullet, Player, Self;
 
-    public GameObject Self;
-
-    public float rotateZ;
     [Header("ShotSpeed/ReloadSpeed")]
-    public float ShootSpeed;
-    public float ReloadSpeed;
+    public float ShootSpeed, ReloadSpeed;
 
     [Header("Ammo")]
-    public int Cartridges; //��� ��������
-    public int CurCartridges; // ������
+    public int Cartridges, CurCartridges;
 
-    [Header("Text")] 
+    [Header("UI")] 
     public Text maxCartridgesText;
 
     [Header("Effect")]
     public ParticleSystem shotEffect;
-    public Transform bulletSpawn; // point ��� �������
+    public Transform bulletSpawn;
 
     [Header("Timer")]
-    public float ReloadTimer = 0f; // не трогать не менять!!!!
-    public float ShootTimer = 0.0f; // не трогать не менять
+    private float ReloadTimer = 0f, ShootTimer = 0.0f;
 
     void Update()
     {
@@ -41,6 +35,9 @@ public class Weapon : Sounds
         TouchButtonReloadUpdate();
         AutoReload();
         TimeUpdate();
+
+        if (this != null)
+            maxCartridgesText.gameObject.SetActive(true);
     }
 
     void SpectorMouse() 
