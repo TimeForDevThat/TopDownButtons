@@ -6,8 +6,7 @@ public class PlayerController : Sounds
     [Space(5)]
     [Header("Speed, MoveSpeed, DashForce, DashForceTime")]
     public float _movementSpeed = 5f;
-    [SerializeField] private float _dashSpeed = 5000f;
-    [SerializeField] private float _dashTime = 2f;
+    [SerializeField] private float _dashSpeed = 5000f, _dashTime = 2f;
 
     private Animator _animator;
 
@@ -15,14 +14,12 @@ public class PlayerController : Sounds
     private Rigidbody2D rb;
 
     private bool _isDashing = true;
-    public bool theRoom = false;
 
     public ParticleSystem effect;
 
     [Space(5)]
     [Header("GameObject Gun")]
-    public GameObject GunRight;
-    public GameObject GunLeft;
+    public GameObject GunRight, GunLeft;
 
     [Space(5)]
     [Header("KeyBoard")]
@@ -31,10 +28,7 @@ public class PlayerController : Sounds
     public KeyCode Down = KeyCode.S;
     public KeyCode Right = KeyCode.A;
     public KeyCode Left = KeyCode.D;
-    bool dashKeyBoardUp;
-    bool dashKeyBoardDown;
-    bool dashKeyBoardRight;
-    bool dashKeyBoardLeft;
+    bool dashKeyBoardUp, dashKeyBoardDown, dashKeyBoardRight, dashKeyBoardLeft;
 
     private void Start()
         => InitComponentLinks();
@@ -121,15 +115,4 @@ public class PlayerController : Sounds
     }
 
     void DashLock()=> _isDashing = true;
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.tag == "Room")
-            theRoom = true;
-    }
-
-    private void OnTriggerExit2D(Collider2D other) {
-        if (other.gameObject.tag == "Room")
-            theRoom = false;
-    }
 }

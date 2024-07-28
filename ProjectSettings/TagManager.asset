@@ -6,7 +6,6 @@ TagManager:
   tags:
   - Bull
   - Enemy
-  - Room
   - Shield
   layers:
   - Default

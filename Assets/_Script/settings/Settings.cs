@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Rendering.PostProcessing;
+using UnityEngine.Rendering;
 using UnityEngine.UI;
 
 [AddComponentMenu("Settings/Settings")]
@@ -8,9 +8,8 @@ public class Settings : MonoBehaviour
 {
     public Dropdown resolutionDropdown;
     public Toggle toggleEffect;
-    public PostProcessVolume PostProcessVolume;
-    private static bool isFullScreen;
-    private static bool off_onEffect;
+    public Volume PostProcessVolume;
+    private static bool isFullScreen, off_onEffect;
 
     Resolution[] resolutions;
     private void Start()

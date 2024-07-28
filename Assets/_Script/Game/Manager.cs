@@ -2,8 +2,7 @@ using UnityEngine;
 
 public class Manager : MonoBehaviour
 {
-    public GameObject pausa;
-    public GameObject console;
+    public GameObject pausa, console;
 
     [Space(5)]
     public GameObject weapon;

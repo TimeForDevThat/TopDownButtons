@@ -3,11 +3,8 @@ using UnityEngine;
 
 public class ButtonsCountdownandCall : MonoBehaviour
 {
-    [SerializeField] private float _gametime = 330f;
-    [SerializeField] private float _timetotrigger = 30f;
-    public GameObject ButtonsMenu;
-    public GameObject weapon;
-    public GameObject weapontwo;
+    [SerializeField] private float _gametime = 330f, _timetotrigger = 30f;
+    public GameObject ButtonsMenu, weapon, weapontwo;
 
     [Space(5)]
     public TextMeshProUGUI textMeshPro;
