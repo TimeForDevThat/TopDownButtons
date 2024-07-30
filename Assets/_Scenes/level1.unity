@@ -7066,6 +7066,10 @@ PrefabInstance:
       propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 2053329512}
+    - target: {fileID: 6877563409745970425, guid: 0578c216b943d9c429a5eb3b9c1b79c7, type: 3}
+      propertyPath: m_Name
+      value: Sound effect
+      objectReference: {fileID: 0}
     - target: {fileID: 7148618782650961785, guid: 0578c216b943d9c429a5eb3b9c1b79c7, type: 3}
       propertyPath: m_Text
       value: 100%
