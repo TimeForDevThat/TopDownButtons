@@ -22,10 +22,13 @@ public class PlayerHelth : MonoBehaviour
         => InitComponentLinks();
 
     void InitComponentLinks()
-    {
-        SliderHelth.value = _value;
-        GameOver.SetActive(false);
-    }
+        => GameOver.SetActive(false);
+
+    private void Update()
+        => UpdateValueHelth();
+
+    private void UpdateValueHelth()
+        => SliderHelth.value = _value;
 
     public void DealDamage(int damage)
     {
