@@ -87580,7 +87580,6 @@ GameObject:
   - component: {fileID: 470624076}
   - component: {fileID: 470624075}
   - component: {fileID: 470624074}
-  - component: {fileID: 470624073}
   m_Layer: 5
   m_Name: barButton
   m_TagString: Untagged
@@ -87617,33 +87616,6 @@ RectTransform:
   m_AnchoredPosition: {x: -0.00014544, y: -52.9704}
   m_SizeDelta: {x: 450, y: 900}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &470624073
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 470624071}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 32385419e6d880749bb478402ff44fb2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  buttonEffects: []
-  Player: {fileID: 0}
-  _randomEffect: 0
-  Weapon: {fileID: 0}
-  SecondWeapon: {fileID: 0}
-  Buff1Info: {fileID: 0}
-  Buff2Info: {fileID: 0}
-  Buff3Info: {fileID: 0}
-  Buff4Info: {fileID: 0}
-  Buff5Info: {fileID: 0}
-  Debuff1Info: {fileID: 0}
-  Debuff2Info: {fileID: 0}
-  EmptyEffectInfo: {fileID: 0}
-  InfoTimer: 2
-  Self: {fileID: 0}
 --- !u!114 &470624074
 MonoBehaviour:
   m_ObjectHideFlags: 0

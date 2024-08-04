@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -95,6 +94,4 @@ public class RandomButton : MonoBehaviour
     {
         Self.interactable = false;
     }
-
-
 }
