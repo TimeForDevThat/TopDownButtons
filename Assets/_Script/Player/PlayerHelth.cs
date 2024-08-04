@@ -19,15 +19,9 @@ public class PlayerHelth : MonoBehaviour
     public GameObject GameOver;
 
     private void Start()
-        => InitComponentLinks();
-
-    void InitComponentLinks()
         => GameOver.SetActive(false);
 
     private void Update()
-        => UpdateValueHelth();
-
-    private void UpdateValueHelth()
         => SliderHelth.value = _value;
 
     public void DealDamage(int damage)
@@ -38,18 +32,20 @@ public class PlayerHelth : MonoBehaviour
             Die();
     }
 
-    void Die()
-    {
-        textMeshPro.text = textMenu;
-        GameOver.SetActive(true);
-        GetComponent<PlayerController>().enabled = false;
-        Weapon.GetComponent<Weapon>().enabled = false;
-        EnemySpawn.GetComponent<SpawnerEnemy>().enabled = false;
-    }
-
     public void AddHealth(int amout)
     {
         _value += amout;
         SliderHelth.value += amout;
     }
+
+    void Die()
+    {
+        textMeshPro.text = textMenu;
+        GameOver.SetActive(true);
+
+        GetComponent<PlayerController>().enabled = false;
+        Weapon.GetComponent<Weapon>().enabled = false;
+        EnemySpawn.GetComponent<SpawnerEnemy>().enabled = false;
+    }
+
 }
