@@ -1,5 +1,6 @@
 using UnityEngine.UI;
 using UnityEngine;
+using System.Collections;
 
 [AddComponentMenu("ScriptGun/Weapon")]
 public class Weapon : Sounds
@@ -15,10 +16,13 @@ public class Weapon : Sounds
     public float ShootSpeed, ReloadSpeed;
 
     [Header("Ammo")]
-    public int Cartridges, CurCartridges;
+    public int Cartridges, MaxCartridges;
+    public int CurCartridges;
 
     [Header("UI")] 
     public Text maxCartridgesText;
+    public Image Bar;
+    public Slider ReloadAmmoCartridges;
 
     [Header("Effect")]
     public ParticleSystem shotEffect;
@@ -26,6 +30,9 @@ public class Weapon : Sounds
 
     [Header("Timer")]
     private float ReloadTimer = 0f, ShootTimer = 0.0f;
+
+    private void Start()
+        => Bar.gameObject.SetActive(false);
 
     void Update()
     {
@@ -66,13 +73,27 @@ public class Weapon : Sounds
 
     void ReloadCartridges()
     {
-        ReloadTimer = ReloadSpeed;
-
+        Bar.gameObject.SetActive(true);
         isActive = false;
 
-        Cartridges = CurCartridges;
-        CurCartridges -= 5;
-        YesShoot();
+        float elapsedTime = 0;
+
+        StartCoroutine(Loop(100));
+        IEnumerator Loop(float value)
+        {
+            while (elapsedTime < ReloadSpeed) {
+                ReloadAmmoCartridges.value = Mathf.Lerp(0, value, elapsedTime / ReloadSpeed);
+                elapsedTime += Time.deltaTime;
+                yield return null;
+            }
+
+            Bar.gameObject.SetActive(false);
+
+            Cartridges = MaxCartridges;
+            CurCartridges -= MaxCartridges;
+
+            isActive = true;
+        }
     }
 
     void TouchButtonReloadUpdate()
@@ -95,7 +116,7 @@ public class Weapon : Sounds
         if (ShootTimer > 0)
             ShootTimer -= Time.deltaTime;
 
-        if (ReloadTimer > 0)
+        if(ReloadTimer > 0)
             ReloadTimer -= Time.deltaTime;
     }
 
@@ -109,11 +130,4 @@ public class Weapon : Sounds
 
         PlaySounds(0);
     }
-
-    void YesShoot() 
-        => isActive = true;
-
-
-
-    
 }

@@ -10,16 +10,20 @@ public class PlayerHelth : MonoBehaviour
     [Header("UI")]
     public Slider SliderHelth;
     public GameObject EnemySpawn;
-
-    public Weapon Weapon;
+    public GameObject IteamSpawn;
+    public GameObject Weapon;
+    public GameObject Weapon2;
 
     [Space(5)]
     public TextMeshProUGUI textMeshPro;
     public string textMenu;
     public GameObject GameOver;
+    private GameObject[] _gameObjects;
 
     private void Start()
-        => GameOver.SetActive(false);
+    {
+        GameOver.SetActive(false);
+    }
 
     private void Update()
         => SliderHelth.value = _value;
@@ -43,9 +47,18 @@ public class PlayerHelth : MonoBehaviour
         textMeshPro.text = textMenu;
         GameOver.SetActive(true);
 
-        GetComponent<PlayerController>().enabled = false;
-        Weapon.GetComponent<Weapon>().enabled = false;
-        EnemySpawn.GetComponent<SpawnerEnemy>().enabled = false;
-    }
+        _gameObjects = GameObject.FindGameObjectsWithTag("Enemy");
 
+        for (int i = 0; i < _gameObjects.Length; i++) {
+            //Debug.Log(GameObject.FindGameObjectsWithTag("Enemy").Length + " :have a tag 'enemy'");
+            Destroy(_gameObjects[i]);
+        }
+
+        GetComponent<PlayerController>().enabled = false;
+
+        Weapon2.SetActive(false);
+        Weapon.SetActive(false);
+        EnemySpawn.SetActive(false);
+        IteamSpawn.SetActive(false);
+    }
 }

@@ -228,7 +228,7 @@ GameObject:
   - component: {fileID: 7857622168962544461}
   m_Layer: 0
   m_Name: LowKit
-  m_TagString: Untagged
+  m_TagString: Iteam
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
