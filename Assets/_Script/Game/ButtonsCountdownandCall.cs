@@ -1,15 +1,9 @@
-using TMPro;
 using UnityEngine;
 
 public class ButtonsCountdownandCall : MonoBehaviour
 {
-    [SerializeField] private float _gametime = 330f, _timetotrigger = 30f;
+    public float _gametime = 330f, _timetotrigger = 30f;
     public GameObject ButtonsMenu, weapon, weapontwo;
-
-    [Space(5)]
-    public TextMeshProUGUI textMeshPro;
-    public string textMenu;
-    public GameObject VictoryMenu;
 
     void Update()
     {
@@ -45,7 +39,6 @@ public class ButtonsCountdownandCall : MonoBehaviour
             if (_gametime <= 0)
             {
                 ZaWarudo();
-                VictoryScreenCall();
             }
         }
     }
@@ -55,11 +48,5 @@ public class ButtonsCountdownandCall : MonoBehaviour
         Time.timeScale = 0;
         weapon.GetComponent<Weapon>().enabled = false;
         weapontwo.GetComponent<Weapon>().enabled = false;
-    }
-
-    void VictoryScreenCall()
-    {
-        textMeshPro.text = textMenu;
-        VictoryMenu.SetActive(true);
     }
 }

@@ -1,29 +1,15 @@
-using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class PlayerHelth : MonoBehaviour
 {
-    public int _value = 100;
+    public float _value = 100;
+    private float _threshold = 100;
 
     [Space(5)]
     [Header("UI")]
     public Slider SliderHelth;
-    public GameObject EnemySpawn;
-    public GameObject IteamSpawn;
-    public GameObject Weapon;
-    public GameObject Weapon2;
-
-    [Space(5)]
-    public TextMeshProUGUI textMeshPro;
-    public string textMenu;
-    public GameObject GameOver;
-    private GameObject[] _gameObjects;
-
-    private void Start()
-    {
-        GameOver.SetActive(false);
-    }
+    public GameObject[] Weapon;
 
     private void Update()
         => SliderHelth.value = _value;
@@ -38,27 +24,19 @@ public class PlayerHelth : MonoBehaviour
 
     public void AddHealth(int amout)
     {
-        _value += amout;
-        SliderHelth.value += amout;
+        if (_value > _threshold) {
+            _value += amout;
+            SliderHelth.value += amout;
+        }
+        else
+            _value = _threshold;
     }
 
     void Die()
     {
-        textMeshPro.text = textMenu;
-        GameOver.SetActive(true);
-
-        _gameObjects = GameObject.FindGameObjectsWithTag("Enemy");
-
-        for (int i = 0; i < _gameObjects.Length; i++) {
-            //Debug.Log(GameObject.FindGameObjectsWithTag("Enemy").Length + " :have a tag 'enemy'");
-            Destroy(_gameObjects[i]);
-        }
-
         GetComponent<PlayerController>().enabled = false;
 
-        Weapon2.SetActive(false);
-        Weapon.SetActive(false);
-        EnemySpawn.SetActive(false);
-        IteamSpawn.SetActive(false);
+        for (int i = 0; i < Weapon.Length; i++)
+            Weapon[i].SetActive(false);
     }
 }
