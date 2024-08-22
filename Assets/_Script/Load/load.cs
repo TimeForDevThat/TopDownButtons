@@ -9,11 +9,17 @@ namespace Load{
         AsyncOperation asyncOperation;
 
         public Image image;
-        public Text Text;
+        public Text Text, TextDescript;
 
         private int SceneID;
-        void Start()
-            => StartCoroutine(LoadScene());
+
+        public string[] str_text;
+
+        private void Start()
+        {
+            StartCoroutine(LoadScene());
+            TextDescript.text = str_text[Random.Range(0, str_text.Length)];
+        }
 
         public void SceneLoadID(int sceneID)
         {
