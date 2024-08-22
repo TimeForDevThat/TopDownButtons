@@ -6410,6 +6410,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1208573458}
     m_Modifications:
+    - target: {fileID: 1618035127515367251, guid: 7992ed433e683144bbe767795a4d37c1, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 120
+      objectReference: {fileID: 0}
+    - target: {fileID: 1618035127515367251, guid: 7992ed433e683144bbe767795a4d37c1, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 1618035127515367251, guid: 7992ed433e683144bbe767795a4d37c1, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -60.732
+      objectReference: {fileID: 0}
+    - target: {fileID: 1673686268372203078, guid: 7992ed433e683144bbe767795a4d37c1, type: 3}
+      propertyPath: m_PixelsPerUnitMultiplier
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2755642463327351182, guid: 7992ed433e683144bbe767795a4d37c1, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 3499464807526053286, guid: 7992ed433e683144bbe767795a4d37c1, type: 3}
       propertyPath: m_Name
       value: Console

@@ -6,7 +6,7 @@ public class BaseCommands : MonoBehaviour
 {
     [Commmand]
     public void help() {
-        console.Console.WriteConsole("<size=60>Все команды:</size>", Color.cyan);
+        console.Console.WriteConsole("<size=60>Команды:</size>", Color.cyan);
         console.Console.WriteConsole("Command Example: \"Console\"\n", Color.cyan);
         List<ChatCodes> commands = console.Console.GatCommands();
         foreach (ChatCodes command in commands) {
@@ -29,8 +29,8 @@ public class BaseCommands : MonoBehaviour
     [Commmand]
     public void version()
     {
-        string temp = "<color=white>версия игры:</color>";
-        temp += $"<color=blue>{Application.version}, {Application.productName}</color>";
+        string temp = "<color=white>версия игры: </color>";
+        temp += $"<color=white>{Application.version}, {Application.productName}</color>";
         console.Console.WriteConsole(temp, Color.black);
     }
 
