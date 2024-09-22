@@ -15,6 +15,8 @@ public class ShowPanel : MonoBehaviour
     [Space(5)]
     public float time = 1;
 
+    public bool IsShow = false;
+
     void Start()
     {
         var image = GetComponent<Image>();
@@ -26,5 +28,15 @@ public class ShowPanel : MonoBehaviour
             .Append(image.DOFade(min_opacity, 0f))
             .SetEase(Ease.InOutQuart)
             .Append(image.DOFade(max_opacity, time));
+    }
+
+    private void Update()
+    {
+        if (IsShow)
+            Invoke("IsShowPanel", time);
+    }
+
+    private void IsShowPanel() {
+        this.gameObject.SetActive(false);
     }
 }
