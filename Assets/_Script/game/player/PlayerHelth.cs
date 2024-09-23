@@ -1,4 +1,9 @@
+using System;
+using Unity.VisualScripting;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
+using UnityEngine.Rendering;
+using UnityEngine.Rendering.Universal;
 using UnityEngine.UI;
 
 public class PlayerHelth : MonoBehaviour
@@ -11,11 +16,27 @@ public class PlayerHelth : MonoBehaviour
     public Slider SliderHelth;
     public GameObject[] Weapon;
 
-    private void Update()
-        => SliderHelth.value = _value;
+    public Volume volume;
+    private LiftGammaGain LGG;
+
+    private void Start() {
+        volume.profile.TryGet(out LGG);
+
+        LGG.lift.value = new Vector3(1f, 1f, 1f);
+        LGG.gamma.value = new Vector3(1f, 1f, 1f);
+        LGG.gain.value = new Vector3(1f, 1f, 1f);
+    }
+
+    private void Update() => SliderHelth.value = _value;
 
     public void DealDamage(int damage)
     {
+        LGG.lift.value = new Vector3(1f, 0.85f, 0.91f);
+        LGG.gamma.value = new Vector3(1f, 0.91f, 0.98f);
+        LGG.gain.value = new Vector3(0.47f, 1f, 0.78f);
+
+        Invoke("Restart", 2f);
+      
         SliderHelth.value -= damage;
         _value -= damage;
         if (_value <= 0)
@@ -30,6 +51,12 @@ public class PlayerHelth : MonoBehaviour
         }
         else
             _value = _threshold;
+    }
+
+    void Restart() {
+        LGG.lift.value = new Vector3(1f, 1f, 1f);
+        LGG.gamma.value = new Vector3(1f, 1f, 1f);
+        LGG.gain.value = new Vector3(1f, 1f, 1f);
     }
 
     void Die()

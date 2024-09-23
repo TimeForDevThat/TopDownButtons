@@ -130671,6 +130671,10 @@ PrefabInstance:
       value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 609571472642936255, guid: 42205bed59e7bb541a4ffdcf67fe7241, type: 3}
+      propertyPath: volume
+      value: 
+      objectReference: {fileID: 1481402425}
+    - target: {fileID: 609571472642936255, guid: 42205bed59e7bb541a4ffdcf67fe7241, type: 3}
       propertyPath: Weapon2
       value: 
       objectReference: {fileID: 1467799754}
@@ -130681,6 +130685,10 @@ PrefabInstance:
     - target: {fileID: 609571472642936255, guid: 42205bed59e7bb541a4ffdcf67fe7241, type: 3}
       propertyPath: textMenu
       value: Game Over
+      objectReference: {fileID: 0}
+    - target: {fileID: 609571472642936255, guid: 42205bed59e7bb541a4ffdcf67fe7241, type: 3}
+      propertyPath: intensity
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 609571472642936255, guid: 42205bed59e7bb541a4ffdcf67fe7241, type: 3}
       propertyPath: EnemySpawn
@@ -130695,9 +130703,29 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 414631150}
     - target: {fileID: 609571472642936255, guid: 42205bed59e7bb541a4ffdcf67fe7241, type: 3}
+      propertyPath: baseColor.a
+      value: 0.78039217
+      objectReference: {fileID: 0}
+    - target: {fileID: 609571472642936255, guid: 42205bed59e7bb541a4ffdcf67fe7241, type: 3}
+      propertyPath: baseColor.b
+      value: 0.2179601
+      objectReference: {fileID: 0}
+    - target: {fileID: 609571472642936255, guid: 42205bed59e7bb541a4ffdcf67fe7241, type: 3}
+      propertyPath: baseColor.g
+      value: 0.2179601
+      objectReference: {fileID: 0}
+    - target: {fileID: 609571472642936255, guid: 42205bed59e7bb541a4ffdcf67fe7241, type: 3}
+      propertyPath: baseColor.r
+      value: 0.5849056
+      objectReference: {fileID: 0}
+    - target: {fileID: 609571472642936255, guid: 42205bed59e7bb541a4ffdcf67fe7241, type: 3}
       propertyPath: textMeshPro
       value: 
       objectReference: {fileID: 560709627}
+    - target: {fileID: 609571472642936255, guid: 42205bed59e7bb541a4ffdcf67fe7241, type: 3}
+      propertyPath: renderingVolume
+      value: 
+      objectReference: {fileID: 1481402425}
     - target: {fileID: 609571472642936255, guid: 42205bed59e7bb541a4ffdcf67fe7241, type: 3}
       propertyPath: Weapon.Array.size
       value: 2
