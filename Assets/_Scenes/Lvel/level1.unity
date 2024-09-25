@@ -127329,7 +127329,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1782556620
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -131197,6 +131197,10 @@ PrefabInstance:
     - target: {fileID: 2025662408811772275, guid: 42205bed59e7bb541a4ffdcf67fe7241, type: 3}
       propertyPath: ReloadSpeed
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2025662408811772275, guid: 42205bed59e7bb541a4ffdcf67fe7241, type: 3}
+      propertyPath: CurCartridges
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 2025662408811772275, guid: 42205bed59e7bb541a4ffdcf67fe7241, type: 3}
       propertyPath: MaxCartridges

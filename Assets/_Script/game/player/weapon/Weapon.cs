@@ -89,8 +89,16 @@ public class Weapon : Sounds
 
             Bar.gameObject.SetActive(false);
 
-            Cartridges = MaxCartridges;
-            CurCartridges -= MaxCartridges;
+            if (CurCartridges >= MaxCartridges)
+            {
+                Cartridges = MaxCartridges;
+                CurCartridges -= MaxCartridges;
+            }
+            else
+            {
+                Cartridges = CurCartridges;
+                CurCartridges = 0;
+            }
 
             isActive = true;
         }
