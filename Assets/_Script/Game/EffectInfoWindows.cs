@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class EffectInfoWindows : MonoBehaviour
 {
-    public GameObject Self;
     public float InfoTimer = 2f;
 
     void Update()
@@ -16,7 +15,7 @@ public class EffectInfoWindows : MonoBehaviour
         if(InfoTimer <= 0)
         {
             InfoTimer = 2f;
-            Self.SetActive(false);
+            this.gameObject.SetActive(false);
         }
     }
 }
