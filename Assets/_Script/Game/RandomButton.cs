@@ -4,27 +4,19 @@ using TMPro;
 
 public class RandomButton : MonoBehaviour
 {
-    public Component[] buttonEffects;
     public GameObject Player;
-    [SerializeField] private int _randomEffect;
-    public GameObject Weapon;
-    public GameObject SecondWeapon;
-    public GameObject Buff1Info;
-    public GameObject Buff2Info;
-    public GameObject Buff3Info;
-    public GameObject Buff4Info;
-    public GameObject Buff5Info;
-    public GameObject Debuff1Info;
-    public GameObject Debuff2Info;
-    public GameObject EmptyEffectInfo;
+    public GameObject Weapon, SecondWeapon;
+    public Component[] buttonEffects;
+
     public float InfoTimer = 2f;
     private Button Self;
 
     public TMP_Text text;
-    public Image Image;
-    public Image Icon;
+    public Image Image, Icon;
 
     public BaseBaff baseBaff;
+
+    [SerializeField] private int _randomEffect;
 
     void Start() { RandomizeButtons(); Init(); }
 
@@ -34,100 +26,81 @@ public class RandomButton : MonoBehaviour
 
     void Buffs()
     {
-        if (_randomEffect == 1)
-        {
-            Player.GetComponent<PlayerController>()._movementSpeed *= 2;
-            Buff1Info.SetActive(true);
+        switch (_randomEffect) {
+            case 0:
+                Image.gameObject.SetActive(true);
+                text.text = baseBaff.Baffs[4].InfoName;
+                Image.color = baseBaff.Baffs[4].color;
+                Icon.sprite = baseBaff.Baffs[4].IconImage;
+                break;
+            case 1:
+                Player.GetComponent<PlayerController>()._movementSpeed *= 2;
 
-            Image.gameObject.SetActive(true);
-            text.text = baseBaff.Baffs[0].InfoName;
-            Image.color = baseBaff.Baffs[0].color;
-            Icon.sprite = baseBaff.Baffs[0].IconImage;
-        }
+                Image.gameObject.SetActive(true);
+                text.text = baseBaff.Baffs[0].InfoName;
+                Image.color = baseBaff.Baffs[0].color;
+                Icon.sprite = baseBaff.Baffs[0].IconImage;
+                break;
+            case 2:
+                Weapon.GetComponent<Weapon>().ShootSpeed = 0;
+                SecondWeapon.GetComponent<Weapon>().ShootSpeed = 0;
 
-        if (_randomEffect == 2)
-        {
-            Weapon.GetComponent<Weapon>().ShootSpeed = 0;
-            SecondWeapon.GetComponent<Weapon>().ShootSpeed = 0;
-            Buff2Info.SetActive(true);
+                Image.gameObject.SetActive(true);
+                text.text = baseBaff.Baffs[1].InfoName;
+                Image.color = baseBaff.Baffs[1].color;
+                Icon.sprite = baseBaff.Baffs[1].IconImage;
+                break;
+            case 4:
+                Weapon.GetComponent<Weapon>().CurCartridges += 25;
+                SecondWeapon.GetComponent<Weapon>().CurCartridges += 25;
 
-            Image.gameObject.SetActive(true);
-            text.text = baseBaff.Baffs[1].InfoName;
-            Image.color = baseBaff.Baffs[1].color;
-            Icon.sprite = baseBaff.Baffs[1].IconImage;
-        }
+                Image.gameObject.SetActive(true);
+                text.text = baseBaff.Baffs[2].InfoName;
+                Image.color = baseBaff.Baffs[2].color;
+                Icon.sprite = baseBaff.Baffs[2].IconImage;
+                break;
+            case 6:
+                SecondWeapon.SetActive(true);
 
+                Image.gameObject.SetActive(true);
+                text.text = baseBaff.Baffs[3].InfoName;
+                Image.color = baseBaff.Baffs[3].color;
+                Icon.sprite = baseBaff.Baffs[3].IconImage;
+                break;
+            case 7:
+                Weapon.GetComponent<Weapon>().ReloadSpeed = 0;
+                SecondWeapon.GetComponent<Weapon>().ReloadSpeed = 0;
 
-        if (_randomEffect == 4)
-        {
-            Weapon.GetComponent<Weapon>().CurCartridges += 25;
-            SecondWeapon.GetComponent<Weapon>().CurCartridges += 25;
-            Buff4Info.SetActive(true);
-
-            Image.gameObject.SetActive(true);
-            text.text = baseBaff.Baffs[2].InfoName;
-            Image.color = baseBaff.Baffs[2].color;
-            Icon.sprite = baseBaff.Baffs[2].IconImage;
-        }
-
-        if (_randomEffect == 6)
-        {
-            SecondWeapon.SetActive(true);
-            Buff5Info.SetActive(true);
-
-            Image.gameObject.SetActive(true);
-            text.text = baseBaff.Baffs[3].InfoName;
-            Image.color = baseBaff.Baffs[3].color;
-            Icon.sprite = baseBaff.Baffs[3].IconImage;
-        }
-
-        if (_randomEffect == 0)
-        {
-            EmptyEffectInfo.SetActive(true);
-
-            Image.gameObject.SetActive(true);
-            text.text = baseBaff.Baffs[4].InfoName;
-            Image.color = baseBaff.Baffs[4].color;
-            Icon.sprite = baseBaff.Baffs[4].IconImage;
-        }
-
-        if (_randomEffect == 7)
-        {
-            Weapon.GetComponent<Weapon>().ReloadSpeed = 0;
-            SecondWeapon.GetComponent<Weapon>().ReloadSpeed = 0;
-            Buff3Info.SetActive(true);
-
-            Image.gameObject.SetActive(true);
-            text.text = baseBaff.Baffs[5].InfoName;
-            Image.color = baseBaff.Baffs[5].color;
-            Icon.sprite = baseBaff.Baffs[5].IconImage;
+                Image.gameObject.SetActive(true);
+                text.text = baseBaff.Baffs[5].InfoName;
+                Image.color = baseBaff.Baffs[5].color;
+                Icon.sprite = baseBaff.Baffs[5].IconImage;
+                break;
         }
     }
 
     void Debuffs()
     {
-        if (_randomEffect == 5)
-        {
-            Player.GetComponent<PlayerController>()._movementSpeed /= 2;
-            Debuff1Info.SetActive(true);
+        switch (_randomEffect) {
+            case 5:
+                Player.GetComponent<PlayerController>()._movementSpeed /= 2;
 
-            Image.gameObject.SetActive(true);
-            text.text = baseBaff.Baffs[6].InfoName;
-            Image.color = baseBaff.Baffs[6].color;
-            Icon.sprite = baseBaff.Baffs[6].IconImage;
-        }
+                Image.gameObject.SetActive(true);
+                text.text = baseBaff.Baffs[6].InfoName;
+                Image.color = baseBaff.Baffs[6].color;
+                Icon.sprite = baseBaff.Baffs[6].IconImage;
+                break;
+            case 3:
+                Weapon.GetComponent<Weapon>().CurCartridges = 0;
 
-        if (_randomEffect == 3)
-        {
-            Weapon.GetComponent<Weapon>().CurCartridges = 0;
-            Debuff2Info.SetActive(true);
-
-            Image.gameObject.SetActive(true);
-            text.text = baseBaff.Baffs[7].InfoName;
-            Image.color = baseBaff.Baffs[7].color;
-            Icon.sprite = baseBaff.Baffs[7].IconImage;
+                Image.gameObject.SetActive(true);
+                text.text = baseBaff.Baffs[7].InfoName;
+                Image.color = baseBaff.Baffs[7].color;
+                Icon.sprite = baseBaff.Baffs[7].IconImage;
+                break;
         }
     }
+
     public void EffectSelect() { Buffs(); Debuffs(); }
 
     public void SetInactive() => Self.interactable = false;

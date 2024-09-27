@@ -128,7 +128,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1259434705584267652
 RectTransform:
   m_ObjectHideFlags: 0
@@ -364,7 +364,7 @@ MonoBehaviour:
   SoundRandom: []
   Helth: 14000000190000001e000000
   ammo: 
-  canvas: {fileID: 8835505563347406698}
+  text: {fileID: 2613646651937716455}
   point: {fileID: 8951097394571509752}
   _particleSystem: {fileID: 4360557437673477465, guid: e432c61971d3bcb429d5e0313fdb6fd2, type: 3}
   type: 0

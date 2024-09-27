@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D), typeof(BoxCollider2D))]
@@ -6,7 +7,7 @@ public class PlayerController : Sounds
     [Space(5)]
     [Header("Speed, MoveSpeed, DashForce, DashForceTime")]
     public float _movementSpeed = 5f;
-    [SerializeField] private float _dashSpeed = 5000f, _dashTime = 2f;
+    [SerializeField] private float _dashSpeed = 5000f, _dashTime = 1.5f;
 
     private Animator _animator;
 
@@ -40,23 +41,37 @@ public class PlayerController : Sounds
 
     private void Update()
     {
-        Dash();
+
         Flip();
+        HandleDash();
         CombiningKeyUpdate();
-        GetComponent<Rigidbody2D>();
         direction.x = Input.GetAxisRaw("Horizontal");
         direction.y = Input.GetAxisRaw("Vertical");
     }
 
-    void CombiningKeyUpdate() {
+    void CombiningKeyUpdate()
+    {
         dashKeyBoardUp = (Input.GetKey(LeftShift) && Input.GetKey(Up));
         dashKeyBoardDown = (Input.GetKey(LeftShift) && Input.GetKey(Down));
         dashKeyBoardRight = (Input.GetKey(LeftShift) && Input.GetKey(Right));
         dashKeyBoardLeft = (Input.GetKey(LeftShift) && Input.GetKey(Left));
     }
 
+    private void Flip()
+    {
+        if ((GunRight.GetComponent<Weapon>().rotateZ >= 100 || GunRight.GetComponent<Weapon>().rotateZ <= -100) || 
+            (GunLeft.GetComponent<Weapon>().rotateZ >= 100 || GunLeft.GetComponent<Weapon>().rotateZ <= -100))
+            GetComponent<SpriteRenderer>().flipX = true;
+        else
+        {
+            GetComponent<SpriteRenderer>().flipX = false;
+            GunLeft.GetComponent<SpriteRenderer>().flipY = false;
+            GunRight.GetComponent<SpriteRenderer>().flipY = false;
+        }
+    }
+
     void FixedUpdate() {
-        rb.MovePosition(rb.position + direction* _movementSpeed * Time.fixedDeltaTime);
+        rb.MovePosition(rb.position + direction * _movementSpeed * Time.fixedDeltaTime);
         if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
         {
             effect.Play();
@@ -64,55 +79,57 @@ public class PlayerController : Sounds
         }
     }
 
-    private void Flip()
+    public void HandleDash() {
+        if (_isDashing)
+        {
+            if (dashKeyBoardLeft)
+            {
+                ApplyDashForce(Vector2.right, Vector2.left);
+                StartCoroutine("StopDashingTemporarily");
+            }
+            else if (dashKeyBoardRight)
+            {
+                ApplyDashForce(Vector2.left, Vector2.right);
+                StartCoroutine("StopDashingTemporarily");
+            }
+            else if (dashKeyBoardUp)
+            {
+                ApplyDashForce(Vector2.up, Vector2.down);
+                StartCoroutine("StopDashingTemporarily");
+            }
+            else if (dashKeyBoardDown) {
+                ApplyDashForce(Vector2.down, Vector2.up);
+                StartCoroutine("StopDashingTemporarily");
+            }
+        }
+    }
+
+    private void ApplyDashForce(Vector2 mainDirection, Vector2 oppositeDirection)
     {
-        if (GunRight.GetComponent<Weapon>().rotateZ >= 100 || GunRight.GetComponent<Weapon>().rotateZ <= -100 || GunLeft.GetComponent<Weapon>().rotateZ >= 100 || GunLeft.GetComponent<Weapon>().rotateZ <= -100)
-          GetComponent<SpriteRenderer>().flipX = true;
-       else
-       {
-           GetComponent<SpriteRenderer>().flipX = false;
-           GunLeft.GetComponent<SpriteRenderer>().flipY = false;
-           GunRight.GetComponent<SpriteRenderer>().flipY = false;
-       }
+        if (rb.transform.localScale.x < 0 && (mainDirection == Vector2.left || mainDirection == Vector2.right))
+            rb.AddForce(oppositeDirection * _dashSpeed);
+        else if (rb.transform.localScale.y < 0 && (mainDirection == Vector2.up || mainDirection == Vector2.down))
+            rb.AddForce(oppositeDirection * _dashSpeed);
+        else
+            rb.AddForce(mainDirection * _dashSpeed);
     }
 
-    public void Dash() {
-        if (dashKeyBoardLeft == true && _isDashing) {
-            BaseDash();
-
-            if (rb.transform.localScale.x < 0)
-                rb.AddForce(Vector2.left * _dashSpeed);
-            else rb.AddForce(Vector2.right * _dashSpeed);
-        }
-        if (dashKeyBoardRight == true && _isDashing){
-            BaseDash();
-
-            if (rb.transform.localScale.x < 0)
-                rb.AddForce(Vector2.right * _dashSpeed);
-            else rb.AddForce(Vector2.left * _dashSpeed);
-        }
-        if (dashKeyBoardUp == true && _isDashing) {
-            BaseDash();
-
-            if (rb.transform.localScale.y < 0)
-                rb.AddForce(Vector2.down * _dashSpeed);
-            else rb.AddForce(Vector2.up * _dashSpeed);
-        }
-        if (dashKeyBoardDown == true && _isDashing){
-            BaseDash();
-
-            if (rb.transform.localScale.y < 0)
-                rb.AddForce(Vector2.up * _dashSpeed);
-            else rb.AddForce(Vector2.down * _dashSpeed);
-        }
-    }
-
-    void BaseDash() {
-        _isDashing = false;
+    private IEnumerator StopDashingTemporarily()
+    {
         _animator.SetTrigger("dash");
-        rb.velocity = new Vector2(0, 0);
-        Invoke("DashLock", _dashTime);
+        _isDashing = false;
+        yield return new WaitForSeconds(_dashTime);
+        _isDashing = true;
     }
 
-    void DashLock()=> _isDashing = true;
+    /*
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Iteam"))
+        {
+            _isDashing = false;
+            rb.velocity = Vector2.zero;
+        }
+    }
+*/
 }

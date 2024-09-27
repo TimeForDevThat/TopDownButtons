@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 
 [RequireComponent(typeof(BoxCollider2D))]
 public class Use : Sounds
@@ -10,7 +11,7 @@ public class Use : Sounds
 
     [Space(5)]
     [Header("UI")]
-    public Canvas canvas;
+    public Text text;
     [Space(5)]
     [Header("Спавн particle system")]
     public Transform point;
@@ -29,14 +30,16 @@ public class Use : Sounds
     {
         _weapon = FindObjectOfType<Weapon>();
         _player = FindObjectOfType<PlayerHelth>();
-        canvas.gameObject.SetActive(false);
+        text.gameObject.SetActive(false);
     }
 
     private void OnTriggerStay2D(Collider2D other)
     {
         if (other.gameObject.tag == "Player")
         {
-            canvas.gameObject.SetActive(true);
+            text.gameObject.SetActive(true);
+            text.color = Color.Lerp(Color.green, Color.white, Mathf.Abs(Mathf.Sin(Time.time)));
+
             if (Input.GetKeyDown(KeyCode.E)) {
                 PlaySounds(0, destroy: true);
                 if (type == Type.AidKit)
@@ -50,5 +53,5 @@ public class Use : Sounds
     }
 
     private void OnTriggerExit2D(Collider2D collision)
-        => canvas.gameObject.SetActive(false);
+        => text.gameObject.SetActive(false);
 }

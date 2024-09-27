@@ -364,7 +364,7 @@ MonoBehaviour:
   SoundRandom: []
   Helth: 
   ammo: 050000000a0000000f000000
-  canvas: {fileID: 169782262593382519}
+  text: {fileID: 3258640887366179659}
   point: {fileID: 1472517115834291076}
   _particleSystem: {fileID: 6796291305883008259, guid: 4f686180ea0b91648914facd598258fa, type: 3}
   type: 1
