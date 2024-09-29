@@ -112938,7 +112938,6 @@ GameObject:
   - component: {fileID: 2053329513}
   - component: {fileID: 2053329514}
   - component: {fileID: 2053329515}
-  - component: {fileID: 2053329516}
   - component: {fileID: 2053329517}
   - component: {fileID: 2053329519}
   - component: {fileID: 2053329520}
@@ -113027,19 +113026,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d70d7af1fb004b945903227b4d34cb54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &2053329516
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2053329510}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 969536d4c8a5acd4197551b65e3e8006, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  what: 0
 --- !u!114 &2053329517
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -113068,6 +113054,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   resolutionDropdown: {fileID: 2239471583365542945}
   toggleEffect: {fileID: 8833193512347917304}
+  toggleReload: {fileID: 4747374055177342276}
   PostProcessVolume: {fileID: 0}
 --- !u!114 &2053329520
 MonoBehaviour:
@@ -113913,6 +113900,38 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 62
       objectReference: {fileID: 0}
+    - target: {fileID: 7734138422111348132, guid: 0578c216b943d9c429a5eb3b9c1b79c7, type: 3}
+      propertyPath: m_Interactable
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7734138422111348132, guid: 0578c216b943d9c429a5eb3b9c1b79c7, type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7734138422111348132, guid: 0578c216b943d9c429a5eb3b9c1b79c7, type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7734138422111348132, guid: 0578c216b943d9c429a5eb3b9c1b79c7, type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2053329519}
+    - target: {fileID: 7734138422111348132, guid: 0578c216b943d9c429a5eb3b9c1b79c7, type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7734138422111348132, guid: 0578c216b943d9c429a5eb3b9c1b79c7, type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: AutoReloadToggle
+      objectReference: {fileID: 0}
+    - target: {fileID: 7734138422111348132, guid: 0578c216b943d9c429a5eb3b9c1b79c7, type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Settings, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7734138422111348132, guid: 0578c216b943d9c429a5eb3b9c1b79c7, type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 8138803826373596164, guid: 0578c216b943d9c429a5eb3b9c1b79c7, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -113946,6 +113965,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0578c216b943d9c429a5eb3b9c1b79c7, type: 3}
+--- !u!114 &4747374055177342276 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7734138422111348132, guid: 0578c216b943d9c429a5eb3b9c1b79c7, type: 3}
+  m_PrefabInstance: {fileID: 4747374055177342275}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9085046f02f69544eb97fd06b6048fe2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &4799841186563493327 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4136168604088647687, guid: 0578c216b943d9c429a5eb3b9c1b79c7, type: 3}
