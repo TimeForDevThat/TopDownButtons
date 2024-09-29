@@ -1,6 +1,6 @@
-using UnityEngine.UI;
-using UnityEngine;
 using System.Collections;
+using UnityEngine;
+using UnityEngine.UI;
 
 [AddComponentMenu("ScriptGun/Weapon")]
 public class Weapon : Sounds
@@ -8,6 +8,7 @@ public class Weapon : Sounds
     public float offset, rotateZ;
 
     public bool isActive = true;
+    private bool autoReload;
 
     [Space(5)]
     public GameObject bullet, Player, Self;
@@ -39,9 +40,14 @@ public class Weapon : Sounds
         SpectorMouse();
         CheckAmmoUiUpdate();
         TouchButtonFireUpdate();
-        TouchButtonReloadUpdate();
-        AutoReload();
+        Reload();
         TimeUpdate();
+
+
+        if (PlayerPrefs.HasKey("autoReload"))
+            autoReload = System.Convert.ToBoolean(PlayerPrefs.GetInt("autoReload"));
+        else
+            autoReload = false;
     }
 
     void SpectorMouse() 
@@ -104,19 +110,16 @@ public class Weapon : Sounds
         }
     }
 
-    void TouchButtonReloadUpdate()
+    void Reload()
     {
-        if (Input.GetKey(KeyCode.R) && Cartridges == 0 & CurCartridges > 0 & ReloadTimer <= 0 & isActive == true)
-        {
-            ReloadCartridges();
-        }
-    }
-
-    void AutoReload()
-    {
-        if (Cartridges == 0 & CurCartridges > 0 & ReloadTimer <= 0 & isActive == true)
-        {
-            ReloadCartridges();
+        if (Cartridges == 0 & CurCartridges > 0 & ReloadTimer <= 0 & isActive == true) {
+            if (autoReload == true)
+            {
+                ReloadCartridges();
+            }
+            else if (Input.GetKey(KeyCode.R)) {
+                ReloadCartridges();
+            }
         }
     }
 

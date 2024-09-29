@@ -8,8 +8,9 @@ public class Settings : MonoBehaviour
 {
     public Dropdown resolutionDropdown;
     public Toggle toggleEffect;
+    public Toggle toggleReload;
     public Volume PostProcessVolume;
-    private static bool isFullScreen, off_onEffect;
+    private static bool isFullScreen, off_onEffect, autoReload;
 
     Resolution[] resolutions;
     private void Start()
@@ -19,10 +20,10 @@ public class Settings : MonoBehaviour
         resolutions = Screen.resolutions;
         int currentResolutionIndex = 0;
 
-        for (int i = 0; i < resolutions.Length; i++) { 
+        for (int i = 0; i < resolutions.Length; i++) {
             string option = resolutions[i].width + "x" + resolutions[i].height;
             optins.Add(option);
-            if (resolutions[i].width == Screen.currentResolution.width && resolutions[i].height == Screen.currentResolution.height) 
+            if (resolutions[i].width == Screen.currentResolution.width && resolutions[i].height == Screen.currentResolution.height)
                 currentResolutionIndex = i;
         }
 
@@ -42,6 +43,11 @@ public class Settings : MonoBehaviour
         PostProcessVolume.enabled = !off_onEffect;
     }
 
+    public void AutoReloadToggle() {
+        autoReload = !autoReload;
+        toggleReload.isOn = autoReload;
+    }
+
     public void SetResolution(int resolutionIndex) {
         Resolution resolution = resolutions[resolutionIndex];
         Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
@@ -55,10 +61,8 @@ public class Settings : MonoBehaviour
     public void SaveSettings() {
         PlayerPrefs.SetInt("ResolutionPrefence", resolutionDropdown.value);
         PlayerPrefs.SetInt("FullscreenPrefence", System.Convert.ToInt32(Screen.fullScreen));
-        if (toggleEffect.isOn)
-            PlayerPrefs.SetInt("off_onEffect", 1);
-        else
-            PlayerPrefs.SetInt("off_onEffect", 0);
+        PlayerPrefs.SetInt("autoReload", System.Convert.ToInt32(autoReload));
+        PlayerPrefs.SetInt("off_onEffect", System.Convert.ToInt32(off_onEffect));
     }
 
     public void LoadSettings(int currentResolutionIndex) {
@@ -70,10 +74,18 @@ public class Settings : MonoBehaviour
         else
             Screen.fullScreen = true;
 
-        if (PlayerPrefs.GetInt("off_onEffect") == 1)
-            off_onEffect = true;
+        if(PlayerPrefs.HasKey("autoReload"))
+            toggleReload.isOn = System.Convert.ToBoolean(PlayerPrefs.GetInt("autoReload"));
+        else 
+            autoReload = false;
+
+        toggleReload.isOn = autoReload;
+
+        if (PlayerPrefs.HasKey("off_onEffect"))
+            toggleEffect.isOn = System.Convert.ToBoolean(PlayerPrefs.GetInt("off_onEffect"));
         else
             off_onEffect = false;
+
         toggleEffect.isOn = off_onEffect;
     }
 }

@@ -51,16 +51,16 @@ public class PlayerController : Sounds
 
     void CombiningKeyUpdate()
     {
-        dashKeyBoardUp = (Input.GetKey(LeftShift) && Input.GetKey(Up));
-        dashKeyBoardDown = (Input.GetKey(LeftShift) && Input.GetKey(Down));
-        dashKeyBoardRight = (Input.GetKey(LeftShift) && Input.GetKey(Right));
-        dashKeyBoardLeft = (Input.GetKey(LeftShift) && Input.GetKey(Left));
+        dashKeyBoardUp = Input.GetKey(LeftShift) && Input.GetKey(Up);
+        dashKeyBoardDown = Input.GetKey(LeftShift) && Input.GetKey(Down);
+        dashKeyBoardRight = Input.GetKey(LeftShift) && Input.GetKey(Right);
+        dashKeyBoardLeft = Input.GetKey(LeftShift) && Input.GetKey(Left);
     }
 
     private void Flip()
     {
-        if ((GunRight.GetComponent<Weapon>().rotateZ >= 100 || GunRight.GetComponent<Weapon>().rotateZ <= -100) || 
-            (GunLeft.GetComponent<Weapon>().rotateZ >= 100 || GunLeft.GetComponent<Weapon>().rotateZ <= -100))
+        if (GunRight.GetComponent<Weapon>().rotateZ >= 100 || GunRight.GetComponent<Weapon>().rotateZ <= -100 || 
+            GunLeft.GetComponent<Weapon>().rotateZ >= 100 || GunLeft.GetComponent<Weapon>().rotateZ <= -100)
             GetComponent<SpriteRenderer>().flipX = true;
         else
         {
@@ -72,7 +72,7 @@ public class PlayerController : Sounds
 
     void FixedUpdate() {
         rb.MovePosition(rb.position + direction * _movementSpeed * Time.fixedDeltaTime);
-        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
+        if (Input.GetKey(Up) || Input.GetKey(Down) || Input.GetKey(Right) || Input.GetKey(Left))
         {
             effect.Play();
             PlaySounds(0, random: true);
