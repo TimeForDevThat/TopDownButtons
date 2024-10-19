@@ -57736,8 +57736,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 50, y: -0.0011911}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: 47.255, y: -0.0011911}
+  m_SizeDelta: {x: 225.5, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &173789208
 MonoBehaviour:
@@ -57789,9 +57789,9 @@ MonoBehaviour:
   m_fontSize: 36
   m_fontSizeBase: 36
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 25
+  m_fontSizeMax: 36
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -58565,10 +58565,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Baffs:
   - InfoName: "\u0411\u043E\u043B\u044C\u0448\u0435 \u0441\u043A\u043E\u0440\u043E\u0441\u0442\u0438"
-    IconImage: {fileID: 21300000, guid: b2d5ba5c533110f4e8c394128c7b7935, type: 3}
+    IconImage: {fileID: 21300000, guid: bcd8d3f00b031764db3147039bd928a9, type: 3}
     color: {r: 1, g: 0.78431374, b: 0, a: 1}
   - InfoName: "\u0411\u043E\u043B\u044C\u0448\u0435 \u0441\u043A\u043E\u0440\u043E\u0441\u0442\u0440\u0435\u043B\u044C\u043D\u043E\u0441\u0442\u0438"
-    IconImage: {fileID: 21300000, guid: b2d5ba5c533110f4e8c394128c7b7935, type: 3}
+    IconImage: {fileID: 21300000, guid: bcd8d3f00b031764db3147039bd928a9, type: 3}
     color: {r: 1, g: 0.78431374, b: 0, a: 1}
   - InfoName: "+ 25 \u043F\u0430\u0442\u0440\u043E\u043D\u043E\u0432"
     IconImage: {fileID: 21300000, guid: f203112d0489ae34fb8ff3828b4d6136, type: 3}
@@ -58577,13 +58577,13 @@ MonoBehaviour:
     IconImage: {fileID: 21300000, guid: bfdad69eecba3ed41bba7b6474e51d9f, type: 3}
     color: {r: 1, g: 0.78431374, b: 0, a: 1}
   - InfoName: "\u041D\u0438\u0447\u0435\u0433\u043E \u043D\u0435 \u0438\u0437\u043C\u0435\u043D\u0438\u043B\u043E\u0441\u044C"
-    IconImage: {fileID: 21300000, guid: b2d5ba5c533110f4e8c394128c7b7935, type: 3}
+    IconImage: {fileID: 21300000, guid: 18e3d9857a65d744bb14477b6e914903, type: 3}
     color: {r: 0.42352942, g: 0.42352942, b: 0.42352942, a: 1}
   - InfoName: "\u0411\u044B\u0441\u0442\u0440\u0430\u044F \u043F\u0435\u0440\u0435\u0437\u0430\u0440\u044F\u0434\u043A\u0430"
-    IconImage: {fileID: 21300000, guid: b2d5ba5c533110f4e8c394128c7b7935, type: 3}
+    IconImage: {fileID: 21300000, guid: bcd8d3f00b031764db3147039bd928a9, type: 3}
     color: {r: 1, g: 0.78431374, b: 0, a: 1}
   - InfoName: "\u041C\u0435\u043D\u044C\u0448\u0435 \u0441\u043A\u043E\u0440\u043E\u0441\u0442\u0438"
-    IconImage: {fileID: 21300000, guid: b2d5ba5c533110f4e8c394128c7b7935, type: 3}
+    IconImage: {fileID: 21300000, guid: 485462f434dbc6c43a0510e7fec5d331, type: 3}
     color: {r: 1, g: 0, b: 0, a: 1}
   - InfoName: "- \u0432\u0441\u0435 \u043F\u0430\u0442\u0440\u043E\u043D\u044B"
     IconImage: {fileID: 21300000, guid: f203112d0489ae34fb8ff3828b4d6136, type: 3}
