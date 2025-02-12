@@ -40,7 +40,8 @@ public class Settings : MonoBehaviour
 
     public void off_onEffectToggle() {
         off_onEffect = !off_onEffect;
-        PostProcessVolume.enabled = !off_onEffect;
+        if(PostProcessVolume != null)
+            PostProcessVolume.enabled = !off_onEffect;
     }
 
     public void AutoReloadToggle() {

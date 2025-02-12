@@ -6,7 +6,6 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using Unity.VisualScripting;
-using UnityEngine.SceneManagement;
 
 public class console : MonoBehaviour
 {

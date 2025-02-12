@@ -31,7 +31,7 @@ public partial class @ConsoleInput: IInputActionCollection2, IDisposable
                     ""name"": ""AppendText"",
                     ""type"": ""Button"",
                     ""id"": ""5873da06-f746-41c0-86ea-34351b2d4755"",
-                    ""expectedControlType"": ""Button"",
+                    ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
@@ -40,7 +40,7 @@ public partial class @ConsoleInput: IInputActionCollection2, IDisposable
                     ""name"": ""EnterText"",
                     ""type"": ""Button"",
                     ""id"": ""1818356d-2610-4e66-a4f1-c5e5024d17ea"",
-                    ""expectedControlType"": ""Button"",
+                    ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false

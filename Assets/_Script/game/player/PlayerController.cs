@@ -1,9 +1,11 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 
 [RequireComponent(typeof(Rigidbody2D), typeof(BoxCollider2D))]
 public class PlayerController : Sounds
 {
+    public Image load;
     [Space(5)]
     [Header("Speed, MoveSpeed, DashForce, DashForceTime")]
     public float _movementSpeed = 5f;
@@ -41,7 +43,6 @@ public class PlayerController : Sounds
 
     private void Update()
     {
-
         Flip();
         HandleDash();
         CombiningKeyUpdate();

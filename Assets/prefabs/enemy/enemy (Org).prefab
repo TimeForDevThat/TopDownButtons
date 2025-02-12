@@ -374,6 +374,7 @@ MonoBehaviour:
   valueHealth: 50
   canvas: {fileID: 1319055084955099259}
   healthSlider: {fileID: 5021090115072467360}
+  point: {fileID: 1317923036927795249, guid: 5c13ca97f2a17a347bfe65bc3604d475, type: 3}
   UnityEvent:
     m_PersistentCalls:
       m_Calls:
@@ -705,7 +706,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1330841373
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 66cf64ff6f6a50e438f4e6bfebd1d239, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

@@ -1,4 +1,0 @@
-repository "ButtonsGame@Uber_Inator@cloud"
-  path "/"
-    br "/main"
-    co "/main"

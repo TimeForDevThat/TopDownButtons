@@ -11,7 +11,7 @@ public class Weapon : Sounds
     private bool autoReload;
 
     [Space(5)]
-    public GameObject bullet, Player, Self;
+    public GameObject Bullet, Player, Self, Beam;
 
     [Header("ShotSpeed/ReloadSpeed")]
     public float ShootSpeed, ReloadSpeed;
@@ -32,17 +32,19 @@ public class Weapon : Sounds
     [Header("Timer")]
     private float ReloadTimer = 0f, ShootTimer = 0.0f;
 
-    private void Start()
-        => Bar.gameObject.SetActive(false);
+    private void Start() {
+        Bar.gameObject.SetActive(false);
+        Beam.SetActive(false);
+    }
 
     void Update()
     {
         SpectorMouse();
         CheckAmmoUiUpdate();
         TouchButtonFireUpdate();
+        ActiveBeam();
         Reload();
         TimeUpdate();
-
 
         if (PlayerPrefs.HasKey("autoReload"))
             autoReload = System.Convert.ToBoolean(PlayerPrefs.GetInt("autoReload"));
@@ -75,6 +77,11 @@ public class Weapon : Sounds
         if (Input.GetButtonDown("Fire1") & Cartridges > 0 & ReloadTimer <= 0 & ShootTimer <= 0 & isActive == true) {
             Shoot();
         }
+    }
+
+    void ActiveBeam() {
+        if (Input.GetKeyDown(KeyCode.F))
+            Beam.SetActive(!Beam.activeSelf);
     }
 
     void ReloadCartridges()
@@ -135,7 +142,7 @@ public class Weapon : Sounds
     {
         shotEffect.Play();
         ShootTimer = ShootSpeed;
-        Instantiate(bullet, bulletSpawn.position, bulletSpawn.rotation);
+        Instantiate(Bullet, bulletSpawn.position, bulletSpawn.rotation);
 
         Cartridges -= 1;
 

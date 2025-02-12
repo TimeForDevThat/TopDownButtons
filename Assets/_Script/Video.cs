@@ -1,10 +1,11 @@
 using UnityEngine;
 using UnityEngine.Video;
-using UnityEngine.SceneManagement;
+using UnityEngine.Events;
 
 public class Video : MonoBehaviour
 {
     public VideoPlayer _videoPlayer;
+    public UnityEvent unityEvent;
 
     void Start()
     {
@@ -16,7 +17,7 @@ public class Video : MonoBehaviour
         Invoke("play", 3);
     }
 
-    private void _videoPlayer_loopPointReached(VideoPlayer source) => SceneManager.LoadScene(1);
+    private void _videoPlayer_loopPointReached(VideoPlayer source) => unityEvent.Invoke();
 
     private void play() => _videoPlayer.Play();
 
@@ -26,7 +27,7 @@ public class Video : MonoBehaviour
         if (Input.GetMouseButtonDown(0) || Input.GetKeyUp(KeyCode.Escape))
         {
             if (_videoPlayer.isPlaying)
-                SceneManager.LoadScene(1);
+                unityEvent.Invoke();
         }
     }
 }

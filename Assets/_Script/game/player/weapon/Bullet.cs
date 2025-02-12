@@ -29,7 +29,6 @@ public class Bullet : Sounds
         Invoke("DestroyBull", 3f);
     }
 
-    void DestroyBull() {
-        Destroy(gameObject);
-    }
+    void DestroyBull()
+        => Destroy(gameObject);
 }

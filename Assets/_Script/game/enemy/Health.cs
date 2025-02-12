@@ -9,15 +9,14 @@ public class Health : MonoBehaviour
     public Canvas canvas;
     public Slider healthSlider;
 
+    public GameObject point;
+
     [SerializeField]
     UnityEvent UnityEvent;
-
-    private PlayerProgress PlayerProgress;
 
     private void Start() { 
         healthSlider.maxValue = valueHealth;
         canvas.gameObject.SetActive(false);
-        PlayerProgress = FindObjectOfType<PlayerProgress>();
     }
 
     public bool isAlive() { 
@@ -35,13 +34,11 @@ public class Health : MonoBehaviour
             canvas.gameObject.SetActive(true);
 
         if (valueHealth <= 0)
-        {
-            PlayerProgress.AddExperience(damage);
             Die();
-        }
     }
 
     private void Die() {
+        Instantiate(point, transform.position, transform.rotation);
         Destroy(gameObject);
         GetComponent<EnemyAi2>().enabled = false;
         GetComponent<NavMeshAgent>().enabled = false;
